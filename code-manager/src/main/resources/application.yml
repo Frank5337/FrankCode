@@ -67,7 +67,7 @@ logging:
   level.root: info
   path: logs/
   # 日志文件名
-  file: client.log
+  file: manager.log
 zbl-code:
   swagger:
     title: zbl-code

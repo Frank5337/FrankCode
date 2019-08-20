@@ -994,3 +994,468 @@ Caused by: io.lettuce.core.RedisCommandExecutionException: ERR Unsupported CONFI
 2019-08-20 14:42:24.077  INFO 10504 --- [Thread-18] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
 2019-08-20 14:42:24.083  INFO 10504 --- [Thread-18] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
 2019-08-20 14:42:24.084  INFO 10504 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 16:24:01.680  INFO 1520 --- [restartedMain] com.zbl.code.ClientApplication           : Starting ClientApplication on DESKTOP-H92G9EF with PID 1520 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 16:24:01.684  INFO 1520 --- [restartedMain] com.zbl.code.ClientApplication           : The following profiles are active: dev
+2019-08-20 16:24:01.837  INFO 1520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 16:24:01.837  INFO 1520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 16:24:02.938  WARN 1520 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:24:02.949  WARN 1520 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:24:03.014  INFO 1520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 16:24:03.017  INFO 1520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 16:24:03.069  INFO 1520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 0 repository interfaces.
+2019-08-20 16:24:03.710  INFO 1520 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9b4f56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 16:24:04.109  INFO 1520 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-08-20 16:24:04.132  INFO 1520 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 16:24:04.132  INFO 1520 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 16:24:04.141  INFO 1520 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 16:24:04.252  INFO 1520 --- [restartedMain] o.a.c.c.C.[.[localhost].[/client-api]    : Initializing Spring embedded WebApplicationContext
+2019-08-20 16:24:04.253  INFO 1520 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2416 ms
+2019-08-20 16:24:04.640  WARN 1520 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeId': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'zbl-code-center-id' in value "${zbl-code-center-id}"
+2019-08-20 16:24:04.657  INFO 1520 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-08-20 16:24:04.671  WARN 1520 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [client-api] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2019-08-20 16:24:04.680  INFO 1520 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-20 16:24:04.690 ERROR 1520 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeId': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'zbl-code-center-id' in value "${zbl-code-center-id}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.zbl.code.ClientApplication.main(ClientApplication.java:26) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'zbl-code-center-id' in value "${zbl-code-center-id}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:851) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1188) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:668) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	... 22 common frames omitted
+
+2019-08-20 16:24:41.642  INFO 13648 --- [restartedMain] com.zbl.code.ClientApplication           : Starting ClientApplication on DESKTOP-H92G9EF with PID 13648 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 16:24:41.646  INFO 13648 --- [restartedMain] com.zbl.code.ClientApplication           : The following profiles are active: dev
+2019-08-20 16:24:41.701  INFO 13648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 16:24:41.701  INFO 13648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 16:24:42.663  WARN 13648 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:24:42.672  WARN 13648 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:24:42.719  INFO 13648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 16:24:42.721  INFO 13648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 16:24:42.758  INFO 13648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2019-08-20 16:24:43.173  INFO 13648 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$655e84b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 16:24:43.548  INFO 13648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-08-20 16:24:43.574  INFO 13648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 16:24:43.574  INFO 13648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 16:24:43.581  INFO 13648 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 16:24:43.718  INFO 13648 --- [restartedMain] o.a.c.c.C.[.[localhost].[/client-api]    : Initializing Spring embedded WebApplicationContext
+2019-08-20 16:24:43.718  INFO 13648 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2015 ms
+2019-08-20 16:24:44.058  WARN 13648 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeId': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'zbl-code.center-id' in value "${zbl-code.center-id}"
+2019-08-20 16:24:44.072  INFO 13648 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-08-20 16:24:44.085  WARN 13648 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [client-api] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2019-08-20 16:24:44.094  INFO 13648 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-20 16:24:44.104 ERROR 13648 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'snowflakeId': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'zbl-code.center-id' in value "${zbl-code.center-id}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.zbl.code.ClientApplication.main(ClientApplication.java:26) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'zbl-code.center-id' in value "${zbl-code.center-id}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:851) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1188) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:668) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	... 22 common frames omitted
+
+2019-08-20 16:25:01.073  INFO 16000 --- [restartedMain] com.zbl.code.ClientApplication           : Starting ClientApplication on DESKTOP-H92G9EF with PID 16000 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 16:25:01.076  INFO 16000 --- [restartedMain] com.zbl.code.ClientApplication           : The following profiles are active: dev
+2019-08-20 16:25:01.133  INFO 16000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 16:25:01.133  INFO 16000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 16:25:02.262  WARN 16000 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:25:02.272  WARN 16000 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:25:02.336  INFO 16000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 16:25:02.339  INFO 16000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 16:25:02.377  INFO 16000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2019-08-20 16:25:02.793  INFO 16000 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2fb1c8f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 16:25:03.182  INFO 16000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-08-20 16:25:03.207  INFO 16000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 16:25:03.207  INFO 16000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 16:25:03.214  INFO 16000 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 16:25:03.323  INFO 16000 --- [restartedMain] o.a.c.c.C.[.[localhost].[/client-api]    : Initializing Spring embedded WebApplicationContext
+2019-08-20 16:25:03.324  INFO 16000 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2191 ms
+2019-08-20 16:25:03.926  INFO 16000 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 16:25:04.026  WARN 16000 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 16:25:04.086  INFO 16000 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 16:25:04.365  INFO 16000 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 16:25:04.392  INFO 16000 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 16:25:04.392  INFO 16000 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 16:25:04.393  INFO 16000 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 16:25:04.400  INFO 16000 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 16:25:04.773  INFO 16000 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 16:25:04.784  INFO 16000 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 16:25:04.784  INFO 16000 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 16:25:04.785  INFO 16000 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 16:25:04.786  INFO 16000 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 16:25:04.786  INFO 16000 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 16:25:04.786  INFO 16000 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 16:25:04.786  INFO 16000 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@87f1185
+2019-08-20 16:25:04.846  WARN 16000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 16:25:04.971  INFO 16000 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 16:25:04.972  INFO 16000 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 16:25:06.159  INFO 16000 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 16:25:06.159  INFO 16000 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 16:25:06.170  INFO 16000 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 16:25:06.195  INFO 16000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path '/client-api'
+2019-08-20 16:25:06.198  INFO 16000 --- [restartedMain] com.zbl.code.ClientApplication           : Started ClientApplication in 5.751 seconds (JVM running for 6.783)
+2019-08-20 16:25:14.702  INFO 5540 --- [restartedMain] com.zbl.code.ManagerApplication          : Starting ManagerApplication on DESKTOP-H92G9EF with PID 5540 (D:\work\develop\IdeaProjects\code\code-manager\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 16:25:14.705  INFO 5540 --- [restartedMain] com.zbl.code.ManagerApplication          : The following profiles are active: dev
+2019-08-20 16:25:14.768  INFO 5540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 16:25:14.768  INFO 5540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 16:25:15.882  WARN 5540 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:25:15.891  WARN 5540 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:25:15.944  INFO 5540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 16:25:15.947  INFO 5540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 16:25:15.993  INFO 5540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 repository interfaces.
+2019-08-20 16:25:16.382  INFO 5540 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5e2b6847] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 16:25:16.797  INFO 5540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8101 (http)
+2019-08-20 16:25:16.820  INFO 5540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 16:25:16.821  INFO 5540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 16:25:16.828  INFO 5540 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 16:25:16.937  INFO 5540 --- [restartedMain] o.a.c.c.C.[.[localhost].[/manager-api]   : Initializing Spring embedded WebApplicationContext
+2019-08-20 16:25:16.937  INFO 5540 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2168 ms
+2019-08-20 16:25:17.525  INFO 5540 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 16:25:17.625  WARN 5540 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 16:25:17.678  INFO 5540 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 16:25:17.959  INFO 5540 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 16:25:17.987  INFO 5540 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 16:25:17.987  INFO 5540 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 16:25:17.988  INFO 5540 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 16:25:17.994  INFO 5540 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 16:25:18.366  INFO 5540 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 16:25:18.378  INFO 5540 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 16:25:18.378  INFO 5540 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 16:25:18.379  INFO 5540 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 16:25:18.379  INFO 5540 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 16:25:18.379  INFO 5540 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 16:25:18.379  INFO 5540 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 16:25:18.380  INFO 5540 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@596d6aa7
+2019-08-20 16:25:18.440  WARN 5540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 16:25:18.567  INFO 5540 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 16:25:18.568  INFO 5540 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 16:25:19.752  INFO 5540 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 16:25:19.752  INFO 5540 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 16:25:19.762  INFO 5540 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 16:25:19.785  INFO 5540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8101 (http) with context path '/manager-api'
+2019-08-20 16:25:19.788  INFO 5540 --- [restartedMain] com.zbl.code.ManagerApplication          : Started ManagerApplication in 5.723 seconds (JVM running for 6.668)
+2019-08-20 17:07:35.225  INFO 16000 --- [Thread-2] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-08-20 17:07:35.226  INFO 16000 --- [Thread-2] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-08-20 17:07:35.226  INFO 16000 --- [Thread-2] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-08-20 17:07:35.227  INFO 16000 --- [Thread-2] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-08-20 17:07:35.227  INFO 16000 --- [Thread-2] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-08-20 17:07:35.232  INFO 16000 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-08-20 17:07:35.232  INFO 16000 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:07:37.355  INFO 16000 --- [restartedMain] com.zbl.code.ClientApplication           : Starting ClientApplication on DESKTOP-H92G9EF with PID 16000 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:07:37.355  INFO 16000 --- [restartedMain] com.zbl.code.ClientApplication           : The following profiles are active: dev
+2019-08-20 17:07:37.725  WARN 16000 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:07:37.731  WARN 16000 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:07:37.745  INFO 16000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:07:37.745  INFO 16000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:07:37.764  INFO 16000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-08-20 17:07:37.846  INFO 16000 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2fb1c8f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:07:37.945  INFO 16000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-08-20 17:07:37.945  INFO 16000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:07:37.946  INFO 16000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:07:37.963  INFO 16000 --- [restartedMain] o.a.c.c.C.[.[localhost].[/client-api]    : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:07:37.963  INFO 16000 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 600 ms
+2019-08-20 17:07:38.332  INFO 16000 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:07:38.377  WARN 16000 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:07:38.393  INFO 16000 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:07:38.431  INFO 16000 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2019-08-20 17:07:38.454  INFO 16000 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 17:07:38.454  INFO 16000 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:07:38.454  INFO 16000 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:07:38.454  INFO 16000 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 17:07:38.565  INFO 16000 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 17:07:38.566  INFO 16000 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 17:07:38.566  INFO 16000 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 17:07:38.566  INFO 16000 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 17:07:38.566  INFO 16000 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 17:07:38.566  INFO 16000 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 17:07:38.566  INFO 16000 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 17:07:38.566  INFO 16000 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5e812294
+2019-08-20 17:07:38.592  WARN 16000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 17:07:39.155  INFO 16000 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 17:07:39.156  INFO 16000 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 17:07:39.162  INFO 16000 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 17:07:39.166  INFO 16000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path '/client-api'
+2019-08-20 17:07:39.166  INFO 16000 --- [restartedMain] com.zbl.code.ClientApplication           : Started ClientApplication in 1.856 seconds (JVM running for 2559.752)
+2019-08-20 17:07:39.169  INFO 16000 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-08-20 17:07:56.892  INFO 8256 --- [restartedMain] com.zbl.code.ClientApplication           : Starting ClientApplication on DESKTOP-H92G9EF with PID 8256 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:07:56.895  INFO 8256 --- [restartedMain] com.zbl.code.ClientApplication           : The following profiles are active: dev
+2019-08-20 17:07:56.947  INFO 8256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 17:07:56.947  INFO 8256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 17:07:57.828  WARN 8256 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:07:57.838  WARN 8256 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:07:57.883  INFO 8256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:07:57.885  INFO 8256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:07:57.923  INFO 8256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2019-08-20 17:07:58.319  INFO 8256 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$afbbfbf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:07:58.690  INFO 8256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-08-20 17:07:58.722  INFO 8256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:07:58.723  INFO 8256 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:07:58.732  INFO 8256 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 17:07:58.865  INFO 8256 --- [restartedMain] o.a.c.c.C.[.[localhost].[/client-api]    : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:07:58.866  INFO 8256 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1919 ms
+2019-08-20 17:07:59.468  INFO 8256 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:07:59.563  WARN 8256 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:07:59.613  INFO 8256 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:07:59.886  INFO 8256 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 17:07:59.911  INFO 8256 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 17:07:59.912  INFO 8256 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:07:59.912  INFO 8256 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:07:59.919  INFO 8256 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 17:08:00.331  INFO 8256 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 17:08:00.347  INFO 8256 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 17:08:00.347  INFO 8256 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 17:08:00.348  INFO 8256 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 17:08:00.349  INFO 8256 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 17:08:00.349  INFO 8256 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 17:08:00.349  INFO 8256 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 17:08:00.349  INFO 8256 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@54eb942f
+2019-08-20 17:08:00.422  WARN 8256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 17:08:00.561  INFO 8256 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 17:08:00.565  INFO 8256 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 17:08:01.759  INFO 8256 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 17:08:01.760  INFO 8256 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 17:08:01.770  INFO 8256 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 17:08:01.793  INFO 8256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path '/client-api'
+2019-08-20 17:08:01.796  INFO 8256 --- [restartedMain] com.zbl.code.ClientApplication           : Started ClientApplication in 5.573 seconds (JVM running for 6.516)
+2019-08-20 17:15:05.588  INFO 8256 --- [Thread-2] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-08-20 17:15:05.589  INFO 8256 --- [Thread-2] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-08-20 17:15:05.590  INFO 8256 --- [Thread-2] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-08-20 17:15:05.590  INFO 8256 --- [Thread-2] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-08-20 17:15:05.590  INFO 8256 --- [Thread-2] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-08-20 17:15:05.594  INFO 8256 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-08-20 17:15:05.595  INFO 8256 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:15:07.199  INFO 8256 --- [restartedMain] com.zbl.code.ClientApplication           : Starting ClientApplication on DESKTOP-H92G9EF with PID 8256 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:15:07.199  INFO 8256 --- [restartedMain] com.zbl.code.ClientApplication           : The following profiles are active: dev
+2019-08-20 17:15:07.570  WARN 8256 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:15:07.575  WARN 8256 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:15:07.589  INFO 8256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:15:07.589  INFO 8256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:15:07.610  INFO 8256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-08-20 17:15:07.696  INFO 8256 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$afbbfbf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:15:07.823  INFO 8256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-08-20 17:15:07.823  INFO 8256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:15:07.824  INFO 8256 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:15:07.840  INFO 8256 --- [restartedMain] o.a.c.c.C.[.[localhost].[/client-api]    : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:15:07.840  INFO 8256 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 638 ms
+2019-08-20 17:15:07.977  INFO 8256 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:15:08.013  WARN 8256 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:15:08.027  INFO 8256 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:15:08.062  INFO 8256 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2019-08-20 17:15:08.080  INFO 8256 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 17:15:08.080  INFO 8256 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:15:08.080  INFO 8256 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:15:08.080  INFO 8256 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 17:15:08.183  INFO 8256 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 17:15:08.184  INFO 8256 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 17:15:08.184  INFO 8256 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 17:15:08.184  INFO 8256 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 17:15:08.184  INFO 8256 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 17:15:08.184  INFO 8256 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 17:15:08.184  INFO 8256 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 17:15:08.184  INFO 8256 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7ecc510
+2019-08-20 17:15:08.209  WARN 8256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 17:15:08.745  INFO 8256 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 17:15:08.745  INFO 8256 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 17:15:08.750  INFO 8256 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 17:15:08.754  INFO 8256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path '/client-api'
+2019-08-20 17:15:08.755  INFO 8256 --- [restartedMain] com.zbl.code.ClientApplication           : Started ClientApplication in 1.594 seconds (JVM running for 433.475)
+2019-08-20 17:15:08.757  INFO 8256 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-08-20 17:15:29.430  INFO 16844 --- [restartedMain] com.zbl.code.ClientApplication           : Starting ClientApplication on DESKTOP-H92G9EF with PID 16844 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:15:29.433  INFO 16844 --- [restartedMain] com.zbl.code.ClientApplication           : The following profiles are active: dev
+2019-08-20 17:15:29.516  INFO 16844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 17:15:29.516  INFO 16844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 17:15:30.455  WARN 16844 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:15:30.465  WARN 16844 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:15:30.520  INFO 16844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:15:30.522  INFO 16844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:15:30.562  INFO 16844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 repository interfaces.
+2019-08-20 17:15:30.969  INFO 16844 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4342f092] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:15:31.349  INFO 16844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-08-20 17:15:31.371  INFO 16844 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:15:31.372  INFO 16844 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:15:31.378  INFO 16844 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 17:15:31.488  INFO 16844 --- [restartedMain] o.a.c.c.C.[.[localhost].[/client-api]    : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:15:31.488  INFO 16844 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1972 ms
+2019-08-20 17:15:32.122  INFO 16844 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:15:32.216  WARN 16844 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:15:32.267  INFO 16844 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:15:32.539  INFO 16844 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 17:15:32.566  INFO 16844 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 17:15:32.566  INFO 16844 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:15:32.567  INFO 16844 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:15:32.573  INFO 16844 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 17:15:32.941  INFO 16844 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 17:15:32.952  INFO 16844 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 17:15:32.953  INFO 16844 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 17:15:32.954  INFO 16844 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 17:15:32.954  INFO 16844 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 17:15:32.954  INFO 16844 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 17:15:32.954  INFO 16844 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 17:15:32.955  INFO 16844 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@37324ceb
+2019-08-20 17:15:33.016  WARN 16844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 17:15:33.144  INFO 16844 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 17:15:33.146  INFO 16844 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 17:15:34.315  INFO 16844 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 17:15:34.315  INFO 16844 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 17:15:34.326  INFO 16844 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 17:15:34.349  INFO 16844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path '/client-api'
+2019-08-20 17:15:34.352  INFO 16844 --- [restartedMain] com.zbl.code.ClientApplication           : Started ClientApplication in 5.609 seconds (JVM running for 6.584)
+2019-08-20 17:18:24.730  INFO 14184 --- [restartedMain] com.zbl.code.ClientApplication           : Starting ClientApplication on DESKTOP-H92G9EF with PID 14184 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:18:24.732  INFO 14184 --- [restartedMain] com.zbl.code.ClientApplication           : The following profiles are active: dev
+2019-08-20 17:18:24.778  INFO 14184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 17:18:24.778  INFO 14184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 17:18:25.833  WARN 14184 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:18:25.842  WARN 14184 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:18:25.890  INFO 14184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:18:25.892  INFO 14184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:18:25.932  INFO 14184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-08-20 17:18:26.340  INFO 14184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$395562c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:18:26.720  INFO 14184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2019-08-20 17:18:26.744  INFO 14184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:18:26.744  INFO 14184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:18:26.750  INFO 14184 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 17:18:26.858  INFO 14184 --- [restartedMain] o.a.c.c.C.[.[localhost].[/client-api]    : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:18:26.858  INFO 14184 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2080 ms
+2019-08-20 17:18:27.471  INFO 14184 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:18:27.571  WARN 14184 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:18:27.638  INFO 14184 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:18:27.899  INFO 14184 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 17:18:27.925  INFO 14184 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 17:18:27.926  INFO 14184 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:18:27.926  INFO 14184 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:18:27.935  INFO 14184 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 17:18:28.288  INFO 14184 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 17:18:28.300  INFO 14184 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 17:18:28.300  INFO 14184 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 17:18:28.301  INFO 14184 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 17:18:28.301  INFO 14184 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 17:18:28.301  INFO 14184 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 17:18:28.301  INFO 14184 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 17:18:28.302  INFO 14184 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2461fb2
+2019-08-20 17:18:28.364  WARN 14184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 17:18:28.495  INFO 14184 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 17:18:28.496  INFO 14184 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 17:18:29.673  INFO 14184 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 17:18:29.674  INFO 14184 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 17:18:29.684  INFO 14184 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 17:18:29.706  INFO 14184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path '/client-api'
+2019-08-20 17:18:29.709  INFO 14184 --- [restartedMain] com.zbl.code.ClientApplication           : Started ClientApplication in 5.63 seconds (JVM running for 6.595)

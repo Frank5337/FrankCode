@@ -1,0 +1,18 @@
+package ${package.Mapper};
+
+import ${package.Entity}.${entity};
+import com.huabote.kefang.kpp.common.base.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
+
+
+/**
+ * Created by ${author} on ${date}
+ * <p>
+ * ${table.comment}
+ */
+@Mapper
+@Component
+public interface ${table.mapperName} extends BaseMapper<${entity}> {
+
+}

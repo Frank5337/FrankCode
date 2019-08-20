@@ -11,9 +11,12 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://127.0.0.1/code?characterEncoding=utf-8&userSSL=fasle&useAffectedRows=true&allowMultiQueries=true
+    url: jdbc:mysql://127.0.0.1/code?characterEncoding=utf-8&useSSL=false&useAffectedRows=true&allowMultiQueries=true
     username: root
     password: zbl5337
   redis:
     host: 127.0.0.1
     port: 6379
+zbl-code:
+  worker-id: 0
+  data-center-id: 0

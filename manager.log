@@ -1,0 +1,466 @@
+2019-08-20 16:26:46.756  INFO 16444 --- [restartedMain] com.zbl.code.ManagerApplication          : Starting ManagerApplication on DESKTOP-H92G9EF with PID 16444 (D:\work\develop\IdeaProjects\code\code-manager\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 16:26:46.759  INFO 16444 --- [restartedMain] com.zbl.code.ManagerApplication          : The following profiles are active: dev
+2019-08-20 16:26:46.832  INFO 16444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 16:26:46.833  INFO 16444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 16:26:47.983  WARN 16444 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:26:47.992  WARN 16444 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 16:26:48.046  INFO 16444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 16:26:48.048  INFO 16444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 16:26:48.090  INFO 16444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-08-20 16:26:48.482  INFO 16444 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$210b675b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 16:26:48.891  INFO 16444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8101 (http)
+2019-08-20 16:26:48.918  INFO 16444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 16:26:48.918  INFO 16444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 16:26:48.925  INFO 16444 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 16:26:49.069  INFO 16444 --- [restartedMain] o.a.c.c.C.[.[localhost].[/manager-api]   : Initializing Spring embedded WebApplicationContext
+2019-08-20 16:26:49.069  INFO 16444 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2231 ms
+2019-08-20 16:26:49.779  INFO 16444 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 16:26:49.887  WARN 16444 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 16:26:49.951  INFO 16444 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 16:26:50.254  INFO 16444 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 16:26:50.282  INFO 16444 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 16:26:50.283  INFO 16444 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 16:26:50.283  INFO 16444 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 16:26:50.290  INFO 16444 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 16:26:50.685  INFO 16444 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 16:26:50.699  INFO 16444 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 16:26:50.699  INFO 16444 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 16:26:50.700  INFO 16444 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 16:26:50.701  INFO 16444 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 16:26:50.701  INFO 16444 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 16:26:50.701  INFO 16444 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 16:26:50.701  INFO 16444 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7b561330
+2019-08-20 16:26:50.770  WARN 16444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 16:26:50.910  INFO 16444 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 16:26:50.911  INFO 16444 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 16:26:52.127  INFO 16444 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 16:26:52.127  INFO 16444 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 16:26:52.138  INFO 16444 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 16:26:52.162  INFO 16444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8101 (http) with context path '/manager-api'
+2019-08-20 16:26:52.165  INFO 16444 --- [restartedMain] com.zbl.code.ManagerApplication          : Started ManagerApplication in 6.243 seconds (JVM running for 7.338)
+2019-08-20 17:07:39.364  INFO 9248 --- [restartedMain] com.zbl.code.ManagerApplication          : Starting ManagerApplication on DESKTOP-H92G9EF with PID 9248 (D:\work\develop\IdeaProjects\code\code-manager\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:07:39.369  INFO 9248 --- [restartedMain] com.zbl.code.ManagerApplication          : The following profiles are active: dev
+2019-08-20 17:07:39.418  INFO 9248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 17:07:39.418  INFO 9248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 17:07:40.318  WARN 9248 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:07:40.327  WARN 9248 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:07:40.383  INFO 9248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:07:40.386  INFO 9248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:07:40.429  INFO 9248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-08-20 17:07:40.796  INFO 9248 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$223e301a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:07:41.190  INFO 9248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8101 (http)
+2019-08-20 17:07:41.215  INFO 9248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:07:41.216  INFO 9248 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:07:41.221  INFO 9248 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 17:07:41.384  INFO 9248 --- [restartedMain] o.a.c.c.C.[.[localhost].[/manager-api]   : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:07:41.384  INFO 9248 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1966 ms
+2019-08-20 17:07:41.929  INFO 9248 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:07:42.022  WARN 9248 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:07:42.073  INFO 9248 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:07:42.334  INFO 9248 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 17:07:42.357  INFO 9248 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 17:07:42.358  INFO 9248 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:07:42.358  INFO 9248 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:07:42.365  INFO 9248 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 17:07:42.718  INFO 9248 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 17:07:42.729  INFO 9248 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 17:07:42.729  INFO 9248 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 17:07:42.730  INFO 9248 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 17:07:42.731  INFO 9248 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 17:07:42.731  INFO 9248 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 17:07:42.731  INFO 9248 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 17:07:42.731  INFO 9248 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@71d63b17
+2019-08-20 17:07:42.791  WARN 9248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 17:07:42.911  INFO 9248 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 17:07:42.912  INFO 9248 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 17:07:44.061  INFO 9248 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 17:07:44.061  INFO 9248 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 17:07:44.071  INFO 9248 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 17:07:44.095  INFO 9248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8101 (http) with context path '/manager-api'
+2019-08-20 17:07:44.098  INFO 9248 --- [restartedMain] com.zbl.code.ManagerApplication          : Started ManagerApplication in 5.168 seconds (JVM running for 6.365)
+2019-08-20 17:15:06.245  INFO 15084 --- [restartedMain] com.zbl.code.ManagerApplication          : Starting ManagerApplication on DESKTOP-H92G9EF with PID 15084 (D:\work\develop\IdeaProjects\code\code-manager\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:15:06.248  INFO 15084 --- [restartedMain] com.zbl.code.ManagerApplication          : The following profiles are active: dev
+2019-08-20 17:15:06.299  INFO 15084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 17:15:06.299  INFO 15084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 17:15:07.263  WARN 15084 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:15:07.274  WARN 15084 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:15:07.374  INFO 15084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:15:07.378  INFO 15084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:15:07.428  INFO 15084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 0 repository interfaces.
+2019-08-20 17:15:07.845  INFO 15084 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c75549ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:15:08.252  INFO 15084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8101 (http)
+2019-08-20 17:15:08.274  INFO 15084 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:15:08.275  INFO 15084 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:15:08.282  INFO 15084 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 17:15:08.452  INFO 15084 --- [restartedMain] o.a.c.c.C.[.[localhost].[/manager-api]   : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:15:08.453  INFO 15084 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2153 ms
+2019-08-20 17:15:09.005  INFO 15084 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:15:09.111  WARN 15084 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:15:09.166  INFO 15084 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:15:09.438  INFO 15084 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 17:15:09.464  INFO 15084 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 17:15:09.465  INFO 15084 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:15:09.465  INFO 15084 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:15:09.472  INFO 15084 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 17:15:09.840  INFO 15084 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 17:15:09.850  INFO 15084 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 17:15:09.850  INFO 15084 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 17:15:09.851  INFO 15084 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 17:15:09.852  INFO 15084 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 17:15:09.852  INFO 15084 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 17:15:09.852  INFO 15084 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 17:15:09.852  INFO 15084 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@65864516
+2019-08-20 17:15:09.911  WARN 15084 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 17:15:10.032  INFO 15084 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 17:15:10.034  INFO 15084 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 17:15:11.239  INFO 15084 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 17:15:11.239  INFO 15084 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 17:15:11.250  INFO 15084 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 17:15:11.272  INFO 15084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8101 (http) with context path '/manager-api'
+2019-08-20 17:15:11.275  INFO 15084 --- [restartedMain] com.zbl.code.ManagerApplication          : Started ManagerApplication in 5.639 seconds (JVM running for 6.748)
+2019-08-20 17:16:48.852  INFO 13324 --- [restartedMain] com.zbl.code.ManagerApplication          : Starting ManagerApplication on DESKTOP-H92G9EF with PID 13324 (D:\work\develop\IdeaProjects\code\code-manager\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:16:48.855  INFO 13324 --- [restartedMain] com.zbl.code.ManagerApplication          : The following profiles are active: dev
+2019-08-20 17:16:48.924  INFO 13324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 17:16:48.924  INFO 13324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 17:16:50.102  WARN 13324 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:16:50.113  WARN 13324 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:16:50.180  INFO 13324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:16:50.182  INFO 13324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:16:50.225  INFO 13324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2019-08-20 17:16:50.711  INFO 13324 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3dfc9c8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:16:51.152  INFO 13324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8101 (http)
+2019-08-20 17:16:51.177  INFO 13324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:16:51.177  INFO 13324 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:16:51.184  INFO 13324 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 17:16:51.297  INFO 13324 --- [restartedMain] o.a.c.c.C.[.[localhost].[/manager-api]   : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:16:51.297  INFO 13324 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2373 ms
+2019-08-20 17:16:51.922  INFO 13324 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:16:52.018  WARN 13324 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:16:52.071  INFO 13324 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:16:52.234 ERROR 13324 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : init datasource error, url: jdbc:mysql://127.0.0.1/code?characterEncoding=utf-8&useSSL=fasle&useAffectedRows=true&allowMultiQueries=true
+
+java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'fasle' is not in this set.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.validateStringValues(ConnectionPropertiesImpl.java:314) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$BooleanConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:91) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:216) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2500) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3196) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1572) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:898) ~[druid-1.1.13.jar:1.1.13]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1887) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.zbl.code.ManagerApplication.main(ManagerApplication.java:23) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+
+2019-08-20 17:16:52.237 ERROR 13324 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} init error
+
+java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'fasle' is not in this set.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.validateStringValues(ConnectionPropertiesImpl.java:314) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$BooleanConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:91) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:216) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2500) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3196) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1572) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:898) ~[druid-1.1.13.jar:1.1.13]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1887) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.zbl.code.ManagerApplication.main(ManagerApplication.java:23) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+
+2019-08-20 17:16:52.238  INFO 13324 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 17:16:52.239  WARN 13324 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'fasle' is not in this set.
+2019-08-20 17:16:52.239  INFO 13324 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:16:52.243 ERROR 13324 --- [Druid-ConnectionPool-Create-2104340518] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://127.0.0.1/code?characterEncoding=utf-8&useSSL=fasle&useAffectedRows=true&allowMultiQueries=true, errorCode 0, state S1009
+
+java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'fasle' is not in this set.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.validateStringValues(ConnectionPropertiesImpl.java:314) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$BooleanConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:91) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:216) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2500) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3196) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1572) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2550) ~[druid-1.1.13.jar:1.1.13]
+
+2019-08-20 17:16:52.246 ERROR 13324 --- [Druid-ConnectionPool-Create-2104340518] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://127.0.0.1/code?characterEncoding=utf-8&useSSL=fasle&useAffectedRows=true&allowMultiQueries=true, errorCode 0, state S1009
+
+java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'fasle' is not in this set.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.validateStringValues(ConnectionPropertiesImpl.java:314) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$BooleanConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:91) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:216) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2500) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3196) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1572) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2550) ~[druid-1.1.13.jar:1.1.13]
+
+2019-08-20 17:16:52.257  INFO 13324 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-08-20 17:16:52.269  INFO 13324 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-20 17:16:52.277 ERROR 13324 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'fasle' is not in this set.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.zbl.code.ManagerApplication.main(ManagerApplication.java:23) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.sql.SQLException: The connection property 'useSSL' only accepts values of the form: 'true', 'false', 'yes' or 'no'. The value 'fasle' is not in this set.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.validateStringValues(ConnectionPropertiesImpl.java:314) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$BooleanConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:91) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty.initializeFrom(ConnectionPropertiesImpl.java:216) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2500) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3196) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_181]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:410) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1572) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636) ~[druid-1.1.13.jar:1.1.13]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:898) ~[druid-1.1.13.jar:1.1.13]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1887) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	... 21 common frames omitted
+
+2019-08-20 17:18:10.156  INFO 9904 --- [restartedMain] com.zbl.code.ManagerApplication          : Starting ManagerApplication on DESKTOP-H92G9EF with PID 9904 (D:\work\develop\IdeaProjects\code\code-manager\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-20 17:18:10.159  INFO 9904 --- [restartedMain] com.zbl.code.ManagerApplication          : The following profiles are active: dev
+2019-08-20 17:18:10.221  INFO 9904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-20 17:18:10.221  INFO 9904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-20 17:18:11.391  WARN 9904 --- [restartedMain] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:18:11.401  WARN 9904 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-20 17:18:11.448  INFO 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-20 17:18:11.451  INFO 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-20 17:18:11.486  INFO 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-08-20 17:18:11.877  INFO 9904 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$26afd735] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-20 17:18:12.293  INFO 9904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8101 (http)
+2019-08-20 17:18:12.316  INFO 9904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-20 17:18:12.317  INFO 9904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-20 17:18:12.324  INFO 9904 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jbr\\bin\server;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin;D:\work\Idea\IntelliJ IDEA 2018.3\jre64\\bin\server;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;.]
+2019-08-20 17:18:12.433  INFO 9904 --- [restartedMain] o.a.c.c.C.[.[localhost].[/manager-api]   : Initializing Spring embedded WebApplicationContext
+2019-08-20 17:18:12.434  INFO 9904 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2212 ms
+2019-08-20 17:18:13.066  INFO 9904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-20 17:18:13.165  WARN 9904 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-20 17:18:13.227  INFO 9904 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-08-20 17:18:13.492  INFO 9904 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-08-20 17:18:13.518  INFO 9904 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-20 17:18:13.519  INFO 9904 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-20 17:18:13.520  INFO 9904 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-20 17:18:13.528  INFO 9904 --- [restartedMain] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-08-20 17:18:13.902  INFO 9904 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-08-20 17:18:13.913  INFO 9904 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-20 17:18:13.914  INFO 9904 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-08-20 17:18:13.914  INFO 9904 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-08-20 17:18:13.915  INFO 9904 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-20 17:18:13.915  INFO 9904 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-20 17:18:13.915  INFO 9904 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-08-20 17:18:13.915  INFO 9904 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@31fb68db
+2019-08-20 17:18:13.974  WARN 9904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-08-20 17:18:14.101  INFO 9904 --- [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-08-20 17:18:14.102  INFO 9904 --- [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-08-20 17:18:15.285  INFO 9904 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-08-20 17:18:15.285  INFO 9904 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-20 17:18:15.296  INFO 9904 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-20 17:18:15.322  INFO 9904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8101 (http) with context path '/manager-api'
+2019-08-20 17:18:15.325  INFO 9904 --- [restartedMain] com.zbl.code.ManagerApplication          : Started ManagerApplication in 5.76 seconds (JVM running for 6.758)
