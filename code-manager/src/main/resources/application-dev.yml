@@ -1,0 +1,19 @@
+server:
+  port: 8101
+spring:
+  devtools:
+    restart:
+      # 热部署，每次代码有改动就自动重启，原来的restart ClassLoader 被丢弃，重新创建一个restart ClassLoader，
+      # 由于需要加载的类相比较少，所以实现了较快的重启时间。
+      enabled: true
+      additional-paths: src/main/java
+      exclude: WEB-INF/**
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1/code?characterEncoding=utf-8&userSSL=fasle&useAffectedRows=true&allowMultiQueries=true
+    username: root
+    password: zbl5337
+  redis:
+    host: 127.0.0.1
+    port: 6379

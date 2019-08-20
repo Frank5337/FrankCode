@@ -1,0 +1,78 @@
+server:
+  servlet:
+    context-path: /client-api/
+spring:
+  profiles:
+    active: @profileActive@
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+  redis:
+    database: 15
+    timeout: 10000ms
+    lettuce:
+      pool:
+        min-idle: 0
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 1
+      min-idle: 3
+      max-active: 20
+      # 配置获取连接等待超时的时间
+      max-wait: 60000
+      # 配置间隔多久才进行一次检测, 检测需要关闭的空闲连接, 单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 配置一个连接在池中最小生存的时间, 单位是毫秒
+      min-evictable-idle-time-millis: 30000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # 打开PSCache, 并且制定每个连接上PSCache的大小
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      # 配置监控统计拦截的filters, 去掉后监控界面sql无法统计, 'wall'用于防火墙
+      filters: stat,wall,slf4j
+      # 通过connectProperties属性来打开mergeSql功能, 慢sql记录
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      # 合并多个DruidDataSource的监控数据
+      # useGlobalDataSourceStat: true
+  cache:
+    type: redis
+  servlet:
+    multipart:
+      max-file-size: 5000MB
+      max-request-size: 5000MB
+mybatis:
+  type-aliases-package: com.zbl.code.*.pojo.po
+  mapper-locations: classpath*:com/zbl/code/*/dao/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+mapper:
+  mappers: com.zbl.code.common.base.BaseMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helper-dialect: mysql
+  reasonable: false
+  support-methods-arguments: true
+  params: count=countSql
+logging:
+  # 日志级别
+  level.root: info
+  path: logs/
+  # 日志文件名
+  file: client.log
+zbl-code:
+  swagger:
+    title: zbl-code
+    description: zbl-code API
+    basePackage: com.zbl.code.client
+    contactName: zbl
+    contactUrl: www.javachat.cn
+    contactEmail: zbl5337@gmail.com

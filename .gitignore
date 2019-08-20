@@ -1,0 +1,4 @@
+# Project exclude paths
+/code-client/target/
+/code-common/target/
+/code-manager/target/
