@@ -1,0 +1,27 @@
+package ${package.Entity};
+
+import com.huabote.kefang.kpp.common.base.BaseEntity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import javax.persistence.Table;
+
+
+/**
+ * Created by ${author} on ${date}
+ * <p>
+ */
+@Data
+@EqualsAndHashCode(callSuper = true)
+@ApiModel("${table.comment}")
+@Table(name = "${table.name}")
+public class ${entity} extends BaseEntity {
+#foreach($field in ${table.fields})
+#if("$!field.comment" != "")
+    @ApiModelProperty("${field.comment}")
+    private ${field.propertyType} ${field.propertyName};
+#end
+#end
+}

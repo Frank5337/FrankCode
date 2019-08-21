@@ -6,9 +6,10 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 
 /**
- * Created by hook on 2019/4/7.
- * <p>
- * druid过滤器.
+ * @Author: zbl
+ * @Date: Created in 17:11 2019/8/20
+ * @Description: druid过滤器.
+ * @Version: $
  */
 @WebFilter(filterName = "druidWebStatFilter",
         urlPatterns = "/*",
