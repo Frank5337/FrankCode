@@ -81,8 +81,8 @@ public class NumberUtils {
             return true;
         }else if (x != null && y == null) {
             return true;
-        }else if (x != null && y != null) {
-            if (x != y) {
+        }else if (x != null) {
+            if (!x.equals(y)) {
                 return true;
             }
         }
