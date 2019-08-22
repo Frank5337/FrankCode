@@ -1,6 +1,6 @@
 package com.zbl.code.common.base;
 
-import com.zbl.code.common.compoment.SnowflakeId;
+import com.zbl.code.common.component.SnowflakeId;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;

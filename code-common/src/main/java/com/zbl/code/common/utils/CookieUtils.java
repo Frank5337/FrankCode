@@ -100,7 +100,7 @@ public class CookieUtils {
 			for (Cookie cookie : cookies) {
 				if (cookie.getName().equals(name)) {
 					try {
-						if(StringUtils.isNoneBlank(cookie.getValue()) && !cookie.getValue().equalsIgnoreCase("null")){
+						if(StringUtils.isNoneBlank(cookie.getValue()) && !"null".equalsIgnoreCase(cookie.getValue())){
 							value = URLDecoder.decode(cookie.getValue(), "utf-8");
 						}
 					} catch (UnsupportedEncodingException e) {

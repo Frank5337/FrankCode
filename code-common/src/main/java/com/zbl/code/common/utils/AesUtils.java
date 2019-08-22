@@ -191,7 +191,7 @@ public class AesUtils {
      * @param buf
      * @return
      */
-    public static String parseByte2HexStr(byte buf[]) {
+    public static String parseByte2HexStr(byte[] buf) {
             StringBuffer sb = new StringBuffer();
             for (int i = 0; i < buf.length; i++) {
                     String hex = Integer.toHexString(buf[i] & 0xFF);

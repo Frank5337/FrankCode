@@ -1,4 +1,4 @@
-package com.zbl.code.common.compoment;
+package com.zbl.code.common.component;
 
 import com.zbl.code.common.base.BaseException;
 import com.zbl.code.common.enums.ErrorCodeEnum;

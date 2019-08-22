@@ -185,7 +185,7 @@ public class CryptoUtils {
 	/**
 	 * 生成随机向量,默认大小为cipher.getBlockSize(), 16字节.
 	 */
-	public static byte[] generateIV() {
+	public static byte[] generateIv() {
 		byte[] bytes = new byte[DEFAULT_IVSIZE];
 		random.nextBytes(bytes);
 		return bytes;

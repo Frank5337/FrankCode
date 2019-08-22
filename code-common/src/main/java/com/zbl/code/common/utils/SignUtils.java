@@ -64,7 +64,7 @@ public class SignUtils {
         }
         for (String key : sArray.keySet()) {
             String value = sArray.get(key);
-            if (value == null || value.equals("") || key.equalsIgnoreCase("sign")) {
+            if (value == null || "".equals(value) || "sign".equalsIgnoreCase(key)) {
                 continue;
             }
             result.put(key, value);

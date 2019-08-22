@@ -77,17 +77,17 @@ public class PinyinUtil {
     //根据一个包含汉字的字符串返回一个汉字拼音首字母的字符串  
     public String String2Alpha(String SourceStr){  
           
-        String Result = "";  
-        int StrLength = SourceStr.length();  
+        StringBuilder Result = new StringBuilder();
+        int strLength = SourceStr.length();
         int i;  
         try {  
-            for (i = 0; i < StrLength; i++) {  
-                Result += Char2Alpha(SourceStr.charAt(i));  
+            for (i = 0; i < strLength; i++) {
+                Result.append(Char2Alpha(SourceStr.charAt(i)));
             }  
         } catch (Exception e) {  
-            Result = "";  
+            Result = new StringBuilder();
         }  
-        return Result;  
+        return Result.toString();
     }  
   
     private boolean match(int i, int gb) {  

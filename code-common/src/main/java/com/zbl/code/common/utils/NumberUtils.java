@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 public class NumberUtils {
 	
 	public static BigDecimal getBigDecimal(String str) {
-		if (StringUtils.isBlank(str) || str.equalsIgnoreCase("null")) {
+		if (StringUtils.isBlank(str) || "null".equalsIgnoreCase(str)) {
 			return BigDecimal.ZERO.setScale(2,BigDecimal.ROUND_HALF_UP);
 		} else {
 			return new BigDecimal(str).setScale(2,BigDecimal.ROUND_HALF_UP);
@@ -20,7 +20,7 @@ public class NumberUtils {
 	
 	public static int getInteger(Object obj) {
 		String str = String.valueOf(obj);
-		if (StringUtils.isBlank(str) || str.equalsIgnoreCase("null")) {
+		if (StringUtils.isBlank(str) || "null".equalsIgnoreCase(str)) {
 			return 0;
 		} else {
 			return Integer.valueOf(str);
@@ -29,7 +29,7 @@ public class NumberUtils {
 	
 	public static long getLong(Object obj) {
 		String str = String.valueOf(obj);
-		if (StringUtils.isBlank(str) || str.equalsIgnoreCase("null")) {
+		if (StringUtils.isBlank(str) || "null".equalsIgnoreCase(str)) {
 			return 0;
 		} else {
 			return Long.valueOf(str);
@@ -37,7 +37,7 @@ public class NumberUtils {
 	}
 	
 	public static BigDecimal getDecimal(String str) {
-        if (StringUtils.isBlank(str) || str.equalsIgnoreCase("null")) {
+        if (StringUtils.isBlank(str) || "null".equalsIgnoreCase(str)) {
             return BigDecimal.ZERO.setScale(4,BigDecimal.ROUND_HALF_UP);
         } else {
             return new BigDecimal(str).setScale(4,BigDecimal.ROUND_HALF_UP);
@@ -46,7 +46,7 @@ public class NumberUtils {
 	
 	// 保留五位小数
 	public static BigDecimal getMinDecimal(String str) {
-        if (StringUtils.isBlank(str) || str.equalsIgnoreCase("null")) {
+        if (StringUtils.isBlank(str) || "null".equalsIgnoreCase(str)) {
             return BigDecimal.ZERO.setScale(5, BigDecimal.ROUND_HALF_UP);
         }else {
             return new BigDecimal(str).setScale(5, BigDecimal.ROUND_HALF_UP);

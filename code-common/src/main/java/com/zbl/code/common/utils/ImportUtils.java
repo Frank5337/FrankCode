@@ -11,7 +11,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class InportUtils {
+/**
+ * @Author: zb util
+ */
+public class ImportUtils {
     
     public static final Integer USE_FREQUENCY = 13; //使用频次默认值
     

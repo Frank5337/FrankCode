@@ -39,9 +39,8 @@ public class WbUtil {
             //用char循环取得每一个String的 字符
             for (int i = 0; i < str.length(); i++) {
                 char temp1 = str.charAt(i);
-                int asciicode = (int)temp1;
                 //如果是254以内的ASCII 表示是西文字母和字符，直接显示，无需翻译
-                if (asciicode >= 1 && asciicode <= 254) {
+                if ((int)temp1 >= 1 && (int)temp1 <= 254) {
                     result.append(temp1);
                 }else{
                     //循环遍历汉字五笔的字库（按照五笔首字符字符分组）

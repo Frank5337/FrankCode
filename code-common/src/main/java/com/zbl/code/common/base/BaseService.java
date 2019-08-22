@@ -1,6 +1,7 @@
 package com.zbl.code.common.base;
 
-import org.springframework.data.redis.cache.RedisCache;
+
+import com.zbl.code.common.component.RedisCache;
 
 import javax.annotation.Resource;
 

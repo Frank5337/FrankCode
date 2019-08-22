@@ -92,8 +92,8 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
 		if (SpringContextHolder.applicationContext != null) {
 			logger.info("SpringContextHolder中的ApplicationContext被覆盖, 原有ApplicationContext为:" + SpringContextHolder.applicationContext);
 		}
-
-		SpringContextHolder.applicationContext = applicationContext; // NOSONAR
+		//NOSONAR
+		SpringContextHolder.applicationContext = applicationContext;
 	}
 
 	/**

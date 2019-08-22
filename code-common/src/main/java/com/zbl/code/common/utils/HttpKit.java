@@ -14,7 +14,9 @@ import java.security.cert.X509Certificate;
 import java.util.Map;
 import java.util.Map.Entry;
 
-
+/**
+ * @Author: zb util
+ */
 public class HttpKit {
 	private HttpKit() {}
 	

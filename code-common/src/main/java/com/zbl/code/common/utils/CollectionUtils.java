@@ -82,7 +82,7 @@ public class CollectionUtils extends org.apache.commons.collections.CollectionUt
 		try {
 			for (Object obj : collection) {
 				T value = (T) PropertyUtils.getProperty(obj, propertyName);
-				if (ignoreEmptyValue && value == null || value.toString().equals("")) {
+				if (ignoreEmptyValue && value == null || "".equals(value.toString())) {
 					continue;
 				}
 				list.add(PropertyUtils.getProperty(obj, propertyName));

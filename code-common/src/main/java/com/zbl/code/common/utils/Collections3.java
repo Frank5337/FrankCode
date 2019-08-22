@@ -196,7 +196,7 @@ public class Collections3 {
 		return collection.iterator().next();
 	}
 	
-    public static List<Long> StringToLongLst(String[] ids){
+    public static List<Long> stringToLongLst(String[] ids){
     	if(ids == null || ids.length <= 0 ){
     		return null;
     	}
