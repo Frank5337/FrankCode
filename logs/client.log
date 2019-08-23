@@ -1,0 +1,96 @@
+2019-08-23 15:07:54,759 [INFO] [main] com.zbl.code.ClientApplication [StartupInfoLogger.java : 50] Starting ClientApplication on DESKTOP-H92G9EF with PID 804 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-23 15:07:54,762 [INFO] [main] com.zbl.code.ClientApplication [SpringApplication.java : 679] The following profiles are active: dev
+2019-08-23 15:07:55,629 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 239] Skipping MapperFactoryBean with name 'operateLogMapper' and 'com.zbl.code.system.dao.OperateLogMapper' mapperInterface. Bean already defined with the same name!
+2019-08-23 15:07:55,629 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 239] Skipping MapperFactoryBean with name 'permissionMapper' and 'com.zbl.code.system.dao.PermissionMapper' mapperInterface. Bean already defined with the same name!
+2019-08-23 15:07:55,630 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 239] Skipping MapperFactoryBean with name 'roleMapper' and 'com.zbl.code.system.dao.RoleMapper' mapperInterface. Bean already defined with the same name!
+2019-08-23 15:07:55,630 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 239] Skipping MapperFactoryBean with name 'rolePermissionMapper' and 'com.zbl.code.system.dao.RolePermissionMapper' mapperInterface. Bean already defined with the same name!
+2019-08-23 15:07:55,630 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 166] No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-23 15:07:55,673 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-23 15:07:55,676 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-23 15:07:55,713 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2019-08-23 15:07:56,157 [INFO] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f333ddb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 15:07:56,520 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8100 (http)
+2019-08-23 15:07:56,549 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-23 15:07:56,549 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-23 15:07:56,556 [INFO] [main] org.apache.catalina.core.AprLifecycleListener [DirectJDKLog.java : 173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\work\golang\bin;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;C:\Users\ThinkPad\go\bin;.]
+2019-08-23 15:07:56,691 [INFO] [main] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/client-api] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-23 15:07:56,692 [INFO] [main] org.springframework.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] Root WebApplicationContext: initialization completed in 1882 ms
+2019-08-23 15:07:57,260 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-23 15:07:57,554 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 971] {dataSource-1} inited
+2019-08-23 15:07:58,152 [INFO] [main] o.s.scheduling.concurrent.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-23 15:07:58,272 [WARN] [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [ThymeleafAutoConfiguration.java : 108] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-23 15:07:58,308 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-23 15:07:58,309 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-23 15:07:58,310 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-23 15:07:58,310 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 83] Clear EntityHelper entityTableMap cache.
+2019-08-23 15:07:58,715 [WARN] [main] o.s.b.autoconfigure.freemarker.FreeMarkerAutoConfiguration [FreeMarkerAutoConfiguration.java : 70] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-23 15:07:58,789 [INFO] [main] org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java : 1208] Using default implementation for ThreadExecutor
+2019-08-23 15:07:58,801 [INFO] [main] org.quartz.core.SchedulerSignalerImpl [SchedulerSignalerImpl.java : 61] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-23 15:07:58,802 [INFO] [main] org.quartz.core.QuartzScheduler [QuartzScheduler.java : 229] Quartz Scheduler v.2.3.0 created.
+2019-08-23 15:07:58,803 [INFO] [main] org.quartz.simpl.RAMJobStore [RAMJobStore.java : 155] RAMJobStore initialized.
+2019-08-23 15:07:58,804 [INFO] [main] org.quartz.core.QuartzScheduler [QuartzScheduler.java : 294] Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-23 15:07:58,804 [INFO] [main] org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java : 1362] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-23 15:07:58,804 [INFO] [main] org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java : 1366] Quartz scheduler version: 2.3.0
+2019-08-23 15:07:58,804 [INFO] [main] org.quartz.core.QuartzScheduler [QuartzScheduler.java : 2287] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1961d75a
+2019-08-23 15:07:59,015 [INFO] [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider [EpollProvider.java : 68] Starting without optional epoll library
+2019-08-23 15:07:59,018 [INFO] [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider [KqueueProvider.java : 70] Starting without optional kqueue library
+2019-08-23 15:08:00,210 [INFO] [main] org.springframework.scheduling.quartz.SchedulerFactoryBean [SchedulerFactoryBean.java : 726] Starting Quartz Scheduler now
+2019-08-23 15:08:00,210 [INFO] [main] org.quartz.core.QuartzScheduler [QuartzScheduler.java : 547] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-23 15:08:00,221 [INFO] [main] o.s.s.annotation.ScheduledAnnotationBeanPostProcessor [ScheduledAnnotationBeanPostProcessor.java : 295] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-23 15:08:00,244 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 204] Tomcat started on port(s): 8100 (http) with context path '/client-api'
+2019-08-23 15:08:00,246 [INFO] [main] com.zbl.code.ClientApplication [StartupInfoLogger.java : 59] Started ClientApplication in 6.247 seconds (JVM running for 7.286)
+2019-08-23 16:33:54,673 [INFO] [main] com.zbl.code.ClientApplication [StartupInfoLogger.java : 50] Starting ClientApplication on DESKTOP-H92G9EF with PID 9168 (D:\work\develop\IdeaProjects\code\code-client\target\classes started by ThinkPad in D:\work\develop\IdeaProjects\code)
+2019-08-23 16:33:54,678 [INFO] [main] com.zbl.code.ClientApplication [SpringApplication.java : 679] The following profiles are active: dev
+2019-08-23 16:33:55,675 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 239] Skipping MapperFactoryBean with name 'operateLogMapper' and 'com.zbl.code.system.dao.OperateLogMapper' mapperInterface. Bean already defined with the same name!
+2019-08-23 16:33:55,675 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 239] Skipping MapperFactoryBean with name 'permissionMapper' and 'com.zbl.code.system.dao.PermissionMapper' mapperInterface. Bean already defined with the same name!
+2019-08-23 16:33:55,675 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 239] Skipping MapperFactoryBean with name 'roleMapper' and 'com.zbl.code.system.dao.RoleMapper' mapperInterface. Bean already defined with the same name!
+2019-08-23 16:33:55,676 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 239] Skipping MapperFactoryBean with name 'rolePermissionMapper' and 'com.zbl.code.system.dao.RolePermissionMapper' mapperInterface. Bean already defined with the same name!
+2019-08-23 16:33:55,676 [WARN] [main] org.mybatis.spring.mapper.ClassPathMapperScanner [ClassPathMapperScanner.java : 166] No MyBatis mapper was found in '[com.zbl.code]' package. Please check your configuration.
+2019-08-23 16:33:55,720 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-23 16:33:55,722 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-23 16:33:55,764 [INFO] [main] o.s.data.repository.config.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
+2019-08-23 16:33:56,212 [INFO] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$107b837e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-23 16:33:56,525 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8100 (http)
+2019-08-23 16:33:56,548 [INFO] [main] org.apache.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-23 16:33:56,548 [INFO] [main] org.apache.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-08-23 16:33:56,554 [INFO] [main] org.apache.catalina.core.AprLifecycleListener [DirectJDKLog.java : 173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\work\JDK8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\JDK8\bin;D:\work\mysql\bin;D:\work\git\to\bin;D:\work\git\Git\cmd;D:\work\maven\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\work\golang\bin;C:\Users\ThinkPad\AppData\Local\Microsoft\WindowsApps;C:\Users\ThinkPad\AppData\Roaming\npm;C:\Users\ThinkPad\go\bin;.]
+2019-08-23 16:33:56,695 [INFO] [main] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/client-api] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-23 16:33:56,695 [INFO] [main] org.springframework.web.context.ContextLoader [ServletWebServerApplicationContext.java : 296] Root WebApplicationContext: initialization completed in 1965 ms
+2019-08-23 16:33:57,199 [INFO] [main] c.a.d.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-23 16:33:57,484 [INFO] [main] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 971] {dataSource-1} inited
+2019-08-23 16:33:58,088 [INFO] [main] o.s.scheduling.concurrent.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-23 16:33:58,191 [WARN] [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [ThymeleafAutoConfiguration.java : 108] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-08-23 16:33:58,231 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-08-23 16:33:58,232 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-08-23 16:33:58,233 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 60] Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-08-23 16:33:58,233 [INFO] [main] tk.mybatis.mapper.autoconfigure.MapperCacheDisabler [MapperCacheDisabler.java : 83] Clear EntityHelper entityTableMap cache.
+2019-08-23 16:33:58,603 [WARN] [main] o.s.b.autoconfigure.freemarker.FreeMarkerAutoConfiguration [FreeMarkerAutoConfiguration.java : 70] Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-08-23 16:33:58,730 [INFO] [main] org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java : 1208] Using default implementation for ThreadExecutor
+2019-08-23 16:33:58,748 [INFO] [main] org.quartz.core.SchedulerSignalerImpl [SchedulerSignalerImpl.java : 61] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-08-23 16:33:58,749 [INFO] [main] org.quartz.core.QuartzScheduler [QuartzScheduler.java : 229] Quartz Scheduler v.2.3.0 created.
+2019-08-23 16:33:58,750 [INFO] [main] org.quartz.simpl.RAMJobStore [RAMJobStore.java : 155] RAMJobStore initialized.
+2019-08-23 16:33:58,752 [INFO] [main] org.quartz.core.QuartzScheduler [QuartzScheduler.java : 294] Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-08-23 16:33:58,752 [INFO] [main] org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java : 1362] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-08-23 16:33:58,753 [INFO] [main] org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java : 1366] Quartz scheduler version: 2.3.0
+2019-08-23 16:33:58,753 [INFO] [main] org.quartz.core.QuartzScheduler [QuartzScheduler.java : 2287] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7f0a133d
+2019-08-23 16:33:59,016 [INFO] [redisMessageListenerContainer-1] io.lettuce.core.EpollProvider [EpollProvider.java : 68] Starting without optional epoll library
+2019-08-23 16:33:59,018 [INFO] [redisMessageListenerContainer-1] io.lettuce.core.KqueueProvider [KqueueProvider.java : 70] Starting without optional kqueue library
+2019-08-23 16:34:00,191 [INFO] [main] org.springframework.scheduling.quartz.SchedulerFactoryBean [SchedulerFactoryBean.java : 726] Starting Quartz Scheduler now
+2019-08-23 16:34:00,192 [INFO] [main] org.quartz.core.QuartzScheduler [QuartzScheduler.java : 547] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-08-23 16:34:00,203 [INFO] [main] o.s.s.annotation.ScheduledAnnotationBeanPostProcessor [ScheduledAnnotationBeanPostProcessor.java : 295] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-08-23 16:34:00,227 [INFO] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [TomcatWebServer.java : 204] Tomcat started on port(s): 8100 (http) with context path '/client-api'
+2019-08-23 16:34:00,231 [INFO] [main] com.zbl.code.ClientApplication [StartupInfoLogger.java : 59] Started ClientApplication in 6.105 seconds (JVM running for 7.232)
