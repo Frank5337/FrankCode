@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="code-client" />
+        <module name="code-common" />
         <module name="code-manager" />
         <module name="code-service" />
         <module name="code-generator" />
-        <module name="code-common" />
+        <module name="code-client" />
       </profile>
     </annotationProcessing>
   </component>
