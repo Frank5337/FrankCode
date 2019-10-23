@@ -3,7 +3,6 @@ import com.zbl.code.common.conditional.ListService;
 import org.junit.After;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 /**
  * @Author: zbl
  * @Date: Created in 15:04 2019/8/27

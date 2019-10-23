@@ -2,3 +2,7 @@
 /code-client/target/
 /code-common/target/
 /code-manager/target/
+/code/logs
+
+*.iml
+*.log

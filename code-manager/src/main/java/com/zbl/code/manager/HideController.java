@@ -2,6 +2,7 @@ package com.zbl.code.manager;
 
 import com.zbl.code.common.pojo.JsonResult;
 import io.swagger.annotations.Api;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,4 +45,9 @@ public class HideController {
         }
         return JsonResult.ok(phone);
     }
+
+    @Resource
+    private RedisTemplate redisTemplate;
+
+
 }
