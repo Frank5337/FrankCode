@@ -1,7 +1,9 @@
 package com.zbl.code.common.component;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -52,5 +54,26 @@ public class RedisCache {
         }
 
         return null;
+    }
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
+    /**
+     * redis SetNx 指令
+     */
+    private boolean setNx(String key, Object val) {
+        return stringRedisTemplate.execute((RedisConnection conn) -> {
+            try {
+                return conn.setNX(stringRedisTemplate.getStringSerializer().serialize(key) ,
+                        stringRedisTemplate.getStringSerializer().serialize(val.toString()));
+            } finally {
+                conn.close();
+            }
+        });
+    }
+
+    private void setNx(String key, Object val, long time) {
+        
     }
 }

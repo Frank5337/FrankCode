@@ -2,3 +2,11 @@
 /code-client/target/
 /code-common/target/
 /code-manager/target/
+/code-service/target/
+/code/logs/
+target
+
+*.iml
+*.log
+*.gz
+*.class
