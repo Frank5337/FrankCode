@@ -3,7 +3,8 @@
 /code-common/target/
 /code-manager/target/
 /code-service/target/
-/code/logs
+/code/logs/
+target
 
 *.iml
 *.log
