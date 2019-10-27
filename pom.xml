@@ -9,6 +9,7 @@
         <module>code-service</module>
         <module>code-manager</module>
         <module>code-generator</module>
+        <module>code-eureka</module>
     </modules>
 
     <groupId>com.zbl</groupId>
@@ -48,6 +49,14 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!--code-->
             <dependency>
                 <groupId>com.zbl</groupId>
@@ -221,10 +230,10 @@
         </dependency>
 
         <!-- redis缓存 -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -247,16 +256,18 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!--
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
+        -->
 
         <!-- session -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- swagger文档 -->
         <dependency>

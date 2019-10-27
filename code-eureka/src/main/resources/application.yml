@@ -1,0 +1,11 @@
+server:
+  port: 6868
+eureka:
+  client:
+#   是否将自己注册到eureka中, 本身就是 无需注册
+    register-with-eureka: false
+#   是否从eureka中获取注册信息
+    fetchRegistry: false
+#   eureka客户端与EUR额卡服务端进行交互的地址
+    serviceUrl:
+      defaultZone: http://127.0.0.1:${server.port}/eureka/

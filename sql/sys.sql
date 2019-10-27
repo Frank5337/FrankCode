@@ -44,7 +44,7 @@ CREATE TABLE `sys_operate_log` (
   KEY `sys_operate_log_resp_code` (`resp_code`) USING BTREE,
   KEY `sys_operate_log_update_time` (`update_time`) USING BTREE,
   KEY `sys_operate_log_create_time` (`create_time`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='操作日志'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='操作日志';
 
 
 DROP TABLE IF EXISTS `sys_role`;
@@ -65,7 +65,7 @@ CREATE TABLE `sys_role` (
   KEY `sys_role_type` (`type`) USING BTREE,
   KEY `sys_role_father_id` (`father_id`) USING BTREE,
   KEY `sys_role_create_id` (`create_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='管理员角色'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='管理员角色';
 
 DROP TABLE IF EXISTS `sys_role_permission`;
 CREATE TABLE `sys_role_permission` (
@@ -80,7 +80,7 @@ CREATE TABLE `sys_role_permission` (
   KEY `sys_role_permission_role_id` (`role_id`) USING BTREE,
   KEY `sys_role_permission_create_time` (`create_time`) USING BTREE,
   KEY `sys_role_permission_update_time` (`update_time`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='角色权限'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='角色权限';
 
 DROP TABLE IF EXISTS `sys_admin`;
 CREATE TABLE `sys_admin` (
@@ -102,7 +102,23 @@ CREATE TABLE `sys_admin` (
   KEY `sys_admin_phone_index` (`phone`) USING BTREE,
   KEY `sys_admin_role_id_index` (`role_id`) USING BTREE,
   KEY `sys_admin_update_time_index` (`update_time`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='管理员'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='管理员';
+
+DROP TABLE IF EXISTS `sys_config`;
+CREATE TABLE `sys_config` (
+  `id` bigint(20) NOT NULL,
+  `sys_key` varchar(100) NOT NULL COMMENT '系统配置键名',
+  `sys_value` varchar(2000) DEFAULT NULL COMMENT '系统配置键值',
+  `remark` varchar(200) DEFAULT NULL COMMENT '备注',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `sys_config_id_uindex` (`id`),
+  KEY `sys_config_sys_key` (`sys_key`),
+  KEY `sys_config_create_time` (`create_time`),
+  KEY `sys_config_update_time` (`update_time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='系统配置'
+
 
 
 

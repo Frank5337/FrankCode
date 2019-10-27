@@ -14,6 +14,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -26,31 +27,31 @@ import java.util.List;
  * @SuppressWarnings("deprecation") 禁止与弃用相关的警告
  * 当我们开启了EbableAspectJAutoProxy后,每次Bean的装配时,都会执行这段逻辑.
  * .proxyTargetClass = true 使用Cglib动态代理, 默认是java的Proxy
- * @Version: $
+ * @Version: $ WebMvcConfigurationSupport
  */
 @Configuration
 @SuppressWarnings("deprecation")
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-public class GlobalAppConfig extends WebMvcConfigurationSupport {
+public class GlobalAppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public AuthInterceptor authInterceptor(){
         return new AuthInterceptor();
     }
 
     @Override
-    protected void addInterceptors(InterceptorRegistry registry) {
+    public void addInterceptors(InterceptorRegistry registry) {
         //这里可以添加多个拦截器
         registry.addInterceptor(authInterceptor()).addPathPatterns("/**");
         super.addInterceptors(registry);
     }
 
     @Override
-    protected void addFormatters(FormatterRegistry registry) {
+    public void addFormatters(FormatterRegistry registry) {
         registry.addConverterFactory(new EnumConverterFactory());
     }
 
     @Override
-    protected void addCorsMappings(CorsRegistry registry) {
+    public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins("*")
                 .allowedMethods("POST", "GET", "PUT", "OPTIONS", "DELETE")
@@ -59,7 +60,7 @@ public class GlobalAppConfig extends WebMvcConfigurationSupport {
     }
 
     @Override
-    protected void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         MappingJackson2HttpMessageConverter messageConverter = new MappingJackson2HttpMessageConverter();
         ObjectMapper objectMapper = new ObjectMapper();
         SimpleModule simpleModule = new SimpleModule();
