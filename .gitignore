@@ -3,6 +3,7 @@
 /code-common/target/
 /code-manager/target/
 /code-service/target/
+/code-generator/target/
 /code/logs/
 target
 
