@@ -1,14 +1,16 @@
 package com.zbl.pooldesign;
 
 import java.util.stream.IntStream;
+
 /**
  * Create By : FanXiaoYun
  * Date      : 2019-10-23
  * Describe  : Create some Task and put them into RequestQueue
+ *
+ * @author wyk
  */
 
-public class TestThread
-{
+public class TestThread {
 
     public static void main(String[] args) {
 
@@ -31,24 +33,16 @@ public class TestThread
         }).start();
 
 
-        new Thread(()->{
+        new Thread(() -> {
 
             ClientServer clientServer = new ClientServer();
-            IntStream.rangeClosed(1,100).forEach(name->new Thread(()->
-                    clientServer.submitRequest(new Request(Thread.currentThread().getName())),String.valueOf(name)).start());
+            IntStream.rangeClosed(1, 100).forEach(name -> new Thread(() ->
+                    clientServer.submitRequest(new Request(Thread.currentThread().getName())), String.valueOf(name)).start());
 
         }).start();
 
 
-
-
-
-
     }
-
-
-
-
 
 
 }

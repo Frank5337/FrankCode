@@ -10,6 +10,7 @@ import javax.persistence.Table;
 
 /**
  * <p>
+ *
  * @author zhangbl
  */
 @Data
@@ -18,9 +19,9 @@ import javax.persistence.Table;
 @Table(name = "sys_config")
 public class Config extends BaseEntity {
     @ApiModelProperty("系统配置键名")
-	private String sysKey;
+    private String sysKey;
     @ApiModelProperty("系统配置键值")
-	private String sysValue;
+    private String sysValue;
     @ApiModelProperty("备注")
-	private String remark;
+    private String remark;
 }

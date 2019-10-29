@@ -20,7 +20,7 @@ public class DemoController {
     private ManagerFeign managerFeign;
 
     @RequestMapping("/test")
-    public JsonResult<String> test(){
+    public JsonResult<String> test() {
         return managerFeign.testDruid();
     }
 }

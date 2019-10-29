@@ -2,18 +2,19 @@ package com.zbl.pooldesign;
 
 import java.util.LinkedList;
 
+/**
+ * @author wyk
+ */
 public class RequestQueue {
     private final LinkedList<Request> queue;
 
-    public int getSize(){
+    public int getSize() {
         return queue.size();
     }
 
-    public Request getRequest(){
+    public Request getRequest() {
         return this.queue.removeLast();
     }
-
-
 
 
     private RequestQueue() {
@@ -25,7 +26,7 @@ public class RequestQueue {
         this.queue.addFirst(request);
     }
 
-    private enum Instance{
+    private enum Instance {
         INSTANCE;
 
         private RequestQueue instance;
@@ -41,7 +42,7 @@ public class RequestQueue {
     }
 
 
-    public static RequestQueue getInstance(){
+    public static RequestQueue getInstance() {
         return Instance.INSTANCE.getInstance();
     }
 

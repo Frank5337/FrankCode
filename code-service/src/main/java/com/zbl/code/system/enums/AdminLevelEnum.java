@@ -4,7 +4,6 @@ import com.zbl.code.common.base.BaseEnum;
 import com.zbl.code.common.util.EnumUtil;
 
 /**
- *
  * @author zbl
  * @date 2019/9/3
  * <p>

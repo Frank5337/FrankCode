@@ -42,8 +42,8 @@ public class ManagerAspect extends BaseAspect {
     @Before("managerPointCut()")
     public void doBefore(JoinPoint joinPoint) throws BaseException {
         //如果不需要管理员登录 或者权限忽略 或者是超管
-        if(!require(joinPoint, RequireAdmin.class) || require(joinPoint, IgnorePermission.class)
-                || getAdminRoleId() == 0L ){
+        if (!require(joinPoint, RequireAdmin.class) || require(joinPoint, IgnorePermission.class)
+                || getAdminRoleId() == 0L) {
             return;
         }
 

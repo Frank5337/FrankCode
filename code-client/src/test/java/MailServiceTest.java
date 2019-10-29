@@ -21,7 +21,7 @@ public class MailServiceTest {
     private MailService mailService;
 
     @Test
-    public void test01() throws Exception{
+    public void test01() throws Exception {
         String to = "877910220@qq.com";
         String subject = "测试邮件";
         String content = "hello this is simple mail";
@@ -29,7 +29,7 @@ public class MailServiceTest {
     }
 
     @Test
-    public void test02() throws Exception{
+    public void test02() throws Exception {
         String to = "877910220@qq.com";
         String subject = "测试html邮件";
         String content = "<html>\n" +
@@ -42,7 +42,7 @@ public class MailServiceTest {
     }
 
     @Test
-    public void test03() throws Exception{
+    public void test03() throws Exception {
         String to = "877910220@qq.com";
         String subject = "测试带附件的邮件";
         String content = "有附件，请查收！";
@@ -51,7 +51,7 @@ public class MailServiceTest {
     }
 
     @Test
-    public void test04() throws Exception{
+    public void test04() throws Exception {
         String rscId = "ne07";
         String to = "877910220@qq.com";
         String subject = "测试：这是有图片的邮件";

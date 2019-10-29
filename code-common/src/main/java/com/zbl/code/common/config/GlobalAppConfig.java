@@ -13,7 +13,6 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.math.BigInteger;
@@ -34,7 +33,7 @@ import java.util.List;
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class GlobalAppConfig extends WebMvcConfigurerAdapter {
     @Bean
-    public AuthInterceptor authInterceptor(){
+    public AuthInterceptor authInterceptor() {
         return new AuthInterceptor();
     }
 

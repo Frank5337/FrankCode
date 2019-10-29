@@ -29,7 +29,8 @@ public class HideController {
     private DataSource dataSource;
 
     /**
-     *  测试Druid sql监控
+     * 测试Druid sql监控
+     *
      * @return phone
      */
     @GetMapping
@@ -40,7 +41,7 @@ public class HideController {
         String sql = "select phone from uc_user limit 1";
         ResultSet res = statement.executeQuery(sql);
         String phone = "";
-        while (res.next()){
+        while (res.next()) {
             phone = res.getString("phone");
         }
         return JsonResult.ok(phone);

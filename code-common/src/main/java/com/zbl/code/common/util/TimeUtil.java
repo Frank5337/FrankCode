@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * @Author: zbl
  * @Date: Created in 17:11 2019/8/20
- * @Description:  时间工具类
+ * @Description: 时间工具类
  * @Version: $
  */
 public class TimeUtil {
@@ -56,8 +56,8 @@ public class TimeUtil {
         return todayEnd.getTime();
     }
 
-    public static Long getSecondShort(Date fromDate, Date endDate){
-        endDate = endDate == null? new Date() : endDate;
-        return (endDate.getTime() - fromDate.getTime())/1000;
+    public static Long getSecondShort(Date fromDate, Date endDate) {
+        endDate = endDate == null ? new Date() : endDate;
+        return (endDate.getTime() - fromDate.getTime()) / 1000;
     }
 }

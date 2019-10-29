@@ -25,8 +25,8 @@ public class BaseController {
     /**
      * @InitBinder 用于在@Controller 标注的方法上,表示为当前控制器注册一个属性编辑器,只对当前Controller有效
      * @InitBinder 标注的方法必须有一个参数WebDataBinder , 所谓的属性编辑器可以理解为就是完成参数绑定
-     *             ServletRequestDataBinder extends WebDataBinder
-     *             转换 Date 的格式
+     * ServletRequestDataBinder extends WebDataBinder
+     * 转换 Date 的格式
      */
     @InitBinder
     public void initBinder(ServletRequestDataBinder binder) {

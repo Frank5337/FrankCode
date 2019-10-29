@@ -13,7 +13,7 @@ import java.util.List;
  * 管理员角色 服务类
  */
 public interface RoleService {
-    
+
     void save(Long createId, Long fatherId, String name, String remark);
 
     void update(Long createId, Long id, String name, String remark);

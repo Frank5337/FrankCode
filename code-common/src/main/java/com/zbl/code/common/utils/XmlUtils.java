@@ -3,8 +3,7 @@
  * File Name:Xml.java
  * Package Name:cn.swiftpass.pay.protocol
  * Date:2014-8-10下午10:48:21
- *
-*/
+ */
 
 package com.zbl.code.common.utils;
 
@@ -22,29 +21,29 @@ import java.util.*;
  * ClassName:Xml
  * Function: XML的工具方法
  * Date:     2014-8-10 下午10:48:21 
- * @author    
+ * @author
  */
 public class XmlUtils {
-    
+
     /** <一句话功能简述>
      * <功能详细描述>request转字符串
      * @param request
      * @return
      * @see [类、类#方法、类#成员]
      */
-    public static String parseRequst(HttpServletRequest request){
+    public static String parseRequst(HttpServletRequest request) {
         String body = "";
         try {
             ServletInputStream inputStream = request.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-            while(true){
+            while (true) {
                 String info = br.readLine();
-                if(info == null){
+                if (info == null) {
                     break;
                 }
-                if(body == null || "".equals(body)){
+                if (body == null || "".equals(body)) {
                     body = info;
-                }else{
+                } else {
                     body += info;
                 }
             }
@@ -52,19 +51,19 @@ public class XmlUtils {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }            
+        }
         return body;
     }
-    
+
     public static String parseXML(SortedMap<String, String> parameters) {
         StringBuffer sb = new StringBuffer();
         sb.append("<xml>");
         Set es = parameters.entrySet();
         Iterator it = es.iterator();
         while (it.hasNext()) {
-            Map.Entry entry = (Map.Entry)it.next();
-            String k = (String)entry.getKey();
-            String v = (String)entry.getValue();
+            Map.Entry entry = (Map.Entry) it.next();
+            String k = (String) entry.getKey();
+            String v = (String) entry.getValue();
             if (null != v && !"".equals(v) && !"appkey".equals(k)) {
                 sb.append("<" + k + ">" + parameters.get(k) + "</" + k + ">\n");
             }
@@ -75,7 +74,7 @@ public class XmlUtils {
 
     /**
      * 从request中获得参数Map，并返回可读的Map
-     * 
+     *
      * @param request
      * @return
      */
@@ -92,31 +91,31 @@ public class XmlUtils {
             entry = (Map.Entry) entries.next();
             name = (String) entry.getKey();
             Object valueObj = entry.getValue();
-            if(null == valueObj){
+            if (null == valueObj) {
                 value = "";
-            }else if(valueObj instanceof String[]){
-                String[] values = (String[])valueObj;
-                for(int i=0;i<values.length;i++){
+            } else if (valueObj instanceof String[]) {
+                String[] values = (String[]) valueObj;
+                for (int i = 0; i < values.length; i++) {
                     value = values[i] + ",";
                 }
-                value = value.substring(0, value.length()-1);
-            }else{
+                value = value.substring(0, value.length() - 1);
+            } else {
                 value = valueObj.toString();
             }
             returnMap.put(name, value.trim());
         }
         return returnMap;
     }
-    
+
     /**
      * 转XMLmap
-     * @author  
+     * @author
      * @param xmlBytes
      * @param charset
      * @return
      * @throws Exception
      */
-    public static Map<String, String> toMap(byte[] xmlBytes,String charset) throws Exception{
+    public static Map<String, String> toMap(byte[] xmlBytes, String charset) throws Exception {
         SAXReader reader = new SAXReader(false);
         InputSource source = new InputSource(new ByteArrayInputStream(xmlBytes));
         source.setEncoding(charset);
@@ -124,28 +123,28 @@ public class XmlUtils {
         Map<String, String> params = XmlUtils.toMap(doc.getRootElement());
         return params;
     }
-    
+
     /**
      * 转MAP
-     * @author  
+     * @author
      * @param element
      * @return
      */
-    public static Map<String, String> toMap(Element element){
+    public static Map<String, String> toMap(Element element) {
         Map<String, String> rest = new HashMap<String, String>();
         List<Element> els = element.elements();
-        for(Element el : els){
+        for (Element el : els) {
             rest.put(el.getName().toLowerCase(), el.getTextTrim());
         }
         return rest;
     }
-    
-    public static String toXml(Map<String, String> params){
+
+    public static String toXml(Map<String, String> params) {
         StringBuilder buf = new StringBuilder();
         List<String> keys = new ArrayList<String>(params.keySet());
         Collections.sort(keys);
         buf.append("<xml>");
-        for(String key : keys){
+        for (String key : keys) {
             buf.append("<").append(key).append(">");
             buf.append("<![CDATA[").append(params.get(key)).append("]]>");
             buf.append("</").append(key).append(">\n");

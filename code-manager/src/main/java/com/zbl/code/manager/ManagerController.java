@@ -8,8 +8,6 @@ import com.zbl.code.common.pojo.ExtraPageData;
 import com.zbl.code.common.pojo.JsonResult;
 import com.zbl.code.common.pojo.ManagerData;
 import com.zbl.code.common.util.RequestUtil;
-import com.zbl.code.common.util.StringUtil;
-import com.zbl.code.system.enums.AdminLevelEnum;
 import com.zbl.code.system.service.ConfigService;
 import com.zbl.code.system.service.RolePermissionService;
 
@@ -18,7 +16,6 @@ import java.util.List;
 import java.util.function.Function;
 
 /**
- *
  * @author hook
  * @date 2018/5/15
  * <p>

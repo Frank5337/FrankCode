@@ -11,7 +11,7 @@ import com.zbl.code.common.base.BaseEnum;
 public class EnumUtil {
 
     public static <T extends BaseEnum> T getEnum(Integer code, Class<T> cls) {
-        if(code == null){
+        if (code == null) {
             return null;
         }
 

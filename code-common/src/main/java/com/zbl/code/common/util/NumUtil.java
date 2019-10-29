@@ -11,6 +11,7 @@ import java.text.DecimalFormat;
 public class NumUtil {
     /**
      * 二进制转十进制
+     *
      * @param binaryNumber 二进制数字
      * @return 十进制
      */
@@ -34,15 +35,16 @@ public class NumUtil {
 
     /**
      * 位数不够补0
+     *
      * @param zeroNum 几位数 如 5位数 不够补0, "00000"
-     * @param num 要补0的数字
+     * @param num     要补0的数字
      * @return 补0结果
      */
-    public static String repairZero(String zeroNum, String num){
+    public static String repairZero(String zeroNum, String num) {
         return new DecimalFormat(zeroNum).format(Integer.parseInt(num));
     }
 
-    public static String repairZero(String zeroNum, Integer num){
+    public static String repairZero(String zeroNum, Integer num) {
         return new DecimalFormat(zeroNum).format(num);
     }
 
@@ -53,7 +55,6 @@ public class NumUtil {
         System.out.println(Integer.toBinaryString(21));
         System.out.println(new DecimalFormat("000000").format(Integer.parseInt("10101")));
     }
-
 
 
 }

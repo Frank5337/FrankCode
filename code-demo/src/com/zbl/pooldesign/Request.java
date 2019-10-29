@@ -1,8 +1,11 @@
 package com.zbl.pooldesign;
+
 /**
  * Create By : FanXiaoYun
  * Date      : 2019-10-23
  * Describe  : simulate Request
+ *
+ * @author wyk
  */
 public class Request {
 

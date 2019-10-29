@@ -32,7 +32,8 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送简单邮件
-     * @param to 接收者
+     *
+     * @param to      接收者
      * @param subject 主题
      * @param content 发送内容
      */
@@ -48,13 +49,14 @@ public class MailServiceImpl implements MailService {
             javaMailSender.send(mailMessage);
             log.info("简单邮件已发送");
         } catch (Exception e) {
-            log.error("发送简单邮件出现异常:"+e);
+            log.error("发送简单邮件出现异常:" + e);
         }
     }
 
     /**
      * 发送HTML格式邮件
-     * @param to 接收者
+     *
+     * @param to      接收者
      * @param subject 主题
      * @param content 发送内容
      */
@@ -72,11 +74,10 @@ public class MailServiceImpl implements MailService {
 
             javaMailSender.send(message);
             log.info("html邮件发送成功");
-        } catch (MessagingException e){
+        } catch (MessagingException e) {
             log.error("发送html邮件时发生异常: " + e);
         }
     }
-
 
 
     /**
@@ -107,8 +108,9 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送带静态资源的邮件
+     *
      * @param rscPath 图片路径
-     * @param rscId 和图片路径绑定 helper.addInline(rscId, res);
+     * @param rscId   和图片路径绑定 helper.addInline(rscId, res);
      */
     @Override
     public void sendInlineResourceMail(String to, String subject, String content, String rscPath, String rscId) {
@@ -127,7 +129,7 @@ public class MailServiceImpl implements MailService {
             javaMailSender.send(message);
             log.info("嵌入静态资源的邮件已经发送.");
         } catch (MessagingException e) {
-            log.error("发送嵌入静态资源的邮件时发生异常! " + e );
+            log.error("发送嵌入静态资源的邮件时发生异常! " + e);
         }
     }
 

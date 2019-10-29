@@ -227,7 +227,7 @@ public class ExcelUtil {
              col2 - the column (0 based) of the second cell.//图片右下角所在列
              row2 - the row (0 based) of the second cell.//图片右下角所在行
              */
-            HSSFClientAnchor anchor = new HSSFClientAnchor(100, 0, 0, 0,(short) 2, 2, (short) 5, 8);
+            HSSFClientAnchor anchor = new HSSFClientAnchor(100, 0, 0, 0, (short) 2, 2, (short) 5, 8);
             //插入图片
             patriarch.createPicture(anchor, wb.addPicture(byteArrayOut.toByteArray(), HSSFWorkbook.PICTURE_TYPE_JPEG));
             fileOut = new FileOutputStream("e:/excel.xls");

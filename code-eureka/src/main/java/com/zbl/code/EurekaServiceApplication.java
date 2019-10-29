@@ -14,7 +14,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class EurekaServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServiceApplication.class ,args);
+        SpringApplication.run(EurekaServiceApplication.class, args);
         System.out.println("注册中心启动成功");
     }
 }

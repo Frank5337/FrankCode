@@ -9,7 +9,7 @@ import com.zbl.code.common.util.EnumUtil;
  * @Description: 错误码及错误信息
  * @Version: $
  */
-public enum  ErrorCodeEnum implements BaseEnum {
+public enum ErrorCodeEnum implements BaseEnum {
     GL_DEFAULT(100000000, "服务器繁忙，请稍后操作"),
     GL_ID_BAD_CLOCK(100000001, "时钟回拨"),
     GL_ID_BAD_WORK_ID(100000002, "工作机器id错误"),

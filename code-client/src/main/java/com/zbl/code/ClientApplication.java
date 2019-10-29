@@ -32,10 +32,11 @@ public class ClientApplication {
 
     /**
      * Long 类型转为字符串
+     *
      * @return Jackson2ObjectMapperBuilderCustomizer
      */
     @Bean("jackson2ObjectMapperBuilderCustomizer")
-    public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer(){
+    public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer() {
         return jacksonObjectMapperBuilder -> jacksonObjectMapperBuilder.serializerByType(Long.class,
                 ToStringSerializer.instance).serializerByType(Long.TYPE, ToStringSerializer.instance);
     }

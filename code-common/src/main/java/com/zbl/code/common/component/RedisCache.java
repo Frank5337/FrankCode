@@ -65,7 +65,7 @@ public class RedisCache {
     private boolean setNx(String key, Object val) {
         return stringRedisTemplate.execute((RedisConnection conn) -> {
             try {
-                return conn.setNX(stringRedisTemplate.getStringSerializer().serialize(key) ,
+                return conn.setNX(stringRedisTemplate.getStringSerializer().serialize(key),
                         stringRedisTemplate.getStringSerializer().serialize(val.toString()));
             } finally {
                 conn.close();
@@ -74,6 +74,6 @@ public class RedisCache {
     }
 
     private void setNx(String key, Object val, long time) {
-        
+
     }
 }

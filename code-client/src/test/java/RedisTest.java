@@ -24,11 +24,11 @@ public class RedisTest {
     private RedisTemplate redisTemplate;
 
     @Test
-    public void test01() throws Exception{
-        stringRedisTemplate.opsForValue().set("Lp","利普");
+    public void test01() throws Exception {
+        stringRedisTemplate.opsForValue().set("Lp", "利普");
         //断言 如果相等  继续向下执行, 如果不相等 抛异常
         try {
-            Assert.assertEquals("利普",stringRedisTemplate.opsForValue().get("Lp"));
+            Assert.assertEquals("利普", stringRedisTemplate.opsForValue().get("Lp"));
             System.out.println(stringRedisTemplate.opsForValue().get("Lp"));
         } catch (Error e) {
             e.printStackTrace();

@@ -15,7 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import javax.annotation.Resource;
 
 /**
- *
  * @author zbl
  * @date 2018/7/25
  * <p>

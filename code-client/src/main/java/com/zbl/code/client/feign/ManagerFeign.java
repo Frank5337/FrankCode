@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface ManagerFeign {
 
     /**
-     *  测试Druid sql监控
+     * 测试Druid sql监控
+     *
      * @return phone
      */
     @GetMapping("/Hide")

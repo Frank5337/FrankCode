@@ -37,14 +37,14 @@ public class RequestUtil {
     /**
      * 获取当前请求参数
      */
-    public static String  getParams(HttpServletRequest req) {
+    public static String getParams(HttpServletRequest req) {
         Map<String, String[]> params = req.getParameterMap();
         StringBuilder paramsBuilder = new StringBuilder();
         boolean first = true;
         for (String key : params.keySet()) {
             String[] values = params.get(key);
             for (String value : values) {
-                if (key != null && !key.contains("password")){
+                if (key != null && !key.contains("password")) {
                     if (!first) {
                         paramsBuilder.append("&");
                     }

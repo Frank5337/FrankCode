@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @Table(name = "sys_role_permission")
 public class RolePermission extends BaseEntity {
     @ApiModelProperty("角色id")
-	private Long roleId;
+    private Long roleId;
     @ApiModelProperty("权限id")
-	private Long permissionId;
+    private Long permissionId;
 }

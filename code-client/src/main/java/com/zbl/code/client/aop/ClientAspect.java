@@ -26,6 +26,6 @@ public class ClientAspect extends BaseAspect {
      */
     @AfterReturning(pointcut = "clientPointCut()", returning = "rtnVal")
     public void afterReturning(JoinPoint joinPoint, Object rtnVal) {
-        
+
     }
 }

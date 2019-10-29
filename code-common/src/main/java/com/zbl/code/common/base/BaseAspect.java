@@ -30,7 +30,7 @@ public class BaseAspect {
 
     /**
      * 获取控制器名称
-     *  joinPoint.getSignature() 获取封装了署名信息的对象,在该对象中可以获取到目标方法名,所属类的Class等信息
+     * joinPoint.getSignature() 获取封装了署名信息的对象,在该对象中可以获取到目标方法名,所属类的Class等信息
      */
     protected String getCtrl(JoinPoint joinPoint) {
         return joinPoint.getSignature().getDeclaringType().getSimpleName();
@@ -39,7 +39,7 @@ public class BaseAspect {
     /**
      * 获取方法名称
      */
-    protected  String getMethod(JoinPoint joinPoint) {
+    protected String getMethod(JoinPoint joinPoint) {
         return joinPoint.getSignature().getName();
     }
 

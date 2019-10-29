@@ -106,7 +106,7 @@ public class IdCardUtil {
 
     public static Date getBirth(String idCardNo) {
         //noinspection deprecation
-        return new Date(getYear(idCardNo) - 1900, getMonth(idCardNo)-1, getDay(idCardNo));
+        return new Date(getYear(idCardNo) - 1900, getMonth(idCardNo) - 1, getDay(idCardNo));
     }
 
     public static SexTypeEnum getSex(String idCardNo) {
