@@ -1,6 +1,8 @@
 server:
   port: 8101
 spring:
+  application:
+    name: code-manager
   devtools:
     restart:
       # 热部署，每次代码有改动就自动重启，原来的restart ClassLoader 被丢弃，重新创建一个restart ClassLoader，
@@ -21,3 +23,7 @@ spring:
 zbl-code:
   worker-id: 0
   data-center-id: 0
+eureka:
+  client:
+    service-url:
+      defaule-zone: http://${eureka.instanse.hostname}:8761/eureka/

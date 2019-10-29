@@ -1,6 +1,11 @@
 server:
-  port: 6868
+  port: 8761
+spring:
+  application:
+    name: eureka-server
 eureka:
+  instance:
+    hostname: localhost
   client:
 #   是否将自己注册到eureka中, 本身就是 无需注册
     register-with-eureka: false
