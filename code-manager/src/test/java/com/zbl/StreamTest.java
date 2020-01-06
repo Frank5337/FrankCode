@@ -107,5 +107,10 @@ public class StreamTest {
         System.out.println(studentList);
     }
 
+    @Test
+    public void test07() throws Exception{
+        System.out.println("abc".substring(2,3));
+    }
+
 
 }
