@@ -6,6 +6,7 @@ package com.zbl.demo;
  * @Description: go code
  * @Version: $
  */
+@SuppressWarnings("all")
 public class DemoTest02 {
     public static void main(String[] args) {
         String str = "　JQE11SV0BR-\n" +
