@@ -1,5 +1,7 @@
 package com.zbl.testReflection;
 
+import org.junit.Test;
+
 /**
  * @Author: zbl
  * @Date: Created in 11:50 2020/1/21
@@ -19,17 +21,26 @@ public class TestJDKClassLoader {
      */
     public static void main(String[] args) {
         //Bootstrap ClassLoader
-        System.out.println(String.class.getClassLoader());
+        //System.out.println(String.class.getClassLoader());
         //extesion
-        System.out.println(com.sun.crypto.provider.DESKeyFactory.class.getClassLoader());
-        System.out.println(com.sun.crypto.provider.DESKeyFactory.class.getClassLoader().getClass().getName());
+        //System.out.println(com.sun.crypto.provider.DESKeyFactory.class.getClassLoader());
+        //System.out.println(com.sun.crypto.provider.DESKeyFactory.class.getClassLoader().getClass().getName());
         //最核心的 把其他的ClassLoader loade 进来
         //application APPClassLoader
-        System.out.println(TestJDKClassLoader.class.getClassLoader().getClass().getName());
+        //System.out.println(TestJDKClassLoader.class.getClassLoader().getClass().getName());
         //系统的 ClassLoader 就是 appClassLoader
-        System.out.println(ClassLoader.getSystemClassLoader().getClass().getName());
+        //System.out.println(ClassLoader.getSystemClassLoader().getClass().getName());
+        ClassLoader c = TestJDKClassLoader.class.getClassLoader();
+        while (c != null) {
+            System.out.println(c.getClass().getName());
+            c = c.getParent();
+        }
 
+    }
 
+    @Test
+    public void test01() throws Exception{
+        System.out.print("Java\n");
     }
 
 }
