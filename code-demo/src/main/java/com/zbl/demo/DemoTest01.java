@@ -1,5 +1,7 @@
 package com.zbl.demo;
 
+import org.junit.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -32,5 +34,23 @@ public class DemoTest01 {
         // 将会输出 2019，使用 ISO 8601
         //System.out.println(DateFormatUtils.format(date20191229, "YYYY", Locale.FRANCE));
     }
+
+    @Test
+    public void test01() throws Exception{
+
+    }
+
+  /*  private static String getInternetIp() throws Exception{
+        try {
+            // 打开连接
+            Document doc = Jsoup.connect("http://chaipip.com/").get();
+            Elements eles = doc.select("#ip");
+            return eles.attr("value");
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return InetAddress.getLocalHost().getHostAddress();
+    }*/
 
 }
