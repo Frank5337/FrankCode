@@ -1,0 +1,73 @@
+server:
+  port: 8110
+#  servlet:
+#    context-path: /shiro-api/
+spring:
+  profiles:
+    active: @profileActive@
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+  application:
+    name: code-shiro
+      #  devtools:
+      #    restart:
+      # 热部署，每次代码有改动就自动重启，原来的restart ClassLoader 被丢弃，重新创建一个restart ClassLoader，
+    # 由于需要加载的类相比较少，所以实现了较快的重启时间。
+  #      enabled: true
+  #      additional-paths: src/main/java
+  #      exclude: WEB-INF/**
+  datasource:
+    url: jdbc:mysql://127.0.0.1/code-shiro?characterEncoding=utf-8&useSSL=false&useAffectedRows=true&allowMultiQueries=true
+    username: root
+    password: zbl5337
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 1
+      min-idle: 3
+      max-active: 20
+      # 配置获取连接等待超时的时间
+      max-wait: 60000
+      # 配置间隔多久才进行一次检测, 检测需要关闭的空闲连接, 单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 配置一个连接在池中最小生存的时间, 单位是毫秒
+      min-evictable-idle-time-millis: 30000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # 打开PSCache, 并且制定每个连接上PSCache的大小
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      # 配置监控统计拦截的filters, 去掉后监控界面sql无法统计, 'wall'用于防火墙
+      filters: stat,wall,slf4j
+      # 通过connectProperties属性来打开mergeSql功能, 慢sql记录
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      # 合并多个DruidDataSource的监控数据
+      # useGlobalDataSourceStat: true
+      #  redis:
+      #    host: 47.99.69.28
+      #    port: 6379
+      #    password: zbl5337
+      #zbl-code:
+      #  worker-id: 0
+      #  data-center-id: 0
+      #eureka:
+      #  client:
+      #    service-url:
+      #      defaule-zone: http://${eureka.instanse.hostname}:6868/eureka/
+      # 开启熔断器
+      #feign:
+      #  hystrix:
+      #    enabled: true
+mybatis:
+  type-aliases-package: com.zbl.pojo
+  mapper-locations: classpath*:com/zbl/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+#mapper:
+#  mappers: com.zbl.mapper
+#  not-empty: false
+#  identity: MYSQL
+
