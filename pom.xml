@@ -10,6 +10,7 @@
         <module>code-manager</module>
         <module>code-generator</module>
         <module>code-eureka</module>
+        <module>code-shiro</module>
     </modules>
 
     <groupId>com.zbl</groupId>
