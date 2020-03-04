@@ -1,5 +1,7 @@
 package com.zbl.prototype;
 
+import org.junit.Test;
+
 /**
  * @Author: zbl
  * @Date: Created in 14:52 2020/2/25
@@ -15,7 +17,7 @@ package com.zbl.prototype;
  *               需要区分深克隆与浅克隆
  * @Version: $
  */
-public class Test {
+public class Prototype {
 
     public static void main(String[] args) throws CloneNotSupportedException {
         Person p1 = new Person();
@@ -28,6 +30,19 @@ public class Test {
         p1.lc.street = "hz";
         System.out.println("p1: " + p1.lc);
         System.out.println("p2: " + p2.lc);
+    }
+
+    @Test
+    public void test01() throws Exception{
+        int[] arr = {1,2,3};
+        double[] arr2 = {1.1,2.2,3.3};
+        for (int i = 0; i < arr.length ; i++) {
+            System.out.println(arr[i]);
+        }
+        System.out.println("--------------------");
+        for (int i = 0; i < arr.length ; ++i) {
+            System.out.println(arr[i]);
+        }
     }
 
 }

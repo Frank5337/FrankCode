@@ -1,6 +1,5 @@
 package com.zbl.config;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import com.zbl.pojo.User;
 import com.zbl.service.UserService;
 import org.apache.shiro.SecurityUtils;
@@ -11,6 +10,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @Date: 15:52 2020/3/1
  * @Description: 自定义Realm
  */
-public class UserRealm extends AuthorizingRealm {
+public class ShiroRealm extends AuthorizingRealm {
 
     @Autowired
     private UserService userService;
@@ -41,9 +41,9 @@ public class UserRealm extends AuthorizingRealm {
 
         Session session = subject.getSession();
         session.setAttribute("loginUser", user);
-
+        userToken.setRememberMe(true);
         //密码认证
-        return new SimpleAuthenticationInfo(user , user.getPwd(),  "");
+        return new SimpleAuthenticationInfo(user , user.getPwd(), ByteSource.Util.bytes(user.getName() + user.getSalt()),  getName());
     }
 
     //授权 权限

@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+package com.zbl.quickstart;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;

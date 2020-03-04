@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * @Author: zbl
  * @Date: 17:02 2020/3/1
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class User implements Serializable {
 
     private Integer id;
 
@@ -21,4 +23,6 @@ public class User {
     private String pwd;
 
     private String perms;
+
+    private String salt;
 }
