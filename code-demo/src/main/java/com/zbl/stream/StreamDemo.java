@@ -195,6 +195,53 @@ public class StreamDemo {
         System.out.println(Stream.of(str.split(",")).map(Integer::valueOf).mapToInt(x->x).sum());
     }
 
+    @Test
+    public void test19() throws Exception{
+        List<String> list = Stream.of("aa", "aa", "bb", "cc").distinct().collect(Collectors.toList());
+        System.out.println(list);
+    }
+
+    /**
+     * distinct比较的是hashcode
+     * @throws Exception
+     */
+    @Test
+    public void test20() throws Exception{
+        List<User> list = Stream.of(
+                new User(1, "aa"),
+                new User(1, "aa"),
+                new User(3, "bb"),
+                new User(4, "cc")).distinct().collect(Collectors.toList());
+        System.out.println(list);
+    }
+
+    @Test
+    public void test21() throws Exception{
+        List<User1> list = Stream.of(
+                new User1(1, "aa"),
+                new User1(2, "aa"),
+                new User1(3, "bb"),
+                new User1(4, "cc")).distinct().collect(Collectors.toList());
+        System.out.println(list);
+    }
+
+    /**
+     * 对list中的类的某个属性去重
+     * @throws Exception
+     */
+    @Test
+    public void test22() throws Exception{
+        List<User> list = Stream.of(
+                new User(1, "aa"),
+                new User(1, "aa"),
+                new User(3, "bb"),
+                new User(4, "cc")).
+                collect(Collectors.collectingAndThen(Collectors.toCollection(
+                        () -> new TreeSet<>(Comparator.comparing(User::getName))),
+                        ArrayList::new) );
+        System.out.println(list);
+    }
+
 
 
 

@@ -1,6 +1,5 @@
 package com.zbl.test;
 
-import java.util.Collections;
 import java.util.LinkedList;
 
 /**
