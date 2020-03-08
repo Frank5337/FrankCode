@@ -3,6 +3,8 @@
 2：同上，B线程是否可以同时执行同一个对象中的另一个同步方法？
 3：线程抛出异常会释放锁吗？
 4：volatile和synchronized区别？
+   volatile 只保证可见性 不保证原子性
+   synchronized 都保证 效率比volatile低不少   ++操作不具备原子性
 5：写一个程序，证明AtomXXX类比synchronized更高效
 6：AtomXXX类可以保证可见性吗？请写一个程序来证明
 7：写一个程序证明AtomXXX类的多个方法并不构成原子性
