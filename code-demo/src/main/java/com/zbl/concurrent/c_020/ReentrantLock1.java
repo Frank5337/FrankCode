@@ -1,13 +1,18 @@
-/**
- * reentrantlock�������synchronized
- * ����������m1����this,ֻ��m1ִ����ϵ�ʱ��,m2����ִ��
- * �����Ǹ�ϰsynchronized��ԭʼ������
- * @author mashibing
- */
 package com.zbl.concurrent.c_020;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * reentrantlock 用于替代synchronized
+ * 本例中由于m1锁定this,只有m1执行完毕的时候,m2才能执行
+ * 这里是复习synchronized最原始的语义
+ * @author mashibing
+ *
+ * java高并发主要3块知识点
+ * 同步器 synchronizer
+ * 同步容器 CurrentMap CurrentList CopyOnWrite ....
+ * ThreadPool , executor future ...
+ */
 public class ReentrantLock1 {
 	synchronized void m1() {
 		for(int i=0; i<10; i++) {

@@ -1,19 +1,19 @@
-/**
- * reentrantlock�������synchronized
- * ����m1����this,ֻ��m1ִ����ϵ�ʱ��,m2����ִ��
- * �����Ǹ�ϰsynchronized��ԭʼ������
- * 
- * ʹ��reentrantlock�������ͬ���Ĺ���
- * ��Ҫע����ǣ�����Ҫ����Ҫ����Ҫ�ֶ��ͷ�������Ҫ������˵���飩
- * ʹ��syn�����Ļ���������쳣��jvm���Զ��ͷ���������lock�����ֶ��ͷ�������˾�����finally�н��������ͷ�
- * @author mashibing
- */
 package com.zbl.concurrent.c_020;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * reentrantlock用于替代synchronized
+ * 由于m1锁定this,只有m1执行完毕的时候,m2才能执行
+ * 这里是复习synchronized最原始的语义
+ *
+ * 使用reentrantlock可以完成同样的功能
+ * 需要注意的是，必须要必须要必须要手动释放锁（重要的事情说三遍）
+ * 使用syn锁定的话如果遇到异常，jvm会自动释放锁，但是lock必须手动释放锁，因此经常在finally中进行锁的释放
+ * @author mashibing
+ */
 public class ReentrantLock2 {
 	Lock lock = new ReentrantLock();
 

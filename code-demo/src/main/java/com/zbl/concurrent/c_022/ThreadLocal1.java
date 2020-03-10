@@ -1,12 +1,12 @@
-/**
- * ThreadLocal�ֲ߳̾�����
- * 
- * @author ��ʿ��
- */
 package com.zbl.concurrent.c_022;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * ThreadLocal线程局部变量
+ *
+ * @author 马士兵
+ */
 public class ThreadLocal1 {
 	volatile static Person p = new Person();
 	
