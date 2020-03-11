@@ -45,4 +45,6 @@ public class ThreadLocal2 {
 	}
 }
 
+//线程的创建方法 继续thread / 实现runnable接口 实现run / 实现Callable接口
+
 

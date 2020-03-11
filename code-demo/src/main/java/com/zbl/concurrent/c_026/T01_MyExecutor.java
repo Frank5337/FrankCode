@@ -1,10 +1,10 @@
-/**
- * ��ʶExecutor
- */
 package com.zbl.concurrent.c_026;
 
 import java.util.concurrent.Executor;
 
+/**
+ * 认识Executor
+ */
 public class T01_MyExecutor implements Executor {
 
 	public static void main(String[] args) {

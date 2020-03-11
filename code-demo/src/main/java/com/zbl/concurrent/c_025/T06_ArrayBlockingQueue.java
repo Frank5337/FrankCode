@@ -5,7 +5,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 public class T06_ArrayBlockingQueue {
-
+	//有界队列
 	static BlockingQueue<String> strs = new ArrayBlockingQueue<>(10);
 
 	static Random r = new Random();
@@ -15,10 +15,10 @@ public class T06_ArrayBlockingQueue {
 			strs.put("a" + i);
 		}
 		
-		strs.put("aaa"); //���˾ͻ�ȴ�����������
-		//strs.add("aaa");
-		//strs.offer("aaa");
-		//strs.offer("aaa", 1, TimeUnit.SECONDS);
+		strs.put("aaa"); //满了就会等待，程序阻塞
+		//strs.add("aaa");  //满了会异常
+		//strs.offer("aaa");//满了不会异常 返回boolean
+		//strs.offer("aaa", 1, TimeUnit.SECONDS);//按时间段进行阻塞
 		
 		System.out.println(strs);
 	}

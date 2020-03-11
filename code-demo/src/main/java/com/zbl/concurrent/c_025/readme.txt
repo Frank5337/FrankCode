@@ -1,5 +1,5 @@
-×Ü½á£º
-1£º¶ÔÓÚmap/setµÄÑ¡ÔñÊ¹ÓÃ
+æ€»ç»“ï¼š
+1ï¼šå¯¹äºŽmap/setçš„é€‰æ‹©ä½¿ç”¨
 HashMap
 TreeMap
 LinkedHashMap
@@ -8,9 +8,9 @@ Hashtable
 Collections.sychronizedXXX
 
 ConcurrentHashMap
-ConcurrentSkipListMap 
+ConcurrentSkipListMap
 
-2£º¶ÓÁÐ
+2ï¼šé˜Ÿåˆ—
 ArrayList
 LinkedList
 Collections.synchronizedXXX
@@ -22,6 +22,6 @@ Queue
 		ArrayBQ
 		TransferQueue
 		SynchronusQueue
-	DelayQueueÖ´ÐÐ¶¨Ê±ÈÎÎñ
+	DelayQueueæ‰§è¡Œå®šæ—¶ä»»åŠ¡
 		
 	

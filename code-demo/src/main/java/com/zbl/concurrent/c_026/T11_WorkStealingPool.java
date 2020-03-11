@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.zbl.concurrent.c_026;
 
 import java.io.IOException;
@@ -18,8 +15,8 @@ public class T11_WorkStealingPool {
 		service.execute(new R(2000));
 		service.execute(new R(2000)); //daemon
 		service.execute(new R(2000));
-		
-		//���ڲ������Ǿ����̣߳��ػ��̡߳���̨�̣߳������̲߳������Ļ������������
+
+		//由于产生的是精灵线程（守护线程、后台线程），主线程不阻塞的话，看不到输出
 		System.in.read(); 
 	}
 

@@ -1,7 +1,3 @@
-/**
- * �̳߳صĸ���
- * nasa
- */
 package com.zbl.concurrent.c_026;
 
 import java.util.ArrayList;
@@ -12,6 +8,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+/**
+ * 线程池的概念
+ * nasa
+ */
 public class T07_ParallelComputing {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		long start = System.currentTimeMillis();

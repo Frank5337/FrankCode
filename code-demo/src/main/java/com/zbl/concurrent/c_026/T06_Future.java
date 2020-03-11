@@ -1,6 +1,3 @@
-/**
- * ��ʶfuture
- */
 package com.zbl.concurrent.c_026;
 
 import java.util.concurrent.ExecutionException;
@@ -10,6 +7,9 @@ import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 认识future
+ */
 public class T06_Future {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		
@@ -20,7 +20,7 @@ public class T06_Future {
 		
 		new Thread(task).start();
 		
-		System.out.println(task.get()); //����
+		System.out.println(task.get()); //阻塞
 		
 		//*******************************
 		ExecutorService service = Executors.newFixedThreadPool(5);

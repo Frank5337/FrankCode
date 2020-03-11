@@ -1,8 +1,3 @@
-/**
- * http://blog.csdn.net/sunxianghuang/article/details/52221913 
- * http://www.educity.cn/java/498061.html
- * �Ķ�concurrentskiplistmap
- */
 package com.zbl.concurrent.c_025;
 
 import java.util.Arrays;
@@ -11,11 +6,19 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * http://blog.csdn.net/sunxianghuang/article/details/52221913
+ * http://www.educity.cn/java/498061.html
+ * 阅读concurrentskiplistmap
+ *
+ * CurrentHashMap 在多线程情况下 效率比HashTable要高一些
+ */
 public class T01_ConcurrentMap {
 	public static void main(String[] args) {
-		//Map<String, String> map = new ConcurrentHashMap<>();
-		Map<String, String> map = new ConcurrentSkipListMap<>(); //�߲�����������
-		
+		//Map<String, String> map = new ConcurrentHashMap<>(); 并发性比较高
+		Map<String, String> map = new ConcurrentSkipListMap<>(); //高并发并且排序
+
+		//并发性不是特别高 用下面两个
 		//Map<String, String> map = new Hashtable<>();
 		//Map<String, String> map = new HashMap<>(); //Collections.synchronizedXXX
 		//TreeMap
