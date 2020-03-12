@@ -13,7 +13,7 @@ public class T14_ParallelStreamAPI {
 		//System.out.println(nums);
 		
 		long start = System.currentTimeMillis();
-		nums.forEach(v->isPrime(v));
+		nums.forEach(T14_ParallelStreamAPI::isPrime);
 		long end = System.currentTimeMillis();
 		System.out.println(end - start);
 		

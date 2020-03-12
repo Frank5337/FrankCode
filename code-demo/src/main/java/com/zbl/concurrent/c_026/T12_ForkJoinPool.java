@@ -6,6 +6,9 @@ import java.util.Random;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
+/**
+ * 分岔合并
+ */
 public class T12_ForkJoinPool {
 	static int[] nums = new int[1000000];
 	static final int MAX_NUM = 50000;
@@ -19,8 +22,8 @@ public class T12_ForkJoinPool {
 		System.out.println(Arrays.stream(nums).sum()); //stream api 
 	}
 	
-	/*
-	static class AddTask extends RecursiveAction { 
+	/* 没有返回值
+	static class AddTask extends RecursiveAction {
 		
 		int start, end;
 		
@@ -51,8 +54,8 @@ public class T12_ForkJoinPool {
 		
 	}
 	*/
-	
-	static class AddTask extends RecursiveTask<Long> { 
+
+	static class AddTask extends RecursiveTask<Long> {
 		
 		int start, end;
 		
@@ -79,7 +82,7 @@ public class T12_ForkJoinPool {
 			
 			return subTask1.join() + subTask2.join();
 		}
-		
+
 	}
 	
 	public static void main(String[] args) throws IOException {
