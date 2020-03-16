@@ -1,0 +1,6 @@
+spring:
+  security:
+    # 账号密码配置
+    user:
+      name: zbl
+      password: 123

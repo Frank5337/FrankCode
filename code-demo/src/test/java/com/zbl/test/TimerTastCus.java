@@ -12,10 +12,11 @@ public class TimerTastCus extends TimerTask {
 
     @Override
     public void run() {
-        int count = 10;
-        count = (count + 1) % 2;
-        System.out.println("Boom boom");
-        new Timer().schedule(new TimerTastCus(), 2000 + 2000 * count);
+        //int count = 10;
+        //count = (count + 1) % 2;
+        //System.out.println("Boom boom");
+        //new Timer().schedule(new TimerTastCus(), 2000 + 2000 * count);
+        System.out.println("10秒");
     }
 
 }

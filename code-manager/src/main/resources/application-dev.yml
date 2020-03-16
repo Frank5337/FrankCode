@@ -17,13 +17,15 @@ spring:
     username: root
     password: zbl5337
   redis:
-    host: 47.99.69.28
+#    host: 47.99.69.28
+    host: 127.0.0.1
     port: 6379
-    password: zbl5337
+#    password: zbl5337
 zbl-code:
   worker-id: 0
   data-center-id: 0
 eureka:
   client:
     service-url:
-      defaule-zone: http://${eureka.instanse.hostname}:8761/eureka/
+      default-zone: http://${eureka.instanse.hostname}:8761/eureka
+#      default-zone: http://zbl:123@127.0.0.1:8761/eureka/
