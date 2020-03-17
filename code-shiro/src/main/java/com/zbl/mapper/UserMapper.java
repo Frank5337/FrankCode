@@ -4,6 +4,8 @@ import com.zbl.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @Author: zbl
  * @Date: 17:28 2020/3/1
@@ -14,4 +16,6 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper {
 
     public User queryUserByName(String name);
+
+    List<User> findAll();
 }

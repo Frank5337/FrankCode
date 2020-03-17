@@ -7,7 +7,11 @@ import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
 public class T07_DelayQueue {
-
+	/**
+	 * 无界队列, 加进去的每一个元素, 每一个元素自己记载着 我还有多久可以被消费者往外拿
+	 * 默认是有序的, 等待时间最长的 先往外拿
+	 * 比如定时任务
+	 */
 	static BlockingQueue<MyTask> tasks = new DelayQueue<>();
 
 	static Random r = new Random();

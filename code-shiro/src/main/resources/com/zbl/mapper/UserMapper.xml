@@ -5,4 +5,8 @@
     <select id="queryUserByName" parameterType="String" resultType="com.zbl.pojo.User">
         select * from s_user where name = #{name}
     </select>
+
+    <select id="findAll" resultType="com.zbl.pojo.User">
+        select * from s_user
+    </select>
 </mapper>

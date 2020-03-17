@@ -4,6 +4,9 @@
 /code-manager/target/
 /code-service/target/
 /code-generator/target/
+/code-demo/target/
+/code-eureka/target/
+/code-shiro/target/
 /code/logs/
 target
 

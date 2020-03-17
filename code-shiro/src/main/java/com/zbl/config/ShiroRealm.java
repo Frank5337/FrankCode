@@ -41,7 +41,7 @@ public class ShiroRealm extends AuthorizingRealm {
 
         Session session = subject.getSession();
         session.setAttribute("loginUser", user);
-        userToken.setRememberMe(true);
+        //userToken.setRememberMe(true);
         //密码认证
         return new SimpleAuthenticationInfo(user , user.getPwd(), ByteSource.Util.bytes(user.getName() + user.getSalt()),  getName());
     }

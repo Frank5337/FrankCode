@@ -1,9 +1,9 @@
 package com.zbl.controller;
 
 
+import com.zbl.pojo.User;
 import com.zbl.service.UserService;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @Author: zbl
@@ -32,6 +33,14 @@ public class MyController {
         model.addAttribute("msg", "hello world");
         return "index";
     }
+    @RequestMapping("/list")
+    @ResponseBody
+    public List<User> list(){
+        List<User> list = userService.findAll();
+        System.out.println(list);
+        return list;
+    }
+
 
     @RequestMapping("/user/add")
     public String add(){

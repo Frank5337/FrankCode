@@ -25,4 +25,6 @@ public class User implements Serializable {
     private String perms;
 
     private String salt;
+
+    private String json;
 }

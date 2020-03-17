@@ -6,6 +6,7 @@ import com.zbl.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @Author: zbl
@@ -21,5 +22,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User queryUserByName(String name) {
         return userMapper.queryUserByName(name);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return userMapper.findAll();
     }
 }
