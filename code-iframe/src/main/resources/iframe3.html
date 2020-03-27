@@ -1,0 +1,6 @@
+<script type="text/javascript">
+    document.domain = window.location.hostname;
+    alert('我（IframeC）收到iframeB通过参数（#）给我传递高度值，我现在调用主页面方法去设置IframeB的高度');
+    // top.callback(window.location.href.split('#')[1]);
+    top.callback(300);
+</script>

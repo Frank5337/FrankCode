@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>iframeB</title>
+</head>
+<body onload="init();">
+<p style="height:500px;">我是三方应用，我的域是：test.com</p>
+<iframe id="frameC" style="height:1px;width:1px;display:none;"></iframe>
+</body>
+</html>
+<script type="text/javascript">
+    function init(){
+        alert('我是第三方App，下面开始创建和主框架同域的通信通道IframeC,并设置它的src，用#号传递高度值');
+
+        var iframeTag = document.getElementById('frameC'),
+            iframeSrc = 'http://localhost:63342/code/code-iframe/iframe3.html?_ijt=1tb8qbfsah0c9hj6cqisdbvd9n',
+            pageHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+
+        iframeTag.src = iframeSrc + pageHeight;
+        iframeTag.style.display = 'block';
+
+        window.setTimeout(function(){
+            alert('主页面设置我（IframeB）的src，通过Hash（#）给我传递它收到的高度：' + location.hash);
+        },2000);
+    };
+</script>

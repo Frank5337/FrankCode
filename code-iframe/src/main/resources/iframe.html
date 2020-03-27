@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>主页面A</title>
+
+<script type="text/javascript">
+    function init(){
+        document.domain = window.location.hostname;
+        alert('我是主框架，嵌入了第三方应用IframeB,下面开始加载应用');
+        var iframeTag = document.getElementById('frameB'),
+            iframeSrc = 'http://localhost:63342/code/code-iframe/iframe2.html?_ijt=1tb8qbfsah0c9hj6cqisdbvd9n';
+
+        iframeTag.src = iframeSrc;
+        iframeTag.style.display = 'block';
+    };
+
+    function callback(h){
+        var iframeB = document.getElementById('frameB');
+        alert('IframeC调用我（主框架）接口，把IframeB的高度传给我，具体值是：' + h);
+        iframeB.style.height= h + 10 + 'px';
+        iframeB.src += '#'+ h
+    };
+</script>
+</head>
+<body onload="init();">
+    <p>我是主页框架，我的域是：bai.sohu.com</p>
+    <iframe id="frameB" style="display:none;"></iframe>
+</body>
+
+</html>
