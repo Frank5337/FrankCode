@@ -57,7 +57,8 @@ public class PasswordEncoder {
         String source = "123456";
 
         //盐值
-        String salt = createSalt(32);
+        //String salt = createSalt(32);
+        String salt = "134761435858579456";
 
         System.out.println("salt:" + salt);
 
