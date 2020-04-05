@@ -40,13 +40,13 @@ public class DemoController {
 
     @PostMapping("lock")
     public String lock(){
-        boolean lock = redisDistributionLock.lock("frozen", 1000 * 10);
-        Date date = new Date();
-        date.setTime(System.currentTimeMillis());
-        return lock ? "lock success" : "lock fail" + " now: " + TimeUtil.date2String(date, "yyyy:MM:dd HH:mm:ss");
+//        boolean lock = redisDistributionLock.lock("frozen", 1000 * 10);
+//        Date date = new Date();
+//        date.setTime(System.currentTimeMillis());
+//        return lock ? "lock success" : "lock fail" + " now: " + TimeUtil.date2String(date, "yyyy:MM:dd HH:mm:ss");
         //自旋
-        //redisDistributionLock.spinLock("frozen", 1000 * 10);
-        //return "";
+        redisDistributionLock.spinLock("frozen", 1000 * 10);
+        return "";
     }
 
     @GetMapping("getLock")
