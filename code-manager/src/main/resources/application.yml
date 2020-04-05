@@ -83,7 +83,7 @@ zbl-code:
   swagger:
     title: zbl-code
     description: zbl-code API
-    basePackage: com.zbl.code.client
+    basePackage: com.zbl.code.manager
     contactName: zbl
     contactUrl: www.javachat.cn
     contactEmail: zbl5337@gmail.com
