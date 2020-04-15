@@ -20,6 +20,13 @@
             <version>4.12</version>
             <scope>compile</scope>
         </dependency>
+        <!--代码中查看对象头 相关pom-->
+        <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.2</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

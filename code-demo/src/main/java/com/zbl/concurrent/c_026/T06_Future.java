@@ -1,11 +1,6 @@
 package com.zbl.concurrent.c_026;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.FutureTask;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * 认识future
@@ -25,7 +20,7 @@ public class T06_Future {
 		
 		System.out.println(task.get()); //阻塞,  等着任务执行完, get方法拿到的就是futureTask返回的结果
 		//要用Callable返回值 得指定类型
-		
+
 		//*******************************
 		ExecutorService service = Executors.newFixedThreadPool(5);
 		Future<Integer> f = service.submit(()->{
