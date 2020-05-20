@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zbl</groupId>
-    <artifactId>tank</artifactId>
+    <artifactId>code-tank</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>tank</name>
     <description>Demo project for Spring Boot</description>

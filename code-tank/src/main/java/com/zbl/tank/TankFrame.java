@@ -13,7 +13,7 @@ import java.awt.event.WindowEvent;
  */
 public class TankFrame extends Frame {
 
-    int x = 200, y = 200;
+    Tank myTank = new Tank(200, 200, Dir.DOWN);
 
     public TankFrame() {
         this.setSize(800, 600);
@@ -47,9 +47,7 @@ public class TankFrame extends Frame {
      */
     @Override
     public void paint(Graphics g) {
-        //填充矩形  从左上角开始 向右X 向下Y
-        g.fillRect(x, y, 50, 50);
-
+        myTank.paint(g);
     }
 
     /**
@@ -89,38 +87,40 @@ public class TankFrame extends Frame {
                 default:
                     break;
             }
-            if (bl && bu) {
-                x -= 10;
-                y -= 10;
-                return;
-            }
-            if (bl && bd) {
-                x -= 10;
-                y += 10;
-                return;
-            }
-            if (br && bu) {
-                x += 10;
-                y -= 10;
-                return;
-            }
-            if (br && bd) {
-                x += 10;
-                y += 10;
-                return;
-            }
-            if (bu) {
-                y -= 10;
-            }
-            if (bd) {
-                y += 10;
-            }
-            if (bl) {
-                x -= 10;
-            }
-            if (br) {
-                x += 10;
-            }
+            System.out.println(e.getKeyCode());
+            setMainTankDir();
+//            if (bl && bu) {
+//                x -= 10;
+//                y -= 10;
+//                return;
+//            }
+//            if (bl && bd) {
+//                x -= 10;
+//                y += 10;
+//                return;
+//            }
+//            if (br && bu) {
+//                x += 10;
+//                y -= 10;
+//                return;
+//            }
+//            if (br && bd) {
+//                x += 10;
+//                y += 10;
+//                return;
+//            }
+//            if (bu) {
+//                y -= 10;
+//            }
+//            if (bd) {
+//                y += 10;
+//            }
+//            if (bl) {
+//                x -= 10;
+//            }
+//            if (br) {
+//                x += 10;
+//            }
 
         }
 
@@ -147,6 +147,15 @@ public class TankFrame extends Frame {
                 default:
                     break;
             }
+
+            setMainTankDir();
+        }
+
+        private void setMainTankDir() {
+            if (bl) myTank.setDir(Dir.LEFT);
+            if (br) myTank.setDir(Dir.RIGHT);
+            if (bu) myTank.setDir(Dir.UP);
+            if (bd) myTank.setDir(Dir.DOWN);
         }
     }
 }
