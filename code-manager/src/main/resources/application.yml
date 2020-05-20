@@ -56,8 +56,8 @@ spring:
   mail:
     host: smtp.163.com
     # TODO 改成自己的账号
-    username: username@163.com
-    password: password
+    username: 877910220@qq.com
+    password: tnnrnllfhqjebbgb
     default-encoding: UTF-8
 mybatis:
   type-aliases-package: com.zbl.code.*.pojo.po

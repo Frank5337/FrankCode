@@ -5,6 +5,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Author: zbl
@@ -13,10 +15,16 @@ import java.awt.event.WindowEvent;
  */
 public class TankFrame extends Frame {
 
-    Tank myTank = new Tank(200, 200, Dir.DOWN);
+    Tank myTank = new Tank(200, 200, Dir.DOWN, this, false);
+
+    List<Tank> enemy = new ArrayList<>();
+
+    List<Bullet> bullets = new ArrayList<>();
+
+    static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
     public TankFrame() {
-        this.setSize(800, 600);
+        this.setSize(GAME_WIDTH, GAME_HEIGHT);
         this.setTitle("坦克大战");
         //设为可调整大小
         this.setResizable(false);
@@ -37,6 +45,32 @@ public class TankFrame extends Frame {
                 System.exit(0);
             }
         });
+        enemy.add(new Tank(300, 300, Dir.DOWN, this, true));
+        enemy.add(new Tank(400, 400, Dir.DOWN, this, true));
+        enemy.add(new Tank(500, 500, Dir.DOWN, this, true));
+
+    }
+
+    /**
+     * 解决双缓冲
+     * 现在内存中把图片画满
+     * 然后把图片放到屏幕上
+     * 把内存的内容复制到显存
+     */
+    Image offScreenImage = null;
+    @Override
+    public void update(Graphics g) {
+        if (offScreenImage == null) {
+            offScreenImage = this.createImage(GAME_WIDTH, GAME_HEIGHT);
+        }
+        Graphics gOffScreen = offScreenImage.getGraphics();
+        Color c = gOffScreen.getColor();
+        gOffScreen.setColor(Color.BLACK);
+        gOffScreen.fillRect(0 , 0, GAME_WIDTH, GAME_HEIGHT);
+        paint(gOffScreen);
+        //画到屏幕
+        g.drawImage(offScreenImage, 0, 0, null);
+        g.setColor(c);
     }
 
     /**
@@ -47,7 +81,28 @@ public class TankFrame extends Frame {
      */
     @Override
     public void paint(Graphics g) {
+        Color color = g.getColor();
+        g.setColor(Color.WHITE);
+        g.drawString("子弹的数量: " + bullets.size(), 10 ,60);
+        g.setColor(color);
         myTank.paint(g);
+        for (int i = 0; i < bullets.size(); i++) {
+            bullets.get(i).paint(g);
+        }
+        for (Tank tank : enemy) {
+            tank.paint(g);
+        }
+        //另一种删除方式
+//        for (Iterator<Bullet> it = bullets.iterator(); it.hasNext();) {
+//            Bullet b = it.next();
+//            b.paint(g);
+//            if (!b.isLive()) it.remove();
+//        }
+        // forEach 遍历 删除 会有并发修改异常
+        // 用内部的Iterator遍历的时候 不能删除
+        // Iterator遍历的时候 不允许其他地方进行删除, 只允许当前遍历的地方删除
+        // 有一个mutex锁
+        //bullets.forEach(b -> b.paint(g));
     }
 
     /**
@@ -89,38 +144,6 @@ public class TankFrame extends Frame {
             }
             System.out.println(e.getKeyCode());
             setMainTankDir();
-//            if (bl && bu) {
-//                x -= 10;
-//                y -= 10;
-//                return;
-//            }
-//            if (bl && bd) {
-//                x -= 10;
-//                y += 10;
-//                return;
-//            }
-//            if (br && bu) {
-//                x += 10;
-//                y -= 10;
-//                return;
-//            }
-//            if (br && bd) {
-//                x += 10;
-//                y += 10;
-//                return;
-//            }
-//            if (bu) {
-//                y -= 10;
-//            }
-//            if (bd) {
-//                y += 10;
-//            }
-//            if (bl) {
-//                x -= 10;
-//            }
-//            if (br) {
-//                x += 10;
-//            }
 
         }
 
@@ -144,6 +167,9 @@ public class TankFrame extends Frame {
                 case KeyEvent.VK_DOWN:
                     bd = false;
                     break;
+                case KeyEvent.VK_SPACE:
+                    myTank.fire();
+                    break;
                 default:
                     break;
             }
@@ -152,10 +178,33 @@ public class TankFrame extends Frame {
         }
 
         private void setMainTankDir() {
+            if (!bd && !bl && !bu && !br) {
+                myTank.setMoving(false);
+            } else {
+                myTank.setMoving(true);
+            }
+//            多个按键先注释, 子弹不斜着打
+//            if (bl && bu) {
+//                myTank.setDir(Dir.LEFT_UP);
+//                return;
+//            }
+//            if (bl && bd) {
+//                myTank.setDir(Dir.LEFT_DOWN);
+//                return;
+//            }
+//            if (br && bu) {
+//                myTank.setDir(Dir.RIGHT_UP);
+//                return;
+//            }
+//            if (br && bd) {
+//                myTank.setDir(Dir.RIGHT_DOWN);
+//                return;
+//            }
             if (bl) myTank.setDir(Dir.LEFT);
             if (br) myTank.setDir(Dir.RIGHT);
             if (bu) myTank.setDir(Dir.UP);
             if (bd) myTank.setDir(Dir.DOWN);
+
         }
     }
 }
