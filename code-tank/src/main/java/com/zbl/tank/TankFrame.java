@@ -21,6 +21,8 @@ public class TankFrame extends Frame {
 
     List<Bullet> bullets = new ArrayList<>();
 
+    List<Explode> explodes = new ArrayList<>();
+
     static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
     public TankFrame() {
@@ -89,6 +91,9 @@ public class TankFrame extends Frame {
         }
         for (int i = 0; i < enemy.size() ; i++) {
             enemy.get(i).paint(g);
+        }
+        for (int i = 0; i < explodes.size(); i++) {
+            explodes.get(i).paint(g);
         }
         //另一种删除方式
 //        for (Iterator<Bullet> it = bullets.iterator(); it.hasNext();) {

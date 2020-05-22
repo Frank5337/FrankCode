@@ -17,7 +17,7 @@ public class Tank {
 
     private Dir dir = Dir.DOWN;
 
-    private static final int SPEED = 1;
+    private static final int SPEED = 10;
 
     private boolean moving = false;
 
@@ -114,6 +114,8 @@ public class Tank {
             this.fire(this.group);
         }
 
+        if (group == Group.BAD && x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) living = false;
+
     }
 
     public void fire(Group group) {
@@ -121,7 +123,6 @@ public class Tank {
         int bx = this.x + Tank.WIDTH/2 - Bullet.WIDTH/2;
         int by = this.y + Tank.WIDTH/2;
         tf.bullets.add(new Bullet(bx, by, this.dir, group, this.tf));
-
     }
 
     public void die() {
