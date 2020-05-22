@@ -11,6 +11,7 @@
         <module>code-generator</module>
         <module>code-eureka</module>
         <module>code-shiro</module>
+        <module>code-wyk</module>
     </modules>
 
     <groupId>com.zbl</groupId>
