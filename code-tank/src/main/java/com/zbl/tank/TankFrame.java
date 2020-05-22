@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class TankFrame extends Frame {
 
-    Tank myTank = new Tank(200, 400, Dir.DOWN, this);
+    Tank myTank = new Tank(200, 400, Dir.DOWN, Group.GOOD, this);
 
     List<Tank> enemy = new ArrayList<>();
 
@@ -171,7 +171,10 @@ public class TankFrame extends Frame {
                     bd = false;
                     break;
                 case KeyEvent.VK_SPACE:
-                    myTank.fire();
+                    myTank.fire(myTank.getGroup());
+                    break;
+                case KeyEvent.VK_CONTROL:
+                    addEnemy();
                     break;
                 default:
                     break;
@@ -208,6 +211,12 @@ public class TankFrame extends Frame {
             if (bu) myTank.setDir(Dir.UP);
             if (bd) myTank.setDir(Dir.DOWN);
 
+        }
+    }
+
+    private void addEnemy(){
+        for (int i = 0; i <5 ; i++) {
+            enemy.add(new Tank(50 + i * 80, 200, Dir.DOWN, this));
         }
     }
 }

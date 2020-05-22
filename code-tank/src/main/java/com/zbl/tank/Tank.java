@@ -3,6 +3,7 @@ package com.zbl.tank;
 import lombok.Data;
 
 import java.awt.*;
+import java.util.Random;
 
 /**
  * @Author: zbl
@@ -16,7 +17,7 @@ public class Tank {
 
     private Dir dir = Dir.DOWN;
 
-    private static final int SPEED = 5;
+    private static final int SPEED = 1;
 
     private boolean moving = false;
 
@@ -24,7 +25,19 @@ public class Tank {
 
     private boolean living = true;
 
+    private Random random = new Random();
+
+    private Group group = Group.BAD;
+
     public static int WIDTH = ResourceManager.tankD.getWidth(), HEIGHT = ResourceManager.tankD.getHeight();
+
+    public Tank(int x, int y, Dir dir, Group group, TankFrame tf) {
+        this.x = x;
+        this.y = y;
+        this.dir = dir;
+        this.group = group;
+        this.tf = tf;
+    }
 
     public Tank(int x, int y, Dir dir, TankFrame tf) {
         this.x = x;
@@ -58,6 +71,7 @@ public class Tank {
 //        g.fillRect(x, y, 50, 50);
 //        g.setColor(rawColor);
 
+        if (this.group == Group.BAD) moving = true;
         if (!moving) {
             return;
         }
@@ -94,13 +108,19 @@ public class Tank {
                 x += SPEED;
                 y += SPEED;
         }
+
+
+        if (group == Group.BAD && random.nextInt(10) > 5) {
+            this.fire(this.group);
+        }
+
     }
 
-    public void fire() {
+    public void fire(Group group) {
         //计算子弹xy位置
         int bx = this.x + Tank.WIDTH/2 - Bullet.WIDTH/2;
         int by = this.y + Tank.WIDTH/2;
-        tf.bullets.add(new Bullet(bx, by, this.dir, this.tf));
+        tf.bullets.add(new Bullet(bx, by, this.dir, group, this.tf));
 
     }
 
