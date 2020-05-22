@@ -3,7 +3,6 @@ package com.zbl.tank;
 import lombok.Data;
 
 import java.awt.*;
-import java.util.Random;
 
 /**
  * @Author: zbl
@@ -23,7 +22,7 @@ public class Tank {
 
     private TankFrame tf = null;
 
-    private boolean isEnemy;
+    private boolean living = true;
 
     public static int WIDTH = ResourceManager.tankD.getWidth(), HEIGHT = ResourceManager.tankD.getHeight();
 
@@ -35,6 +34,8 @@ public class Tank {
     }
 
     public void paint(Graphics g) {
+        if (!living)
+             tf.enemy.remove(this);
         //Color rawColor = g.getColor();
         Image image = null;
         switch (dir) {
@@ -56,10 +57,7 @@ public class Tank {
 //        g.setColor(Color.ORANGE);
 //        g.fillRect(x, y, 50, 50);
 //        g.setColor(rawColor);
-        if (isEnemy) {
-            new Random().nextInt(3);
-            //move();
-        }
+
         if (!moving) {
             return;
         }
@@ -67,9 +65,6 @@ public class Tank {
     }
 
     private void move() {
-        if (isEnemy) {
-
-        }
         switch (dir) {
             case LEFT:
                 x -= SPEED;
@@ -107,6 +102,10 @@ public class Tank {
         int by = this.y + Tank.WIDTH/2;
         tf.bullets.add(new Bullet(bx, by, this.dir, this.tf));
 
+    }
+
+    public void die() {
+        living = false;
     }
 
 //    public static void main(String[] args) {

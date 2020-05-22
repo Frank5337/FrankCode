@@ -17,13 +17,9 @@ public class Bullet {
 
     private Dir dir;
 
-    private boolean live = true;
+    private boolean living = true;
 
     private TankFrame tf = null;
-
-    public boolean isLive() {
-        return live;
-    }
 
     public Bullet(int x, int y, Dir dir, TankFrame tf) {
         this.x = x;
@@ -34,7 +30,7 @@ public class Bullet {
 
     public void paint(Graphics g) {
         //不删除会有内存泄露问题
-        if (!live) {
+        if (!living) {
             tf.bullets.remove(this);
         }
 //        Color c = g.getColor();
@@ -77,7 +73,25 @@ public class Bullet {
                 break;
         }
 
-        if (x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) live = false;
+        if (x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) living = false;
     }
 
+    /**
+     *
+     * @param tank
+     */
+    public void collideWith(Tank tank) {
+        Rectangle rect1 = new Rectangle(this.x, this.y, WIDTH, HEIGHT);
+        Rectangle rect2 = new Rectangle(tank.getX(), tank.getY(), tank.WIDTH, tank.HEIGHT);
+        //判断是否相交
+        if (rect1.intersects(rect2)) {
+            tank.die();
+            this.die();
+        }
+
+    }
+
+    private void die() {
+        living = false;
+    }
 }

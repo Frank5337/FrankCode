@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class TankFrame extends Frame {
 
-    Tank myTank = new Tank(200, 600, Dir.DOWN, this);
+    Tank myTank = new Tank(200, 400, Dir.DOWN, this);
 
     List<Tank> enemy = new ArrayList<>();
 
@@ -45,9 +45,6 @@ public class TankFrame extends Frame {
                 System.exit(0);
             }
         });
-        enemy.add(new Tank(300, 300, Dir.DOWN, this));
-        enemy.add(new Tank(400, 400, Dir.DOWN, this));
-        enemy.add(new Tank(500, 500, Dir.DOWN, this));
 
     }
 
@@ -84,6 +81,7 @@ public class TankFrame extends Frame {
         Color color = g.getColor();
         g.setColor(Color.WHITE);
         g.drawString("子弹的数量: " + bullets.size(), 10 ,60);
+        g.drawString("敌人的数量: " + enemy.size(), 10 ,80);
         g.setColor(color);
         myTank.paint(g);
         for (int i = 0; i < bullets.size(); i++) {
@@ -103,6 +101,11 @@ public class TankFrame extends Frame {
         // Iterator遍历的时候 不允许其他地方进行删除, 只允许当前遍历的地方删除
         // 有一个mutex锁
         //bullets.forEach(b -> b.paint(g));
+        for (int i = 0; i < bullets.size(); i++) {
+            for (int j = 0; j <enemy.size() ; j++) {
+                bullets.get(i).collideWith(enemy.get(j));
+            }
+        }
     }
 
     /**
