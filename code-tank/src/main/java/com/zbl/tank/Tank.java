@@ -25,20 +25,37 @@ public class Tank {
 
     private boolean isEnemy;
 
-    public Tank(int x, int y, Dir dir, TankFrame tf, boolean isEnemy) {
+    public static int WIDTH = ResourceManager.tankD.getWidth(), HEIGHT = ResourceManager.tankD.getHeight();
+
+    public Tank(int x, int y, Dir dir, TankFrame tf) {
         this.x = x;
         this.y = y;
         this.dir = dir;
         this.tf = tf;
-        this.isEnemy = isEnemy;
     }
 
     public void paint(Graphics g) {
-        Color rawColor = g.getColor();
+        //Color rawColor = g.getColor();
+        Image image = null;
+        switch (dir) {
+            case LEFT:
+                image = ResourceManager.tankL;
+                break;
+            case RIGHT:
+                image = ResourceManager.tankR;
+                break;
+            case UP:
+                image = ResourceManager.tankU;
+                break;
+            case DOWN:
+                image = ResourceManager.tankD;
+                break;
+        }
+        g.drawImage(image, x, y, null);
         //填充矩形  从左上角开始 向右X 向下Y
-        g.setColor(Color.ORANGE);
-        g.fillRect(x, y, 50, 50);
-        g.setColor(rawColor);
+//        g.setColor(Color.ORANGE);
+//        g.fillRect(x, y, 50, 50);
+//        g.setColor(rawColor);
         if (isEnemy) {
             new Random().nextInt(3);
             //move();
@@ -85,7 +102,10 @@ public class Tank {
     }
 
     public void fire() {
-        tf.bullets.add(new Bullet(this.x + (int) 17.5, this.y + (int) 17.5, this.dir, this.tf));
+        //计算子弹xy位置
+        int bx = this.x + Tank.WIDTH/2 - Bullet.WIDTH/2;
+        int by = this.y + Tank.WIDTH/2;
+        tf.bullets.add(new Bullet(bx, by, this.dir, this.tf));
 
     }
 

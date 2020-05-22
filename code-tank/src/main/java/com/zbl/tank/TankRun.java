@@ -1,9 +1,5 @@
 package com.zbl.tank;
 
-import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-
 /**
  * @Author: zbl
  * @Date: 23:15 2020/5/16
@@ -13,6 +9,11 @@ public class TankRun {
 
     public static void main(String[] args) throws InterruptedException {
         TankFrame tf = new TankFrame();
+
+        //初始化敌方坦克
+        for (int i = 0; i <5 ; i++) {
+            tf.enemy.add(new Tank(50 + i * 80, 200, Dir.DOWN, tf));
+        }
 
         while (true) {
             Thread.sleep(50);

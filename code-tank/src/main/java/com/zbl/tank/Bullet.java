@@ -11,7 +11,7 @@ import java.awt.*;
 public class Bullet {
     private static final int SPEED = 10;
 
-    private static int WIDTH = 15, HEIGHT = 15;
+    public static int WIDTH = ResourceManager.bulletD.getWidth(), HEIGHT = ResourceManager.bulletD.getHeight();
 
     private int x, y;
 
@@ -37,10 +37,26 @@ public class Bullet {
         if (!live) {
             tf.bullets.remove(this);
         }
-        Color c = g.getColor();
-        g.setColor(Color.RED);
-        g.fillOval(x, y, WIDTH, HEIGHT);
-        g.setColor(c);
+//        Color c = g.getColor();
+//        g.setColor(Color.RED);
+//        g.fillOval(x, y, WIDTH, HEIGHT);
+//        g.setColor(c);
+        Image image = null;
+        switch (dir) {
+            case LEFT:
+                image = ResourceManager.bulletL;
+                break;
+            case RIGHT:
+                image = ResourceManager.bulletR;
+                break;
+            case UP:
+                image = ResourceManager.bulletU;
+                break;
+            case DOWN:
+                image = ResourceManager.bulletD;
+                break;
+        }
+        g.drawImage(image, x, y, null);
 
         move();
     }

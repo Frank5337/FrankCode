@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class TankFrame extends Frame {
 
-    Tank myTank = new Tank(200, 200, Dir.DOWN, this, false);
+    Tank myTank = new Tank(200, 600, Dir.DOWN, this);
 
     List<Tank> enemy = new ArrayList<>();
 
@@ -45,9 +45,9 @@ public class TankFrame extends Frame {
                 System.exit(0);
             }
         });
-        enemy.add(new Tank(300, 300, Dir.DOWN, this, true));
-        enemy.add(new Tank(400, 400, Dir.DOWN, this, true));
-        enemy.add(new Tank(500, 500, Dir.DOWN, this, true));
+        enemy.add(new Tank(300, 300, Dir.DOWN, this));
+        enemy.add(new Tank(400, 400, Dir.DOWN, this));
+        enemy.add(new Tank(500, 500, Dir.DOWN, this));
 
     }
 
@@ -89,8 +89,8 @@ public class TankFrame extends Frame {
         for (int i = 0; i < bullets.size(); i++) {
             bullets.get(i).paint(g);
         }
-        for (Tank tank : enemy) {
-            tank.paint(g);
+        for (int i = 0; i < enemy.size() ; i++) {
+            enemy.get(i).paint(g);
         }
         //另一种删除方式
 //        for (Iterator<Bullet> it = bullets.iterator(); it.hasNext();) {
