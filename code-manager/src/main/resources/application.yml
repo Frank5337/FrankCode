@@ -13,7 +13,8 @@ spring:
     serialization:
       write-dates-as-timestamps: true
   redis:
-    database: 15
+#    database: 15
+    database: 0
     timeout: 10000ms
     lettuce:
       pool:

@@ -17,10 +17,10 @@ spring:
     username: root
     password: zbl5337
   redis:
-#    host: 47.99.69.28
-    host: 127.0.0.1
+    host: 47.99.69.28
+#    host: 127.0.0.1
     port: 6379
-#    password: zbl5337
+    password: zbl5337
 zbl-code:
   worker-id: 0
   data-center-id: 0
