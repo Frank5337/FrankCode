@@ -21,6 +21,8 @@ public class Explode {
         this.x = x;
         this.y = y;
         this.tf = tf;
+        //放声音会卡
+        //Audio.explode();
     }
 
     private int step = 0;

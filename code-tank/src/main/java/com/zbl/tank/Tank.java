@@ -47,8 +47,12 @@ public class Tank {
     }
 
     public void paint(Graphics g) {
-        if (!living)
-             tf.enemy.remove(this);
+        if (!living) {
+            tf.enemy.remove(this);
+            if (group == Group.GOOD) {
+                return;
+            }
+        }
         //Color rawColor = g.getColor();
         Image image = null;
         switch (dir) {
@@ -71,11 +75,69 @@ public class Tank {
 //        g.fillRect(x, y, 50, 50);
 //        g.setColor(rawColor);
 
-        if (this.group == Group.BAD) moving = true;
+        if (this.group == Group.BAD) {
+            moving = true;
+            randomDir();
+        }
+
         if (!moving) {
             return;
         }
         move();
+    }
+
+    int threshold = 0;
+
+    private void randomDir() {
+        randomDir(null);
+    }
+
+    private void randomDir(Dir d) {
+        if (d != null) {
+            overturn(d);
+            return;
+        }
+        if (threshold < 3) {
+            threshold++;
+            return;
+        }
+        int n = random.nextInt(8);
+        switch (n) {
+            case 1:
+                dir = Dir.UP;
+                break;
+            case 2:
+                dir = Dir.DOWN;
+                break;
+            case 3:
+                dir = Dir.LEFT;
+                break;
+            case 4:
+                dir = Dir.RIGHT;
+                break;
+            default:
+                break;
+        }
+        threshold = 0;
+    }
+
+    private void overturn(Dir d) {
+        switch (d) {
+            case UP:
+                dir = Dir.DOWN;
+                break;
+            case DOWN:
+                dir = Dir.UP;
+                break;
+            case LEFT:
+                dir = Dir.RIGHT;
+                break;
+            case RIGHT:
+                dir = Dir.LEFT;
+                break;
+            default:
+                break;
+        }
     }
 
     private void move() {
@@ -109,12 +171,14 @@ public class Tank {
                 y += SPEED;
         }
 
-
-        if (group == Group.BAD && random.nextInt(10) > 5) {
+        //敌人子弹数量
+        if (group == Group.BAD && random.nextInt(10) > 7) {
             this.fire(this.group);
         }
 
-        if (group == Group.BAD && x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) living = false;
+        if (group == Group.BAD && x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) {
+            randomDir(dir);
+        }
 
     }
 

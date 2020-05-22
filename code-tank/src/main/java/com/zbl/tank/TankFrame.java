@@ -84,6 +84,9 @@ public class TankFrame extends Frame {
         g.setColor(Color.WHITE);
         g.drawString("子弹的数量: " + bullets.size(), 10 ,60);
         g.drawString("敌人的数量: " + enemy.size(), 10 ,80);
+        g.drawString("↑ ↓ ← → 控制方向", 10 ,100);
+        g.drawString("Shift复活", 10 ,120);
+        g.drawString("Ctrl增加敌人", 10 ,140);
         g.setColor(color);
         myTank.paint(g);
         for (int i = 0; i < bullets.size(); i++) {
@@ -109,6 +112,7 @@ public class TankFrame extends Frame {
         for (int i = 0; i < bullets.size(); i++) {
             for (int j = 0; j <enemy.size() ; j++) {
                 bullets.get(i).collideWith(enemy.get(j));
+                bullets.get(i).collideWith(myTank);
             }
         }
     }
@@ -181,6 +185,9 @@ public class TankFrame extends Frame {
                 case KeyEvent.VK_CONTROL:
                     addEnemy();
                     break;
+                case KeyEvent.VK_SHIFT:
+                    resurgence();
+                    break;
                 default:
                     break;
             }
@@ -217,6 +224,10 @@ public class TankFrame extends Frame {
             if (bd) myTank.setDir(Dir.DOWN);
 
         }
+    }
+
+    private void resurgence() {
+        myTank.setLiving(true);
     }
 
     private void addEnemy(){

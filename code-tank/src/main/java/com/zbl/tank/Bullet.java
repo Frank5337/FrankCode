@@ -99,6 +99,7 @@ public class Bullet {
      * @param tank
      */
     public void collideWith(Tank tank) {
+        //友军伤害
         if (this.group == tank.getGroup())
             return;
         //TODO Rectangle太多了, 用一个rect来记录子弹的位置
