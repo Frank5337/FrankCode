@@ -1,0 +1,10 @@
+server:
+  port: 81
+
+spring:
+  security:
+    user:
+      name: zbl
+      password: 123
+  redis:
+    host: 127.0.0.1
