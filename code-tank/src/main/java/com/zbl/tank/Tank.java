@@ -17,7 +17,7 @@ public class Tank {
 
     private Dir dir = Dir.DOWN;
 
-    private static final int SPEED = 10;
+    private static final int SPEED = 5;
 
     private boolean moving = false;
 
@@ -174,7 +174,7 @@ public class Tank {
         }
 
         //敌人子弹数量
-        if (group == Group.BAD && random.nextInt(10) > 8) {
+        if (group == Group.BAD && random.nextInt(100) > 95) {
             this.fire(this.group);
         }
 
