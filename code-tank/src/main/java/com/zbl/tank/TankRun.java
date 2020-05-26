@@ -15,6 +15,9 @@ public class TankRun {
             tf.enemy.add(new Tank(50 + i * 80, 200, Dir.DOWN, Group.BAD, tf));
         }
 
+        //背景音乐
+        //new Thread(() -> new Audio("main/resources/audio/war1.wav").loop()).start();
+
         while (true) {
             Thread.sleep(50);
             tf.repaint();

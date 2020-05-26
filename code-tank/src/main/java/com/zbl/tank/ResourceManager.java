@@ -13,20 +13,28 @@ import java.util.Objects;
  */
 public class ResourceManager {
 
-    public static BufferedImage tankL, tankU, tankR, tankD, bulletL, bulletU, bulletR, bulletD;
+    public static BufferedImage tankL, tankU, tankR, tankD,
+                                BadTankL, BadTankU, BadTankR, BadTankD,
+                                bulletL, bulletU, bulletR, bulletD;
 
     public static BufferedImage[] explodes = new BufferedImage[16];
 
     static {
         try {
-            tankL = ImageIO.read(Objects.requireNonNull(
-                    ResourceManager.class.getClassLoader().getResourceAsStream("image/tankL.gif")));
             tankU = ImageIO.read(Objects.requireNonNull(
-                    ResourceManager.class.getClassLoader().getResourceAsStream("image/tankU.gif")));
-            tankR = ImageIO.read(Objects.requireNonNull(
-                    ResourceManager.class.getClassLoader().getResourceAsStream("image/tankR.gif")));
-            tankD = ImageIO.read(Objects.requireNonNull(
-                    ResourceManager.class.getClassLoader().getResourceAsStream("image/tankD.gif")));
+                    ResourceManager.class.getClassLoader().getResourceAsStream("image/GoodTank2.png")));
+            tankD = ImageUtil.rotateImage(tankU, 180);
+            tankL = ImageUtil.rotateImage(tankU, -90);
+            tankR = ImageUtil.rotateImage(tankU, 90);
+
+
+            BadTankU = ImageIO.read(Objects.requireNonNull(
+                    ResourceManager.class.getClassLoader().getResourceAsStream("image/BadTank1.png")));
+            BadTankD = ImageUtil.rotateImage(BadTankU, 180);
+            BadTankL = ImageUtil.rotateImage(BadTankU, -90);
+            BadTankR = ImageUtil.rotateImage(BadTankU, 90);
+
+
             bulletL = ImageIO.read(Objects.requireNonNull(
                     ResourceManager.class.getClassLoader().getResourceAsStream("image/bulletL.gif")));
             bulletU = ImageIO.read(Objects.requireNonNull(

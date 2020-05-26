@@ -55,20 +55,22 @@ public class Tank {
         }
         //Color rawColor = g.getColor();
         Image image = null;
+
         switch (dir) {
             case LEFT:
-                image = ResourceManager.tankL;
+                image = this.group == Group.GOOD ? ResourceManager.tankL : ResourceManager.BadTankL;
                 break;
             case RIGHT:
-                image = ResourceManager.tankR;
+                image = this.group == Group.GOOD ? ResourceManager.tankR : ResourceManager.BadTankR;
                 break;
             case UP:
-                image = ResourceManager.tankU;
+                image = this.group == Group.GOOD ? ResourceManager.tankU : ResourceManager.BadTankU;
                 break;
             case DOWN:
-                image = ResourceManager.tankD;
+                image = this.group == Group.GOOD ? ResourceManager.tankD : ResourceManager.BadTankD;
                 break;
         }
+
         g.drawImage(image, x, y, null);
         //填充矩形  从左上角开始 向右X 向下Y
 //        g.setColor(Color.ORANGE);
@@ -172,7 +174,7 @@ public class Tank {
         }
 
         //敌人子弹数量
-        if (group == Group.BAD && random.nextInt(10) > 7) {
+        if (group == Group.BAD && random.nextInt(10) > 8) {
             this.fire(this.group);
         }
 
