@@ -17,7 +17,7 @@ public class Tank {
 
     private Dir dir = Dir.DOWN;
 
-    private static final int SPEED = 5;
+    private static final int SPEED = 5 ;
 
     private boolean moving = false;
 
@@ -88,7 +88,9 @@ public class Tank {
         move();
     }
 
-    int threshold = 0;
+    int threshold = 7;
+
+    int times = 0;
 
     private void randomDir() {
         randomDir(null);
@@ -99,28 +101,12 @@ public class Tank {
             overturn(d);
             return;
         }
-        if (threshold < 3) {
-            threshold++;
+        if (times < threshold) {
+            times++;
             return;
         }
-        int n = random.nextInt(8);
-        switch (n) {
-            case 1:
-                dir = Dir.UP;
-                break;
-            case 2:
-                dir = Dir.DOWN;
-                break;
-            case 3:
-                dir = Dir.LEFT;
-                break;
-            case 4:
-                dir = Dir.RIGHT;
-                break;
-            default:
-                break;
-        }
-        threshold = 0;
+        dir = Dir.values()[random.nextInt(4)];
+        times = 0;
     }
 
     private void overturn(Dir d) {
