@@ -17,7 +17,7 @@ public class Tank {
 
     private Dir dir = Dir.DOWN;
 
-    private static final int SPEED = 5 ;
+    private static final int SPEED = 10;
 
     private boolean moving = false;
 
@@ -79,7 +79,6 @@ public class Tank {
 
         if (this.group == Group.BAD) {
             moving = true;
-            randomDir();
         }
 
         if (!moving) {
@@ -164,7 +163,35 @@ public class Tank {
             this.fire(this.group);
         }
 
-        if (group == Group.BAD && x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) {
+        if (group == Group.BAD && random.nextInt(100) > 70) {
+            randomDir();
+        }
+
+        boundsCheck();
+
+    }
+
+    //碰撞检测 -2是为了边框
+    private void boundsCheck() {
+        boolean hook = false;
+        if (this.x < 2) {
+            x = 2;
+            hook = true;
+        }
+        if (this.y < Tank.WIDTH / 2 - 2) {
+            y = Tank.WIDTH / 2 - 2;
+            hook = true;
+        }
+        if (this.x > TankFrame.GAME_WIDTH - Tank.WIDTH - 2) {
+            x = TankFrame.GAME_WIDTH - Tank.WIDTH - 2;
+            hook = true;
+        }
+        if (this.y > TankFrame.GAME_HEIGHT - Tank.HEIGHT - 2) {
+            y = TankFrame.GAME_HEIGHT - Tank.HEIGHT - 2;
+            hook = true;
+        }
+        //掉头
+        if (this.group == Group.BAD && hook && random.nextInt(2) == 1) {
             randomDir(dir);
         }
 

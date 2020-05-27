@@ -11,9 +11,9 @@ public class TankRun {
         TankFrame tf = new TankFrame();
 
         //初始化敌方坦克
-        for (int i = 0; i <5 ; i++) {
-            tf.enemy.add(new Tank(50 + i * 80, 200, Dir.DOWN, Group.BAD, tf));
-        }
+//        for (int i = 0; i <5 ; i++) {
+//            tf.enemy.add(new Tank(50 + i * 80, 200, Dir.DOWN, Group.BAD, tf));
+//        }
 
         //背景音乐
         //new Thread(() -> new Audio("main/resources/audio/war1.wav").loop()).start();
