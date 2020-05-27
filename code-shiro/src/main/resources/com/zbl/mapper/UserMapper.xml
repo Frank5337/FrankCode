@@ -9,4 +9,8 @@
     <select id="findAll" resultType="com.zbl.pojo.User">
         select * from s_user
     </select>
+
+    <update id="updateIsSystem">
+        UPDATE s_user SET is_system = #{isSystem} WHERE id = #{userId}
+    </update>
 </mapper>

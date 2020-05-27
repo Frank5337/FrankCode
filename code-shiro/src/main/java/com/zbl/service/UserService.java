@@ -14,4 +14,6 @@ public interface UserService {
     public User queryUserByName(String name);
 
     List<User> findAll();
+
+    void updateIsSystem(Long userId, boolean isSystem);
 }

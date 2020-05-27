@@ -28,4 +28,9 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return userMapper.findAll();
     }
+
+    @Override
+    public void updateIsSystem(Long userId, boolean isSystem) {
+        userMapper.updateIsSystem(userId, isSystem);
+    }
 }
