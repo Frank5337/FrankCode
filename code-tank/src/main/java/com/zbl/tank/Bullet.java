@@ -23,11 +23,17 @@ public class Bullet {
 
     private Group group = Group.BAD;
 
+    public Rectangle rect = new Rectangle();
+
     public Bullet(int x, int y, Dir dir, TankFrame tf) {
         this.x = x;
         this.y = y;
         this.dir = dir;
         this.tf = tf;
+        this.rect.x = this.x;
+        this.rect.y = this.y;
+        this.rect.width = WIDTH;
+        this.rect.height = HEIGHT;
     }
 
     public Bullet(int x, int y, Dir dir, Group group, TankFrame tf) {
@@ -36,6 +42,10 @@ public class Bullet {
         this.dir = dir;
         this.group = group;
         this.tf = tf;
+        this.rect.x = this.x;
+        this.rect.y = this.y;
+        this.rect.width = WIDTH;
+        this.rect.height = HEIGHT;
     }
 
     public Group getGroup() {
@@ -91,6 +101,10 @@ public class Bullet {
                 break;
         }
 
+        //update rect
+        rect.x = this.x;
+        rect.y = this.y;
+
         if (x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) living = false;
     }
 
@@ -103,10 +117,8 @@ public class Bullet {
         if (this.group == tank.getGroup())
             return;
         //TODO Rectangle太多了, 用一个rect来记录子弹的位置
-        Rectangle rect1 = new Rectangle(this.x, this.y, WIDTH, HEIGHT);
-        Rectangle rect2 = new Rectangle(tank.getX(), tank.getY(), tank.WIDTH, tank.HEIGHT);
         //判断是否相交
-        if (rect1.intersects(rect2)) {
+        if (rect.intersects(tank.rect)) {
             tank.die();
             this.die();
             int boomX = tank.getX() + Tank.WIDTH/2 - Explode.WIDTH/2;

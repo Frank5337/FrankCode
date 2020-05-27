@@ -31,12 +31,18 @@ public class Tank {
 
     public static int WIDTH = ResourceManager.tankD.getWidth(), HEIGHT = ResourceManager.tankD.getHeight();
 
+    public Rectangle rect = new Rectangle();
+
     public Tank(int x, int y, Dir dir, Group group, TankFrame tf) {
         this.x = x;
         this.y = y;
         this.dir = dir;
         this.group = group;
         this.tf = tf;
+        this.rect.x = this.x;
+        this.rect.y = this.y;
+        this.rect.width = WIDTH;
+        this.rect.height = HEIGHT;
     }
 
     public Tank(int x, int y, Dir dir, TankFrame tf) {
@@ -44,6 +50,10 @@ public class Tank {
         this.y = y;
         this.dir = dir;
         this.tf = tf;
+        this.rect.x = this.x;
+        this.rect.y = this.y;
+        this.rect.width = WIDTH;
+        this.rect.height = HEIGHT;
     }
 
     public void paint(Graphics g) {
@@ -156,6 +166,7 @@ public class Tank {
             case RIGHT_DOWN:
                 x += SPEED;
                 y += SPEED;
+                break;
         }
 
         //敌人子弹数量
@@ -168,6 +179,10 @@ public class Tank {
         }
 
         boundsCheck();
+
+        //update rect
+        rect.x = this.x;
+        rect.y = this.y;
 
     }
 
