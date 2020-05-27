@@ -34,21 +34,20 @@ public class Tank {
     public Rectangle rect = new Rectangle();
 
     public Tank(int x, int y, Dir dir, Group group, TankFrame tf) {
-        this.x = x;
-        this.y = y;
-        this.dir = dir;
-        this.group = group;
-        this.tf = tf;
-        this.rect.x = this.x;
-        this.rect.y = this.y;
-        this.rect.width = WIDTH;
-        this.rect.height = HEIGHT;
+        setValue(x, y, dir, group, tf);
     }
 
     public Tank(int x, int y, Dir dir, TankFrame tf) {
+      setValue(x, y, dir, null, tf);
+    }
+
+    private void setValue(int x, int y, Dir dir, Group group, TankFrame tf) {
         this.x = x;
         this.y = y;
         this.dir = dir;
+        if (group != null) {
+            this.group = group;
+        }
         this.tf = tf;
         this.rect.x = this.x;
         this.rect.y = this.y;
