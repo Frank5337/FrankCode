@@ -81,23 +81,7 @@ public class MyEnumTypeHandler<E extends Enum<E>> extends BaseTypeHandler<E> {
     @Override
     public E getNullableResult(ResultSet rs, String columnName) throws SQLException {
         String s = rs.getString(columnName);
-        E[] es = type.getEnumConstants();
-        E result = null;
-        for (E e : es) {
-            Object o = null;
-            try {
-                //code是我在枚举中定义的一个属性，用来枚举值跟数据库里数据做对对应的。
-                Field field = type.getDeclaredField("code");
-                field.setAccessible(true);
-                o = field.get(e);
-            } catch (IllegalAccessException | NoSuchFieldException ex) {
-                ex.printStackTrace();
-            }
-            if (Objects.equals(o, s)) {
-                result = e;
-                break;
-            }
-        }
+        E result = getResult(s);
         return result != null ? result : s == null ? null : Enum.valueOf(type, s);
     }
 
@@ -112,22 +96,7 @@ public class MyEnumTypeHandler<E extends Enum<E>> extends BaseTypeHandler<E> {
     @Override
     public E getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
         String s = rs.getString(columnIndex);
-        E[] es = type.getEnumConstants();
-        E result = null;
-        for (E e : es) {
-            Object o = null;
-            try {
-                Field field = type.getDeclaredField("code");
-                field.setAccessible(true);
-                o = field.get(e);
-            } catch (IllegalAccessException | NoSuchFieldException ex) {
-                ex.printStackTrace();
-            }
-            if (Objects.equals(o, s)) {
-                result = e;
-                break;
-            }
-        }
+        E result = getResult(s);
         return result != null ? result : s == null ? null : Enum.valueOf(type, s);
     }
 
@@ -142,6 +111,11 @@ public class MyEnumTypeHandler<E extends Enum<E>> extends BaseTypeHandler<E> {
     @Override
     public E getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
         String s = cs.getString(columnIndex);
+        E result = getResult(s);
+        return result != null ? result : s == null ? null : Enum.valueOf(type, s);
+    }
+
+    private E getResult(String s) {
         E[] es = type.getEnumConstants();
         E result = null;
         for (E e : es) {
@@ -158,6 +132,6 @@ public class MyEnumTypeHandler<E extends Enum<E>> extends BaseTypeHandler<E> {
                 break;
             }
         }
-        return result != null ? result : s == null ? null : Enum.valueOf(type, s);
+        return result;
     }
 }
