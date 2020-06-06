@@ -23,4 +23,6 @@ public interface UserMapper {
     void updateIsSystem(@Param("userId") Long userId,
                 @Param("isSystem") boolean isSystem
                 );
+
+    User findById(@Param("userId") Long userId);
 }
