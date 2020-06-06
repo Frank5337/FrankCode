@@ -12,6 +12,7 @@
         <module>code-eureka</module>
         <module>code-shiro</module>
         <module>code-wyk</module>
+        <module>code-sso-session-redis</module>
     </modules>
 
     <groupId>com.zbl</groupId>
