@@ -19,9 +19,11 @@ import java.util.concurrent.Semaphore;
  */
 public class TestSemaphore {
 
-    private static ExecutorService executorService = Executors.newFixedThreadPool(6);
+    private static ExecutorService executorService = Executors.newFixedThreadPool(10);
     //            /ˈseməfɔː(r)/
-    private static Semaphore semaphore = new Semaphore(5);
+//    private static Semaphore semaphore = new Semaphore(5);
+    //公平的
+    private static Semaphore semaphore = new Semaphore(5, true);
 
     public static void main(String[] args) {
         for (int i = 0; i <10 ; i++) {
@@ -32,9 +34,9 @@ public class TestSemaphore {
                     semaphore.acquire();
                     Thread.sleep(1000);
                     System.out.println(Thread.currentThread().getName() + "-----");
-                    for(;;) {
+                    //for(;;) {
                         Thread.sleep(1000);
-                    }
+                    //}
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
