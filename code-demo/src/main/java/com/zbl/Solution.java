@@ -62,4 +62,9 @@ public class Solution {
         return (int)map.get(n) % 1000000007;
     }
 
+    @Test
+    public void test02() throws Exception{
+        System.out.println(13 & 17);
+    }
+
 }
