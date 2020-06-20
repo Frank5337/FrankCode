@@ -13,6 +13,7 @@
         <module>code-shiro</module>
         <module>code-wyk</module>
         <module>code-sso-session-redis</module>
+        <module>code-tdd</module>
     </modules>
 
     <groupId>com.zbl</groupId>
