@@ -14,6 +14,7 @@
         <module>code-wyk</module>
         <module>code-sso-session-redis</module>
         <module>code-tdd</module>
+        <module>code-tomcat</module>
     </modules>
 
     <groupId>com.zbl</groupId>
