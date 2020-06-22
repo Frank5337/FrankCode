@@ -14,4 +14,25 @@
         <url-pattern>/web</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>myServlet2</servlet-name>
+        <servlet-class>com.zbl.MyServlet2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>myServlet2</servlet-name>
+        <url-pattern>/web2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletLife</servlet-name>
+        <servlet-class>com.zbl.ServletLife</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletLife</servlet-name>
+        <url-pattern>/life</url-pattern>
+    </servlet-mapping>
+
 </web-app>
