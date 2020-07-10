@@ -15,6 +15,7 @@
         <module>code-sso-session-redis</module>
         <module>code-tdd</module>
         <module>code-tomcat</module>
+        <module>code-sse</module>
     </modules>
 
     <groupId>com.zbl</groupId>
