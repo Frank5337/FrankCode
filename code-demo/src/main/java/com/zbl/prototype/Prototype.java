@@ -2,6 +2,8 @@ package com.zbl.prototype;
 
 import org.junit.Test;
 
+import java.util.HashSet;
+
 /**
  * @Author: zbl
  * @Date: Created in 14:52 2020/2/25
@@ -43,6 +45,13 @@ public class Prototype {
         for (int i = 0; i < arr.length ; ++i) {
             System.out.println(arr[i]);
         }
+    }
+
+    @Test
+    public void test02() throws Exception{
+        HashSet h1 = new HashSet();
+        HashSet h2 = new HashSet();
+        h1.removeAll(h2);
     }
 
 }

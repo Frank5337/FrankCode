@@ -3,6 +3,7 @@ package com.zbl.localDateDemo;
 import org.joda.time.*;
 import org.junit.Test;
 
+import java.time.ZoneId;
 import java.util.Date;
 
 /**
@@ -77,9 +78,27 @@ public class Main {
 
     }
 
+    /**
+     * userBo.setLastSignInTime(Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()));
+     * @throws Exception
+     */
     @Test
     public void test01() throws Exception{
+        ZoneId zoneId = ZoneId.systemDefault();
+        LocalDateTime localDateTime = LocalDateTime.now();
+        //ZonedDateTime zdt = localDateTime.(zoneId);
 
+        //Date date = Date.from(zdt.toInstant());
+
+        System.out.println("LocalDateTime = " + localDateTime);
+        //System.out.println("Date = " + date);
+
+    }
+
+    @Test
+    public void test02() throws Exception{
+        Date date = LocalDateTime.now().toDate();
+        System.out.println(date);
     }
 
 }
