@@ -11,7 +11,7 @@ import java.util.concurrent.CountDownLatch;
  * @Description:
  * @Version: $
  */
-public class ConcurrentMap {
+public class T01_ConcurrentMap {
 
     public static void main(String[] args) {
 
