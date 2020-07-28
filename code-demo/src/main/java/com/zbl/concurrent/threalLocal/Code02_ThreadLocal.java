@@ -12,7 +12,7 @@ public class Code02_ThreadLocal {
 
     //volatile static Person p = new Person();
 
-    static ThreadLocal<Person> t1 = new ThreadLocal<>();
+    private static ThreadLocal<Person> t1 = new ThreadLocal<>();
 
     public static void main(String[] args) {
         new Thread(() -> {

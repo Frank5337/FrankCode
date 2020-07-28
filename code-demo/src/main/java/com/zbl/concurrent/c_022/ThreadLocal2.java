@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThreadLocal2 {
 	//volatile static Person p = new Person();
-	static ThreadLocal<Person> tl = new ThreadLocal<>();
+	private static ThreadLocal<Person> tl = new ThreadLocal<>();
 	
 	public static void main(String[] args) {
 				
