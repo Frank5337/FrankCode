@@ -16,4 +16,6 @@ public interface UserService {
     List<User> findAll();
 
     void updateIsSystem(Long userId, boolean isSystem) throws IllegalAccessException;
+
+    void update(Long userId, boolean isSystem) throws IllegalAccessException;
 }

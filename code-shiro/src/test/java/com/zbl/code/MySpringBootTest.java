@@ -38,6 +38,7 @@ public class MySpringBootTest {
 
     @Test
     public void userSet() throws Exception {
-        userService.updateIsSystem(1L, false);
+//        userService.updateIsSystem(1L, false);
+        userService.update(1L, false);
     }
 }
