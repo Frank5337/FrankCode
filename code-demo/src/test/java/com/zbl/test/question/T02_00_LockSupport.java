@@ -21,7 +21,7 @@ public class T02_00_LockSupport {
             for (char c : aI) {
                 System.out.print(c);
                 LockSupport.unpark(t2);//叫醒T2
-                LockSupport.park();//阻塞T1
+                LockSupport.park();//阻塞T1 阻塞当前线程
             }
         }, "t1");
 

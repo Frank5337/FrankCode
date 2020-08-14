@@ -16,6 +16,7 @@
         <module>code-tdd</module>
         <module>code-tomcat</module>
         <module>code-sse</module>
+        <module>code-javaVsGo</module>
     </modules>
 
     <groupId>com.zbl</groupId>
