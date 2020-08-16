@@ -180,7 +180,7 @@ public class TankFrame extends Frame {
                     bd = false;
                     break;
                 case KeyEvent.VK_SPACE:
-                    myTank.fire(myTank.getGroup());
+                    myTank.fire();
                     break;
                 case KeyEvent.VK_CONTROL:
                     addEnemy();

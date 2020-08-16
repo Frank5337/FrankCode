@@ -45,6 +45,8 @@ public class Bullet {
         this.rect.y = this.y;
         this.rect.width = WIDTH;
         this.rect.height = HEIGHT;
+
+        tf.bullets.add(this);
     }
 
     public Group getGroup() {
@@ -115,6 +117,12 @@ public class Bullet {
         //友军伤害
         if (this.group == tank.getGroup())
             return;
+        //如果坦克已经死了
+        if (!tank.isLiving()) {
+            //必须让子弹死亡, 否则变成了一个隐藏的不会爆炸的子弹, 会造成内存泄露
+            die();
+            return;
+        }
         //TODO Rectangle太多了, 用一个rect来记录子弹的位置
         //判断是否相交
         if (rect.intersects(tank.rect)) {

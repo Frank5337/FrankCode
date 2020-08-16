@@ -13,25 +13,27 @@ import java.util.Random;
  */
 @Data
 public class Tank {
-    private int x, y;
+    int x, y;
 
-    private Dir dir = Dir.DOWN;
+    Dir dir = Dir.DOWN;
 
     private static final int SPEED = 10;
 
     private boolean moving = false;
 
-    private TankFrame tf = null;
+    TankFrame tf = null;
 
     private boolean living = true;
 
     private Random random = new Random();
 
-    private Group group = Group.BAD;
+    Group group = Group.BAD;
 
     public static int WIDTH = ResourceManager.tankD.getWidth(), HEIGHT = ResourceManager.tankD.getHeight();
 
     public Rectangle rect = new Rectangle();
+
+    FireStrategy fs = new DefaultFireStrategy();
 
     public Tank(int x, int y, Dir dir, Group group, TankFrame tf) {
         setValue(x, y, dir, group, tf);
@@ -53,6 +55,13 @@ public class Tank {
         this.rect.y = this.y;
         this.rect.width = WIDTH;
         this.rect.height = HEIGHT;
+        if (group == Group.GOOD) {
+            try {
+                fs = (FireStrategy) Class.forName((String) PropertyMgr.get("goodFs")).newInstance();
+            } catch (Exception e) {
+                fs = new DefaultFireStrategy();
+            }
+        }
     }
 
     public void paint(Graphics g) {
@@ -170,7 +179,8 @@ public class Tank {
 
         //敌人子弹数量
         if (group == Group.BAD && random.nextInt(100) > 95) {
-            this.fire(this.group);
+//            this.fire(this.group);
+            this.fire();
         }
 
         if (group == Group.BAD && random.nextInt(100) > 70) {
@@ -211,11 +221,12 @@ public class Tank {
 
     }
 
-    public void fire(Group group) {
+    public void fire() {
         //计算子弹xy位置
-        int bx = this.x + Tank.WIDTH/2 - Bullet.WIDTH/2;
-        int by = this.y + Tank.WIDTH/2;
-        tf.bullets.add(new Bullet(bx, by, this.dir, group, this.tf));
+//        int bx = this.x + Tank.WIDTH/2 - Bullet.WIDTH/2;
+//        int by = this.y + Tank.WIDTH/2;
+//        tf.bullets.add(new Bullet(bx, by, this.dir, group, this.tf));
+        fs.fire(this);
     }
 
     public void die() {

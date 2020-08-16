@@ -18,15 +18,20 @@ public class T08_00_Lock_Condition {
         char[] aC = "1234567".toCharArray();
 
         Lock lock = new ReentrantLock();
+        /**
+         * condition的await signal 相当于Object的wait notify
+         * 对象监视器, 选择性通知
+         * signalAll 对等 notifyAll
+         */
         Condition condition = lock.newCondition();
 
         new Thread(() -> {
             try {
                 lock.lock();
                 for (char c : aC) {
-                    System.out.println(c);
-                    condition.signal();
-                    condition.await();
+                    System.out.print(c);
+                    condition.signal();//唤醒一个线程
+                    condition.await();//等待
                 }
                 condition.signal();
             } catch (InterruptedException e) {
@@ -41,7 +46,7 @@ public class T08_00_Lock_Condition {
             try {
                 lock.lock();
                 for (char c : aI) {
-                    System.out.println(c);
+                    System.out.print(c);
                     condition.signal();
                     condition.await();
                 }
