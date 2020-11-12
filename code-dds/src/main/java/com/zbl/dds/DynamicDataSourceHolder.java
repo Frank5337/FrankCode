@@ -16,10 +16,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class DynamicDataSourceHolder {
 
-    //线程安全
-    private static ThreadLocal<DBTypeEnum> contextHolder = new ThreadLocal<DBTypeEnum>();
+    /**
+     * 线程安全
+     */
+    private static final ThreadLocal<DBTypeEnum> contextHolder = new ThreadLocal<>();
 
-    private static final AtomicInteger counter = new AtomicInteger(-1);
+    private static final AtomicInteger COUNTER = new AtomicInteger(-1);
 
     /**
      * 默认写数据源
@@ -67,9 +69,9 @@ public class DynamicDataSourceHolder {
      */
     public static void slave() {
         //get 并 +1
-        int index = counter.getAndIncrement() % 2;
-        if (counter.get() > 9999) {
-            counter.set(-1);
+        int index = COUNTER.getAndIncrement() % 2;
+        if (COUNTER.get() > 9999) {
+            COUNTER.set(-1);
         }
         if (index == 0) {
             setDbType(DBTypeEnum.SLAVE);

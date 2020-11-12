@@ -4,7 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 读写分离, 动态数据源配置demo
+ * @Author: zbl
+ * @Date: Created in 2020/11/12
+ * @Description: 读写分离, 动态数据源配置demo
+ * @Version: $
  */
 @SpringBootApplication
 public class DdsApplication {
