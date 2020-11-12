@@ -1,0 +1,45 @@
+{
+  "properties": [
+    {
+      "name": "spring.datasource.master.jdbc-url",
+      "type": "java.lang.String",
+      "sourceType": "com.zbl.config.DataSourceConfig",
+      "description": "Master节点 jdbc-url."
+    },
+    {
+      "name": "spring.datasource.master.username",
+      "type": "java.lang.String",
+      "description": "Master节点 username."
+    },
+    {
+      "name": "spring.datasource.master.password",
+      "type": "java.lang.String",
+      "description": "Master节点 password."
+    },
+    {
+      "name": "spring.datasource.master.driver-class-name",
+      "type": "java.lang.String",
+      "description": "Master节点 driver-class-name."
+    },
+    {
+      "name": "spring.datasource.slave.jdbc-url",
+      "type": "java.lang.String",
+      "description": "slave节点 jdbc-url."
+    },
+    {
+      "name": "spring.datasource.slave.username",
+      "type": "java.lang.String",
+      "description": "slave节点 username."
+    },
+    {
+      "name": "spring.datasource.slave.password",
+      "type": "java.lang.String",
+      "description": "slave节点 password."
+    },
+    {
+      "name": "spring.datasource.slave.driver-class-name",
+      "type": "java.lang.String",
+      "description": "slave节点 driver-class-name."
+    }
+  ]
+}
