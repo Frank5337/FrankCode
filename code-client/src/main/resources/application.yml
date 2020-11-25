@@ -3,7 +3,8 @@ server:
     context-path: /client-api/
 spring:
   profiles:
-    active: @profileActive@
+#    active: @profileActive@
+    active: dev
   jackson:
     serialization:
       write-dates-as-timestamps: true

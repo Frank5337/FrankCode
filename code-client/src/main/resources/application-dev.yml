@@ -24,9 +24,13 @@ zbl-code:
   worker-id: 0
   data-center-id: 0
 eureka:
+  instance:
+    hostname: localhost
   client:
     service-url:
-      defaule-zone: http://${eureka.instanse.hostname}:6868/eureka/
+#      defaule-zone: http://${eureka.instanse.hostname}:6868/eureka/
+      defaule-zone: http://${eureka.instanse.hostname}:8761/eureka/
+
 # 开启熔断器
 feign:
   hystrix:

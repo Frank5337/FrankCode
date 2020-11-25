@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zbl</groupId>
-    <artifactId>zull</artifactId>
+    <artifactId>code-zull</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>zull</name>
     <description>Demo project for Spring Boot</description>
