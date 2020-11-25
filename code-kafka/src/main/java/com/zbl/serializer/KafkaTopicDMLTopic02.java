@@ -1,9 +1,8 @@
-package com.zbl.dml;
+package com.zbl.serializer;
 
 import org.apache.kafka.clients.admin.*;
 
 import java.util.Arrays;
-import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
@@ -14,7 +13,7 @@ import java.util.concurrent.ExecutionException;
  * @Email: zbl5337@gmail.com
  * @Description:
  */
-public class KafkaTopicDML {
+public class KafkaTopicDMLTopic02 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //1.创建KafkaAdminClient
         Properties prpos = new Properties();
@@ -23,10 +22,10 @@ public class KafkaTopicDML {
         KafkaAdminClient adminClient = (KafkaAdminClient) KafkaAdminClient.create(prpos);
 
         //创建Topic信息,  异步创建的
-//        CreateTopicsResult createTopicsResult = adminClient.createTopics(Arrays.asList(new NewTopic("topic03", 3, (short) 3)));
+        CreateTopicsResult createTopicsResult = adminClient.createTopics(Arrays.asList(new NewTopic("topic02", 3, (short) 3)));
 
         //异步改成同步
-//        createTopicsResult.all().get();
+        createTopicsResult.all().get();
 
         //查看Topic列表
         ListTopicsResult topicsResult = adminClient.listTopics();
@@ -39,9 +38,9 @@ public class KafkaTopicDML {
         //deleteTopicsResult.all().get();
 
         //查看Topic详细信息
-        DescribeTopicsResult topic01 = adminClient.describeTopics(Arrays.asList("topic01"));
-        Map<String, TopicDescription> descriptionMap = topic01.all().get();
-        descriptionMap.forEach((key, value) -> System.out.println(key + "\t" + value));
+//        DescribeTopicsResult topic01 = adminClient.describeTopics(Arrays.asList("topic01"));
+//        Map<String, TopicDescription> descriptionMap = topic01.all().get();
+//        descriptionMap.forEach((key, value) -> System.out.println(key + "\t" + value));
         //topic01	(name=topic01,
         //           internal=false,
         //           partitions=
