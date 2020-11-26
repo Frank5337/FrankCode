@@ -1,4 +1,4 @@
-package com.zbl.partotopmer;
+package com.zbl.partitioner;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
