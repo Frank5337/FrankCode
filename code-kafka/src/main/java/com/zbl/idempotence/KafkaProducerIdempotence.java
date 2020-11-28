@@ -1,13 +1,10 @@
-package com.zbl.acks;
+package com.zbl.idempotence;
 
-import com.zbl.pojo.User;
-import com.zbl.serializer.UserDefineSerializer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-import java.util.Date;
 import java.util.Properties;
 
 /**
@@ -16,7 +13,7 @@ import java.util.Properties;
  * @Email: zbl5337@gmail.com
  * @Description:
  */
-public class KafkaProducerAcks {
+public class KafkaProducerIdempotence {
     public static void main(String[] args) {
         //1.创建KafkaProducer
         //泛型, 发送的record 的key类型和值类型
@@ -35,11 +32,19 @@ public class KafkaProducerAcks {
         //为了达到效果, 让他请求超时 将检测超时时间设置为1ms
         props.put(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG, 1);
 
+        //开启幂等性
+        props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
+
+        //让记录严格有序, 默认是5  有5个消息未被确认的话 就阻塞客户端
+        //如果有1个发送不成功, 就阻塞
+        props.put(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, 1);
+
+
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 
         //for (int i = 0; i < 5; i++) {
             ProducerRecord<String, String> record = new ProducerRecord<>("topic01",
-                    "key:" + "ack", "test" + "ack");
+                    "key:" + "idempotence", "value:" + "idmtc");
             // 没有key 就是轮询的
             //            ProducerRecord<String, String> record = new ProducerRecord<>("topic01",  "value:" + i);
             //发送给消息服务器
