@@ -38,10 +38,10 @@ public class KafkaSpringBootApplication {
      */
     @KafkaListeners(
             value = {
-                    @KafkaListener(topics = {"topic02"})
+                    @KafkaListener(topics = {"springbootSendTopic"})
             }
     )
-    @SendTo("topic03")
+    @SendTo("toTopic")
     public String receive02(ConsumerRecord<String, String> consumerRecord) {
         return consumerRecord.value() + " / com.zbl.kafka.springboot";
     }
