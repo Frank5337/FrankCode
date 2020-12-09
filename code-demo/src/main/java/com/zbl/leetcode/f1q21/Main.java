@@ -67,7 +67,7 @@ public class Main {
      * @param head
      * @return
      */
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseList3(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
         ListNode tmp = null;
@@ -89,7 +89,7 @@ public class Main {
      * @param head
      * @return
      */
-    public ListNode reverseList2(ListNode head) {
+    public ListNode reverseList4(ListNode head) {
         if(head==null || head.next==null) {
             return head;
         }
