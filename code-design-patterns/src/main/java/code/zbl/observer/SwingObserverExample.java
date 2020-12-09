@@ -29,6 +29,9 @@ public class SwingObserverExample {
         button.addActionListener(new DevilListener());
         frame.getContentPane().add(BorderLayout.CENTER, button);
         //在这里设置frame的属性
+        frame.pack();
+        frame.setLocation(300, 300);
+        frame.setVisible(true);
     }
 
     static class AngleListener implements ActionListener {
