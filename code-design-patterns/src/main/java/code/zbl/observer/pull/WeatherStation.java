@@ -18,6 +18,7 @@ public class WeatherStation {
                 new CurrentConditionDisplay(weatherData);
         ForecastDisplay forecastDisplay =
                 new ForecastDisplay(weatherData);
+
         weatherData.setMeasurementsChanged(80, 65, 30.4f);
 //        currentPressure: 30.4  lastPressure: 29.92
 //        Current conditions: 80.0F degrees and 65.0% humidity

@@ -1,14 +1,15 @@
 package code.zbl.observer.pull;
 
 import java.util.Observable;
+import java.util.Observer;
 
 /**
  * @Author: zbl
  * @Date: Create in 2020/12/7
  * @Email: zbl5337@gmail.com
- * @Description:
+ * @Description: 可观察者, 也是主题
  */
-public class WeatherData extends Observable {
+public class WeatherData extends Observable implements Observer {
 
     private float temperature;
 
@@ -42,5 +43,9 @@ public class WeatherData extends Observable {
 
     public float getPressure() {
         return pressure;
+    }
+
+    public void update(Observable o, Object arg) {
+
     }
 }
