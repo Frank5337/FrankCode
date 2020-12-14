@@ -1,5 +1,11 @@
 package com.zbl.arithmetic.class01;
 
+import org.junit.Test;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
 /**
  * @Author: zbl
  * @Date: Create in 2020/12/9
@@ -55,6 +61,15 @@ public class Code06_PrintB {
         System.out.println(zz);
         System.out.println(zzz);
 
+    }
+
+    @Test
+    public void test01() throws Exception {
+        try (FileInputStream fileInputStream = new FileInputStream(new File("D:\\work\\develop\\IdeaProjects\\code\\code-demo\\src\\main\\java\\com\\zbl\\arithmetic\\class01\\Code03_InsertionSort.java"))){
+            System.out.println(fileInputStream.read());
+        } catch (IOException e) {
+            throw e;
+        }
     }
 
 
