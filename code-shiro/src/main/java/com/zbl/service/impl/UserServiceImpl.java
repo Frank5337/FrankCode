@@ -4,6 +4,7 @@ import com.zbl.mapper.UserMapper;
 import com.zbl.pojo.User;
 import com.zbl.service.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
@@ -51,5 +52,19 @@ public class UserServiceImpl implements UserService {
             throw new IllegalAccessException();//不会被回滚的, 已检查的, 需要@Transactional(rollbackFor = Exception.class)
         }
         //int i = 1/0;
+    }
+
+    @Resource
+    private UserServicePop userServicePop;
+
+    @Override
+    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
+    public void updatePop(Long userId, boolean isSystem) throws IllegalAccessException {
+        update(2L, false);
+
+        userServicePop.update(userId, isSystem);
+
+        throw new IllegalAccessException();
+
     }
 }

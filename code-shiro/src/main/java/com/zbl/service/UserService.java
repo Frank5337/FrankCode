@@ -18,4 +18,6 @@ public interface UserService {
     void updateIsSystem(Long userId, boolean isSystem) throws IllegalAccessException;
 
     void update(Long userId, boolean isSystem) throws IllegalAccessException;
+
+    void updatePop(Long userId, boolean isSystem) throws IllegalAccessException;
 }
