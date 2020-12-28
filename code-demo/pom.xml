@@ -46,6 +46,14 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- **************************** Dubbo 依赖 **************************** -->
+        <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

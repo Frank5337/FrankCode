@@ -63,6 +63,10 @@ public class DynamicDataSourceHolder {
         log.info("切换到master");
     }
 
+    public static void master2() {
+        setDbType(DBTypeEnum.MASTER2);
+        log.info("切换到master2");
+    }
 
     /**
      * 轮询获取从库, 测试先只用一个从库

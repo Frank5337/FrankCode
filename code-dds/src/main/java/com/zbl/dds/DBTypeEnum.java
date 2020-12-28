@@ -12,6 +12,8 @@ public enum DBTypeEnum {
      * 主
      */
     MASTER("master"),
+
+    MASTER2("master2"),
     /**
      * 从
      */

@@ -19,17 +19,22 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class DataSourceAop {
 
-    @Pointcut("!@annotation(com.zbl.aop.Master) " +
-            "&& (execution(* com.zbl.mapper..*.find*(..)) " +
+    @Pointcut("@annotation(com.zbl.aop.Slave) " +
+            "|| (execution(* com.zbl.mapper..*.find*(..)) " +
             "|| execution(* com.zbl.mapper..*.get*(..)))")
     public void readPointcut() {
 
     }
 
-    @Pointcut("@annotation(com.zbl.aop.Slave) " +
+    @Pointcut("@annotation(com.zbl.aop.Master2)")
+    public void writePointcut2() {
+
+    }
+
+    @Pointcut("@annotation(com.zbl.aop.Master) " +
             "|| execution(* com.zbl.mapper..*.insert*(..)) " +
             "|| execution(* com.zbl.mapper..*.add*(..)) " +
-            "|| execution(* com.zbl.mapper..*.update*(..)) " +
+            //"|| execution(* com.zbl.mapper..*.update*(..)) " +
             "|| execution(* com.zbl.mapper..*.edit*(..)) " +
             "|| execution(* com.zbl.mapper..*.delete*(..)) " +
             "|| execution(* com.zbl.mapper..*.remove*(..))")
@@ -47,6 +52,10 @@ public class DataSourceAop {
         DynamicDataSourceHolder.master();
     }
 
+    @Before("writePointcut2()")
+    public void write2() {
+        DynamicDataSourceHolder.master2();
+    }
 
     /**
      * 清理, 防止串连接 or 内存泄露问题

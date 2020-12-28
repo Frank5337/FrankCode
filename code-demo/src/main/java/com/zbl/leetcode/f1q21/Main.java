@@ -1,8 +1,5 @@
 package com.zbl.leetcode.f1q21;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @Author: zbl
  * @Date: Created in 10:50 2020/10/8

@@ -28,6 +28,12 @@ public class DataSourceConfig {
     }
 
     @Bean
+    @ConfigurationProperties(prefix = "spring.datasource.master2")
+    public DataSource master2DataSource() {
+        return DataSourceBuilder.create().build();
+    }
+
+    @Bean
     @ConfigurationProperties(prefix = "spring.datasource.slave")
     public DataSource slaveDataSource() {
         return DataSourceBuilder.create().build();
@@ -35,9 +41,11 @@ public class DataSourceConfig {
 
     @Bean
     public DataSource dynamicDataSource(@Qualifier("masterDataSource") DataSource masterDataSource,
+                                        @Qualifier("master2DataSource") DataSource master2DataSource,
                                         @Qualifier("slaveDataSource") DataSource slaveDataSource) {
         Map<Object, Object> targetDataSources = new HashMap<>();
         targetDataSources.put(DBTypeEnum.MASTER, masterDataSource);
+        targetDataSources.put(DBTypeEnum.MASTER2, master2DataSource);
         targetDataSources.put(DBTypeEnum.SLAVE, slaveDataSource);
         DynamicDataSource dynamicDataSource = new DynamicDataSource();
         dynamicDataSource.setDefaultTargetDataSource(masterDataSource);

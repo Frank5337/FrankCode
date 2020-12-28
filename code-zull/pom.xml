@@ -11,7 +11,7 @@
     <groupId>com.zbl</groupId>
     <artifactId>code-zull</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>zull</name>
+    <name>code-zull</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

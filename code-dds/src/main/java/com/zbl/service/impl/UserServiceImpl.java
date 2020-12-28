@@ -40,5 +40,7 @@ public class UserServiceImpl implements UserService {
     @Transactional(rollbackFor = Exception.class)
     public void update(Long userId, boolean isSystem) throws IllegalAccessException {
         userMapper.updateIsSystem(userId, isSystem);
+        userMapper.updateIsSystem2(userId, isSystem);
+        //int i = 1/0;
     }
 }

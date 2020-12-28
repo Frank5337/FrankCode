@@ -14,6 +14,10 @@
         UPDATE s_user SET is_system = #{isSystem} WHERE id = #{userId}
     </update>
 
+    <update id="updateIsSystem2">
+        UPDATE s_user SET is_system = #{isSystem} WHERE id = #{userId}
+    </update>
+
     <select id="findById" resultType="com.zbl.pojo.User">
         select * from s_user where id = #{userId}
     </select>
