@@ -1,4 +1,4 @@
-package code.zbl.decorator;
+package code.zbl.decorate.decorator;
 
 /**
  * @Author: zbl
