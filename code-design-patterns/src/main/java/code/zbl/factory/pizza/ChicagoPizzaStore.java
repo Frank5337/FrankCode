@@ -1,4 +1,6 @@
-package code.zbl.factory;
+package code.zbl.factory.pizza;
+
+import code.zbl.factory.PizzaStore;
 
 /**
  * @Author: zbl

@@ -1,9 +1,7 @@
 package code.zbl.factory;
 
-import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
+import code.zbl.factory.pizza.ChicagoPizzaStore;
+import code.zbl.factory.pizza.Pizza;
 
 /**
  * @Author: zbl
@@ -25,17 +23,4 @@ public class PizzaTestDrive {
 
     }
 
-    @Test
-    public void test01() throws Exception {
-        List list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        for (Object o : list) {
-            if (o.equals(2)) {
-                continue;
-            }
-            System.out.println(o);
-        }
-    }
 }

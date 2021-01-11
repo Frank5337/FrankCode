@@ -1,4 +1,4 @@
-package code.zbl.factory;
+package code.zbl.factory.pizza;
 
 /**
  * @Author: zbl
@@ -10,5 +10,10 @@ public class ChicagoStyleClamPizza extends Pizza {
 
     public ChicagoStyleClamPizza() {
         super.name = "ChicagoStyleClamPizza";
+    }
+
+    @Override
+    public void prepare() {
+
     }
 }

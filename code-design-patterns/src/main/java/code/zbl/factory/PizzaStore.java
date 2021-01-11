@@ -1,5 +1,7 @@
 package code.zbl.factory;
 
+import code.zbl.factory.pizza.Pizza;
+
 /**
  * @Author: zbl
  * @Date: Created in 2021/1/11

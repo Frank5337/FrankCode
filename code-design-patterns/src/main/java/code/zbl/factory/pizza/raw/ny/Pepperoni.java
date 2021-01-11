@@ -1,4 +1,4 @@
-package code.zbl.factory;
+package code.zbl.factory.pizza.raw.ny;
 
 /**
  * @Author: zbl
@@ -6,7 +6,5 @@ package code.zbl.factory;
  * @Description:
  * @Version: $
  */
-public class SimplePizzaFactory {
-
-
+public class Pepperoni {
 }
