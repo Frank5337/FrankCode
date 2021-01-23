@@ -18,6 +18,8 @@
         <module>code-sse</module>
         <module>code-javaVsGo</module>
         <module>code-leetcode</module>
+        <module>code-design-patterns</module>
+        <module>code-elasticsearch</module>
     </modules>
 
     <groupId>com.zbl</groupId>

@@ -11,8 +11,8 @@ import java.util.List;
 public class MysqlTest {
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1", "root", "123456");
-        PreparedStatement pstmt = conn.prepareStatement("insert into psn2 values(?,?)");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/locktest", "root", "zbl5337");
+        PreparedStatement pstmt = conn.prepareStatement("insert into person (`v1`, `v2`) values(?,?)");
         for (int i = 0; i < 20000; i++) {
             pstmt.setInt(1, i);
             pstmt.setString(2, i + "");

@@ -1,2 +1,6 @@
 server:
   port: 9988
+spring:
+  # 关闭thymeleaf的缓存
+  thymeleaf:
+    cache: false

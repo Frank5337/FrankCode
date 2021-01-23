@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.annotation.KafkaListeners;
-import org.springframework.messaging.handler.annotation.SendTo;
 
 import java.io.IOException;
 
@@ -26,7 +25,7 @@ public class KafkaSpringBootApplication {
 
     @KafkaListeners(
             value = {
-                    @KafkaListener(topics = {"topic01"})
+                    @KafkaListener(topics = {"zblkafka"})
             }
     )
     public void receive01(ConsumerRecord<String, String> consumerRecord) {
@@ -36,13 +35,13 @@ public class KafkaSpringBootApplication {
     /**
      * 接收02的数据发送给03
      */
-    @KafkaListeners(
-            value = {
-                    @KafkaListener(topics = {"springbootSendTopic"})
-            }
-    )
-    @SendTo("toTopic")
-    public String receive02(ConsumerRecord<String, String> consumerRecord) {
-        return consumerRecord.value() + " / com.zbl.kafka.springboot";
-    }
+//    @KafkaListeners(
+//            value = {
+//                    @KafkaListener(topics = {"springbootSendTopic"})
+//            }
+//    )
+//    @SendTo("toTopic")
+//    public String receive02(ConsumerRecord<String, String> consumerRecord) {
+//        return consumerRecord.value() + " / com.zbl.kafka.springboot";
+//    }
 }

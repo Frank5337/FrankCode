@@ -1,4 +1,4 @@
-package com.zbl.quickstart;
+package com.zbl.transactional;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -18,23 +18,24 @@ import java.util.Properties;
  * @Email: zbl5337@gmail.com
  * @Description:
  */
-public class KafkaConsumerQuickStart_01 {
+public class KafkaConsumerTransactionalReadCommitted {
     public static void main(String[] args) {
         //1.创建KafkaConsumer
         //泛型, 发送的record 的key类型和值类型
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
-//                "144-kafka-a:9092,145-kafka-b:9092,146-kafka-c:9092");
-                "8.136.133.137:9092");
+                "144-kafka-a:9092,145-kafka-b:9092,146-kafka-c:9092");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "ke1");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "t1");
+
+        //设置消费者的消费事务的隔离级别 read_committed
+        props.put(ConsumerConfig.ISOLATION_LEVEL_CONFIG, "read_committed");
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
 
         //2.订阅相关的topic
-//        consumer.subscribe(Pattern.compile("^topic.*"));
-        consumer.subscribe(Arrays.asList("zblkafka"));
+        consumer.subscribe(Arrays.asList("topic01"));
 
         //遍历消息队列
         while (true) {
