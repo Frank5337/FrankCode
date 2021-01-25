@@ -4,7 +4,7 @@ package com.zbl.concurrent.wwj.p6;
  * @Author: zbl
  * @Date: Created in 2021/1/23
  * @Description:
- * @Version: $
+ * @Version: $ https://www.bilibili.com/video/BV1hJ411D7k2?p=6
  */
 public class Bank {
 

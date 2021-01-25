@@ -6,7 +6,7 @@ import org.junit.Test;
  * @Author: zbl
  * @Date: Created in 2021/1/23
  * @Description: 策略模式
- * @Version: $
+ * @Version: $ https://www.bilibili.com/video/BV1hJ411D7k2?p=7
  */
 public class Main {
 
