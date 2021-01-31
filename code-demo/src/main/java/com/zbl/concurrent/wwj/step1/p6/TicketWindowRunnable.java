@@ -1,4 +1,4 @@
-package com.zbl.concurrent.wwj.p6;
+package com.zbl.concurrent.wwj.step1.p6;
 
 /**
  * @Author: zbl
