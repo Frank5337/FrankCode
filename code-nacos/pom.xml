@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zbl</groupId>
-    <artifactId>nacos</artifactId>
+    <artifactId>code-nacos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>code-nacos</name>
     <description>Nacos, Sentinel</description>
