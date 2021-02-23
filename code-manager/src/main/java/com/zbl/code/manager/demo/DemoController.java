@@ -2,7 +2,6 @@ package com.zbl.code.manager.demo;
 
 import com.zbl.code.common.component.RedisCache;
 import com.zbl.code.common.component.RedisDistributionLock;
-import com.zbl.code.common.pojo.JsonResult;
 import com.zbl.code.common.util.TimeUtil;
 import io.swagger.annotations.Api;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -66,5 +65,9 @@ public class DemoController {
         return redisDistributionLock.unlock("frozen");
     }
 
+    @RequestMapping("test")
+    public Boolean test(){
+        return true;
+    }
 }
 
