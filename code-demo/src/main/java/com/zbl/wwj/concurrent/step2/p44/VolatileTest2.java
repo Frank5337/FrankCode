@@ -8,7 +8,7 @@ package com.zbl.wwj.concurrent.step2.p44;
  */
 public class VolatileTest2 {
 
-    private static int INIT_VALUE = 0;
+    private static volatile int INIT_VALUE = 0;
 
     private static final int MAX_LIMIT = 50;
 

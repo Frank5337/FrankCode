@@ -8,19 +8,25 @@ package com.zbl.wwj.concurrent.step1.p17;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Thread task = new Thread(() -> {
             System.out.println("task execute");
-            try {
-                Thread.sleep(10_000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            //                Thread.sleep(10_000);
+            for (int i = 0; i < 100000; i++) {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("task .... " + i);
             }
-            System.out.println("task execute");
+            System.out.println("task execute end");
         });
 
         ThreadService threadService = new ThreadService();
         threadService.execute(task);
-        threadService.shutdown(5_000);
+        Thread.sleep(5_000);
+        threadService.shutdown();
+//        threadService.shutdown(5_000);
     }
 }

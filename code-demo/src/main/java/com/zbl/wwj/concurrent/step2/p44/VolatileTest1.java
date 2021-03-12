@@ -11,7 +11,7 @@ public class VolatileTest1 {
     /**
      * 加volatile后 会从主内存去拿
      */
-    private volatile static int INIT_VALUE = 0;
+    private static volatile int INIT_VALUE = 0;
 
     private static final int MAX_LIMIT = 50;
 
