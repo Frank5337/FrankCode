@@ -49,7 +49,14 @@ public class ThreadService {
                 System.out.println("执行线程被打断");
                 break;
             }
+        }
+    }
 
+    public void shutdown() {
+        //如果没执行完, 打断
+        if (!finished) {
+            System.out.println("结束线程");
+            executeThread.interrupt();
         }
     }
 
