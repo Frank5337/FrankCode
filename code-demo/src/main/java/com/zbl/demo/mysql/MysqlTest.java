@@ -1,4 +1,4 @@
-package com.zbl.mysql;
+package com.zbl.demo.mysql;
 
 import org.junit.Test;
 
