@@ -6,7 +6,7 @@ package java.lang;
  * @Description:
  * @Version: $
  */
-public class String {
+public class StringT {
 
     private static int i = 1;
 
@@ -14,7 +14,7 @@ public class String {
 
     private Object obj = new Object();
 
-    public String() {
+    public StringT() {
         x = 10;
     }
 
