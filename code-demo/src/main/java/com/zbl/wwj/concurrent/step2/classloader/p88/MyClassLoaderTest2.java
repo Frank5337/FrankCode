@@ -21,10 +21,12 @@ public class MyClassLoaderTest2 {
         classLoader2.setDir("D:\\develop\\IdeaProjects\\code\\code-demo\\src\\main\\java\\com\\zbl\\wwj\\concurrent\\step2\\classloader\\p88\\app\\classloader2");
         Class<?> klass = classLoader1.loadClass("com.zbl.wwj.concurrent.step2.classloader.p88.MyObject");
         Class<?> klass2 = classLoader2.loadClass("com.zbl.wwj.concurrent.step2.classloader.p88.MyObject");
-        System.out.println(klass.hashCode());
-        System.out.println(klass2.hashCode());
-        System.out.println(klass);
+        System.out.println(klass.hashCode());//1229416514
+        System.out.println(klass2.hashCode());//2016447921
+        System.out.println(klass.getClassLoader());//com.zbl.wwj.concurrent.step2.classloader.p88.MyClassLoader@4d7e1886
+        System.out.println(klass2.getClassLoader());//com.zbl.wwj.concurrent.step2.classloader.p88.MyClassLoader@2f0e140b
         System.out.println(((MyClassLoader)klass.getClassLoader()).getClassLoaderName());
+        System.out.println(((MyClassLoader)klass2.getClassLoader()).getClassLoaderName());
 
     }
 
