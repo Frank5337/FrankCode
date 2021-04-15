@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p102;
+package com.zbl.wwj.concurrent.step3.p95_105_Atomic.p102;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicStampedReference;

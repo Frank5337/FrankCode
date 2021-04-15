@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p97;
+package com.zbl.wwj.concurrent.step3.p95_105_Atomic.p97;
 
 /**
  * @Author: zbl

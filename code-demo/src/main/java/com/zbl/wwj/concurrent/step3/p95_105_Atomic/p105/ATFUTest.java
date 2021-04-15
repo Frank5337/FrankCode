@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p105;
+package com.zbl.wwj.concurrent.step3.p95_105_Atomic.p105;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
@@ -18,7 +18,7 @@ public class ATFUTest {
     private AtomicIntegerFieldUpdater<ATFUTest> t = AtomicIntegerFieldUpdater.newUpdater(ATFUTest.class, "i");
 
     public void update(int newValue) {
-        t.compareAndSet(this, i, newValue);
+//        t.compareAndSet(this, i, newValue);
     }
 
     public int get() {

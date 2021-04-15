@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p95;
+package com.zbl.wwj.concurrent.step3.p95_105_Atomic.p95;
 
 import java.util.Collections;
 import java.util.HashSet;

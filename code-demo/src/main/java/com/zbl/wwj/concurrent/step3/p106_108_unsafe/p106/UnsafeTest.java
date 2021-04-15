@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p106;
+package com.zbl.wwj.concurrent.step3.p106_108_unsafe.p106;
 
 import org.junit.Test;
 import sun.misc.Unsafe;

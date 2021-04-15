@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p100;
+package com.zbl.wwj.concurrent.step3.p95_105_Atomic.p100;
 
 import org.junit.Assert;
 import org.junit.Test;

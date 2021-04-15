@@ -1,8 +1,8 @@
-package com.zbl.wwj.concurrent.step3.p101;
+package com.zbl.wwj.concurrent.step3.p95_105_Atomic.p101;
 
 import org.junit.Test;
 
-import javax.swing.*;
+import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.atomic.AtomicReference;

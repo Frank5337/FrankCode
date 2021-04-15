@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p108;
+package com.zbl.wwj.concurrent.step3.p106_108_unsafe.p108;
 
 import sun.misc.Unsafe;
 
@@ -38,7 +38,7 @@ public class UnsafeFooTest {
         //会初始化
 //        Simple simple = Simple.class.newInstance();
         //不会初始化
-//        Class<?> aClass = Class.forName("com.zbl.wwj.concurrent.step3.p108.UnsafeFooTest.Simple");
+//        Class<?> aClass = Class.forName("com.zbl.wwj.concurrent.step3.p106_108_unsafe.p108.UnsafeFooTest.Simple");
 
         //unsafe绕过初始化 之间开辟内存
         Unsafe unsafe = getUnsafe();

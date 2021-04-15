@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p104;
+package com.zbl.wwj.concurrent.step3.p95_105_Atomic.p104;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
@@ -17,8 +17,8 @@ public class AtomicIntegerFieldUpdaterTest {
         for (int i = 0; i < 2; i++) {
             new Thread(() -> {
                 for (int j = 0; j < 20; j++) {
-                    int v = updater.getAndIncrement(ne);
-                    System.out.println(Thread.currentThread().getName() + " => " + v);
+//                    int v = updater.getAndIncrement(ne);
+//                    System.out.println(Thread.currentThread().getName() + " => " + v);
                 }
             }).start();
         }
@@ -27,4 +27,5 @@ public class AtomicIntegerFieldUpdaterTest {
     static class TestMe {
         volatile int i;
     }
+
 }

@@ -1,4 +1,4 @@
-package com.zbl.wwj.concurrent.step3.p96;
+package com.zbl.wwj.concurrent.step3.p95_105_Atomic.p96;
 
 import org.junit.Test;
 
