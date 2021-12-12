@@ -1,0 +1,144 @@
+syntax = "proto3";
+
+import public "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+//事件内容
+message  StandEventList{
+  repeated StandEvent standEvent =1;
+};
+
+
+message StandEvent{
+  //事件id
+  google.protobuf.StringValue  e_id = 1;
+  //事件时间
+  google.protobuf.Int64Value  e_time = 2;
+
+  google.protobuf.StringValue  e_category = 3;
+
+  google.protobuf.StringValue  e_type = 4;
+
+  google.protobuf.StringValue  e_cap_dev_type = 5;
+
+  google.protobuf.StringValue  e_cap_dev_name = 6;
+
+  google.protobuf.StringValue  e_cap_dev_id = 7;
+
+  //主体
+  //命中的身份
+  google.protobuf.StringValue  s_identity=100;
+
+  google.protobuf.StringValue  s_os_user=101;
+
+  google.protobuf.StringValue  s_db_user=102;
+  //数字证书
+  google.protobuf.StringValue  s_per_cert = 103;
+  //设备数字证书
+  google.protobuf.StringValue  s_dev_cert = 104;
+  //客户端ip
+  google.protobuf.StringValue  s_dev_ip = 105;
+
+  google.protobuf.Int32Value  s_dev_port = 106;
+
+  //mac地址
+  google.protobuf.StringValue  s_dev_mac = 107;
+  //主机名
+  google.protobuf.StringValue  s_dev_name = 108;
+
+  google.protobuf.StringValue  s_app_path = 109;
+  //应用名
+  google.protobuf.StringValue  s_app_name = 110;
+  //应用hash值
+  google.protobuf.StringValue  s_app_hash = 111;
+  //应用签名
+  google.protobuf.StringValue  s_app_sign = 112;
+  //业务终端IP
+  google.protobuf.StringValue  s_t_dev_ip = 113;
+
+  google.protobuf.StringValue  s_t_dev_mac = 114;
+  //业务账号
+  google.protobuf.StringValue  s_t_account = 115;
+
+  google.protobuf.StringValue  s_t_app_name = 116;
+
+  //上下文
+  google.protobuf.Int64Value   c_time= 201;
+
+  google.protobuf.StringValue  c_session = 202;
+  //操作类型
+  google.protobuf.StringValue  b_action = 301;
+
+  google.protobuf.StringValue  b_action_category = 302;
+  //客体
+  //资产id
+  google.protobuf.Int64Value  o_id =401;
+  //资产名字
+  google.protobuf.StringValue  o_name =402;
+  //资产类型
+  google.protobuf.StringValue  o_type =403;
+
+  google.protobuf.StringValue  o_svr_ip =404;
+
+  google.protobuf.Int32Value  o_svr_port = 405;
+
+
+  google.protobuf.StringValue  o_obj_type =406;
+
+  google.protobuf.StringValue  o_object = 407;
+
+
+  google.protobuf.StringValue  o_schema =408;
+
+  //原始语句
+  google.protobuf.StringValue  o_statement =409;
+  //标准化语句
+  google.protobuf.StringValue  o_standard =410;
+  //变量
+  google.protobuf.StringValue  o_file_path =411;
+
+  google.protobuf.StringValue  o_variable =412;
+
+  //策略
+  //命中的策略id
+  google.protobuf.StringValue  r_matched_id = 501;
+  //命中的策略名
+  google.protobuf.StringValue  r_matched_name = 502;
+  //返回，放行，阻断，脱敏，模拟阻断等等
+  google.protobuf.StringValue  r_response = 503;
+
+  google.protobuf.StringValue  r_risk_type = 504;
+  //风险等级
+  google.protobuf.Int32Value  r_risk = 505;
+  //审计级别
+  google.protobuf.Int32Value  r_audit = 506;
+
+  google.protobuf.Int32Value  f_affected = 507;
+  //单位：毫秒，执行时间
+  google.protobuf.Int32Value  f_running_time =508;
+  //执行结果，0 代表执行成功，否则就是错误码
+  google.protobuf.StringValue  f_err =509;
+
+  //附加入库
+  //审阅状态
+  google.protobuf.Int32Value  review_status = 601;
+  //原始文本
+  google.protobuf.StringValue  raw = 602;
+  //错误码描述
+  google.protobuf.StringValue  f_err_description = 603;
+  //风险等级描述
+  google.protobuf.StringValue  r_risk_description = 604;
+  //是否本身是标准数据 1是 0 不是
+  google.protobuf.Int32Value  from_standard = 605;
+  //维度genkey
+  google.protobuf.StringValue  dimension_key = 606;
+  //标准语句id
+  google.protobuf.StringValue  o_standard_id = 608;
+
+  //附加不入库
+
+  // 是否黑名单 0 不是  1是
+  google.protobuf.Int32Value   is_black_list = 607;
+  google.protobuf.StringValue  e_cap_dev_ip = 609;
+
+}

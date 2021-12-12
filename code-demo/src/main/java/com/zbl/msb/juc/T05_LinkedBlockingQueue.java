@@ -1,5 +1,9 @@
 package com.zbl.msb.juc;
 
+import org.junit.Test;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -18,15 +22,16 @@ import java.util.concurrent.TimeUnit;
  */
 public class T05_LinkedBlockingQueue {
 
-    static BlockingQueue<String> strs = new LinkedBlockingQueue<>();
+    static BlockingQueue<String> strs = new LinkedBlockingQueue<>(10);
 
     static Random r = new Random();
 
     public static void main(String[] args) {
         new Thread(() -> {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 15; i++) {
                 try {
                     strs.put("a" + i);//如果满了 就会等待
+                    System.out.println("put a" + i);
                     TimeUnit.MILLISECONDS.sleep(r.nextInt(1000));
                     if (i == 10) {
                         System.out.println("休眠 10 秒");
@@ -50,6 +55,24 @@ public class T05_LinkedBlockingQueue {
             }, "c" + i).start();
         }
 
+    }
+
+    @Test
+    public void test01() throws Exception {
+//        long now = System.currentTimeMillis();
+//        Date date O= new Date(now);
+//        System.out.println(date);
+//        Date date1 = new Date(now - 30 * 60 * 1000);
+//        System.out.println(date1);
+        Map map = new HashMap();
+        Map dbIdMap = new HashMap();
+        map.put("dbId", dbIdMap);
+        dbIdMap.put("x1", "x");
+        dbIdMap.put("x2", "x");
+        dbIdMap.put("x3", "x");
+        if (dbIdMap.get("x1") != null) {
+//            dbIdMap.put("x1", x+1);
+        }
     }
 
 

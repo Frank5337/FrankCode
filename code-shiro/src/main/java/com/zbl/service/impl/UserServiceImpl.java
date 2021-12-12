@@ -4,7 +4,6 @@ import com.zbl.mapper.UserMapper;
 import com.zbl.pojo.User;
 import com.zbl.service.UserService;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
@@ -43,7 +42,7 @@ public class UserServiceImpl implements UserService {
         update(userId, isSystem);
     }
 
-    @Transactional(rollbackFor = Exception.class)
+    //@Transactional(rollbackFor = Exception.class)
     public void update(Long userId, boolean isSystem) throws IllegalAccessException {
         //userMapper.findById(userId);
         userMapper.updateIsSystem(userId, isSystem);
@@ -58,11 +57,11 @@ public class UserServiceImpl implements UserService {
     private UserServicePop userServicePop;
 
     @Override
-    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
+    @Transactional(rollbackFor = Exception.class)
     public void updatePop(Long userId, boolean isSystem) throws IllegalAccessException {
         update(2L, false);
 
-        userServicePop.update(userId, isSystem);
+        //userServicePop.update(userId, isSystem);
 
         throw new IllegalAccessException();
 

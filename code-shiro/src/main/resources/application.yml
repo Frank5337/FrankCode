@@ -18,7 +18,7 @@ spring:
   #      additional-paths: src/main/java
   #      exclude: WEB-INF/**
   datasource:
-    url: jdbc:mysql://127.0.0.1/code-shiro?characterEncoding=utf-8&useSSL=false&useAffectedRows=true&allowMultiQueries=true
+    url: jdbc:mysql://127.0.0.1/code-shiro?characterEncoding=utf-8&useSSL=false&useAffectedRows=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai
     username: root
     password: zbl5337
     driver-class-name: com.mysql.jdbc.Driver
