@@ -114,6 +114,7 @@ public class SimpleSkipList {
             }
             nearNode = nearNode.up;
 
+            //把节点放进去
             Node upNode = new Node(element);
             upNode.left = nearNode;
             upNode.right = nearNode.right;
