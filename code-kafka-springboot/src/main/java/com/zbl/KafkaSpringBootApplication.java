@@ -1,5 +1,7 @@
 package com.zbl;
 
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.zbl.protobuf.Soc;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,11 +27,26 @@ public class KafkaSpringBootApplication {
 
     @KafkaListeners(
             value = {
-                    @KafkaListener(topics = {"zblkafka"})
+                    @KafkaListener(topics = {"DBResoureces"})
             }
     )
     public void receive01(ConsumerRecord<String, String> consumerRecord) {
         System.out.println("record: " + consumerRecord);
+    }
+
+    @KafkaListeners(
+            value = {
+                    @KafkaListener(topics = {"AuditAll"})
+            }
+    )
+    public void receive02(ConsumerRecord<String, byte[]> consumerRecord) {
+        System.out.println("record: " + consumerRecord);
+        try {
+            Soc.StandEventList eventList = Soc.StandEventList.parseFrom(consumerRecord.value());
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+
     }
 
     /**

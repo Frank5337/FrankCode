@@ -44,7 +44,7 @@ public class KafkaTemplateTest {
         kafkaTemplate.executeInTransaction(new KafkaOperations.OperationsCallback<String, String, Object>() {
             @Override
             public Object doInOperations(KafkaOperations<String, String> kafkaOperations) {
-                kafkaOperations.send(new ProducerRecord<>("topic02",
+                kafkaOperations.send(new ProducerRecord<>("testccc",
                         "testTransactional", "testSendMessage transactional"));
                 return null;
             }
