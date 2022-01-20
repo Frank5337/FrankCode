@@ -194,6 +194,18 @@ public class MysqlTest02 {
 
     }
 
+    @Test
+    public void test02221() throws Exception {
+        List<Integer> integers = Arrays.asList(1, 2, 3, 4);
+        for (Integer integer : integers) {
+            if (integer == 2) {
+                continue;
+            }
+            System.out.println(integer);
+        }
+
+    }
+
 
 
 
