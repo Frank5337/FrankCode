@@ -18,7 +18,7 @@ import java.util.Date;
  */
 public class MongoDBTest {
 
-    private static final String COLUM_PRIMARY_KEY = "_id";
+    private static final String COLUMN_PRIMARY_KEY = "_id";
 
     public static void main(String[] args) {
         //mongodb://%s" + ip + ":" + port
@@ -63,7 +63,7 @@ public class MongoDBTest {
         if (columValue instanceof Collection) {
             return "collection";
         }
-        return "unkown";
+        return "unknown";
     }
 
 }

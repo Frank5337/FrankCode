@@ -3,7 +3,7 @@ package com.zbl.wwj.concurrent.step2.p40;
 /**
  * @Author: zbl
  * @Date: Created in 2021/2/16
- * @Description: 饿汉式  DCL
+ * @Description: 饿汉式  code.zbl.decorate.beverage.DCL
  * @Version: $
  *
  * 解决性能问题

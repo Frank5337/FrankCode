@@ -20,6 +20,7 @@
         <module>code-leetcode</module>
         <module>code-design-patterns</module>
         <module>code-elasticsearch</module>
+        <module>code-test</module>
     </modules>
 
     <groupId>com.zbl</groupId>

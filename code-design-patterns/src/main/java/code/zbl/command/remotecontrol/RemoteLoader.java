@@ -28,13 +28,13 @@ public class RemoteLoader {
 
         System.out.println(remoteControl);
 
-        remoteControl.onButtonWasPushed(1);
-        remoteControl.undoButtonWasPushed();
-        remoteControl.onButtonWasPushed(2);
-        remoteControl.undoButtonWasPushed();
+        remoteControl.onButtonWasPushed(1);//开灯
+        remoteControl.undoButtonWasPushed();//关灯
+        remoteControl.onButtonWasPushed(2);//开音响, 装cd ,设定音量: 11
+        remoteControl.undoButtonWasPushed();//关音响
 
-        remoteControl.onButtonWasPushed(3);
-        remoteControl.undoButtonWasPushed();
+        remoteControl.onButtonWasPushed(3);//无命令执行
+        remoteControl.undoButtonWasPushed();//无命令执行
 
 //        remoteControl.offButtonWasPushed(1);
 //        remoteControl.offButtonWasPushed(2);

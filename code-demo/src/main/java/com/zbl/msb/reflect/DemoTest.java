@@ -1,7 +1,8 @@
-package com.zbl.reflect;
+package com.zbl.msb.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Proxy;
 import java.util.Arrays;
 
 /**
@@ -13,6 +14,7 @@ import java.util.Arrays;
 public class DemoTest {
 
     public static void main(String[] args) throws Exception {
+        Proxy proxy;
         //MyProxy m = new MyProxy();
         Class c = MyProxy.class;
         Constructor[] constructors = c.getDeclaredConstructors();
