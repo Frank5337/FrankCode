@@ -1,4 +1,4 @@
-package com.zbl.demo;
+package com.zbl.demo.getip;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
