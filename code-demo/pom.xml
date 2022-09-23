@@ -122,6 +122,12 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.7.1</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
