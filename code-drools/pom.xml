@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>code</artifactId>
+        <groupId>com.zbl</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>code-drools</artifactId>
+
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <drools.version>7.0.0.Final</drools.version>
+        <spring.version>4.2.6.RELEASE</spring.version>
+        <log4j2.version>2.5</log4j2.version>
+    </properties>
+
+    <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-core</artifactId>-->
+<!--            <version>${drools.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-decisiontables</artifactId>-->
+<!--            <version>${drools.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-workbench-models-guided-template</artifactId>-->
+<!--            <version>${drools.version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.drools</groupId>-->
+<!--            <artifactId>drools-simulator</artifactId>-->
+<!--            <version>${drools.version}</version>-->
+<!--        </dependency>-->
+    </dependencies>
+
+</project>

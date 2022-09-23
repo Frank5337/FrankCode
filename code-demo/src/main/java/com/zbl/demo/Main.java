@@ -16,7 +16,7 @@ public class Main {
         Runnable r = () -> {
             long start = System.currentTimeMillis();
             long res = 0;
-            for (int i = 0; i < 989898989; i++) {
+            for (int i = 0; i < 98989898; i++) {
                 res += i;
             }
             long end = System.currentTimeMillis();

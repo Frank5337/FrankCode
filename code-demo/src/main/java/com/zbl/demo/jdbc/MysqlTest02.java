@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -20,18 +20,19 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class MysqlTest02 {
     public static void main(String[] args) throws Exception {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.230.136:3306/capaa?useSSL=false", "root", "zbl5337");
-        PreparedStatement pstmt = conn.prepareStatement("drop table  `mc$active_statistics_operation`  ;");
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.230.136:3333/capaa?useSSL=false", "root", "zbl5337");
+        Statement pstmt = conn.createStatement();
 //        PreparedStatement pstmt = conn.prepareStatement("select * from ;");
 
 //        pstmt.execute();
         AtomicLong timesA = new AtomicLong(0L);
         new Thread(() -> {
-            for (int i = 0; i < 1; i++) {
+            for (int i = 0; i < 1000000; i++) {
                 try {
                     Thread.sleep(new Random().nextInt(10));
-                    pstmt.execute();
+                    pstmt.execute("select " + i);
+                    System.out.println(i);
                 } catch (Exception throwables) {
                     throwables.printStackTrace();
 //                    throwables.printStackTrace();
@@ -40,18 +41,18 @@ public class MysqlTest02 {
             }
         }).start();
 
-//        AtomicLong timesB = new AtomicLong(0L);
-//        new Thread(() -> {
-//            for (int i = 0; i < Integer.MAX_VALUE; i++) {
-//                try {
-//                    Thread.sleep(new Random().nextInt(10 * 1000));
-//                    pstmt.execute();
-//                } catch (Exception throwables) {
-////                    throwables.printStackTrace();
-//                    System.out.println(Thread.currentThread().getName() + "times: " +timesB.addAndGet(1L));
-//                }
-//            }
-//        }).start();
+        AtomicLong timesB = new AtomicLong(0L);
+        new Thread(() -> {
+            for (int i = 0; i < Integer.MAX_VALUE; i++) {
+                try {
+                    Thread.sleep(new Random().nextInt(10 * 1000));
+                    pstmt.execute("select " + i);
+                } catch (Exception throwables) {
+//                    throwables.printStackTrace();
+                    System.out.println(Thread.currentThread().getName() + "times: " +timesB.addAndGet(1L));
+                }
+            }
+        }).start();
 
     }
 
