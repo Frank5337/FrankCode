@@ -9,6 +9,7 @@
 /code-shiro/target/
 /code/logs/
 target
+out
 
 *.iml
 *.log
