@@ -54,7 +54,7 @@ public class EurekaStateChangeListener {
     public void listen(EurekaInstanceRenewedEvent event) {
         event.getAppName();
         event.getServerId();
-        System.out.println("EurekaInstanceRenewedEvent");
+        System.out.println("EurekaInstanceRenewedEvent \nAppName: " + event.getAppName() +  "\nServerId: " +event.getServerId());
 
 
     }

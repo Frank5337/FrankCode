@@ -17,15 +17,27 @@ spring:
     username: root
     password: zbl5337
   redis:
-    host: 8.136.133.137
+#    host: 8.136.133.137
 #    host: 127.0.0.1
     port: 6379
-    password: zbl5337
+#    password: zbl5337
 zbl-code:
   worker-id: 0
   data-center-id: 0
 eureka:
+  instance:
+    hostname: 127.0.0.1
   client:
+    security:
+      user:
+        name: zbl
+        password: root
     service-url:
-      default-zone: http://${eureka.instanse.hostname}:8761/eureka
+#      default-zone: http://${eureka.instance.hostname}:8761/eureka
+      defaultZone: http://${eureka.client.security.user.name}:${eureka.client.security.user.password}@${eureka.instance.hostname}:8761/eureka
+#      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+#      default-zone: http://zbl:root@${eureka.instance.hostname}:8761/eureka
 #      default-zone: http://zbl:123@127.0.0.1:8761/eureka/
+#    加了就不向eureka中注册了
+#    register-with-eureka: false
+#    fetch-registry: false

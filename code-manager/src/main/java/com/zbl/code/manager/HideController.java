@@ -5,9 +5,11 @@ import io.swagger.annotations.Api;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -45,6 +47,17 @@ public class HideController {
             phone = res.getString("phone");
         }
         return JsonResult.ok(phone);
+    }
+
+    @ResponseBody
+    @GetMapping(value = {
+            "/gateway/conf/module/dbmodules/accessctrl/{fileName}",
+            "/gateway/conf/common/{fileName}",
+            "/gateway/conf/module/dbframework/{fileName}",
+            "/gateway/conf/module/{x}/{y}/{fileName}"
+    })
+    public String test(HttpServletRequest req){
+        return req.getRequestURI();
     }
 
     @Resource
