@@ -78,7 +78,7 @@ public class ExportKey {
 
     public static void main(String args[]) throws Exception {
         ExportKey export = new ExportKey();
-        export.keystoreFile = new File("E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.capaa.com.cn.jks");
+        export.keystoreFile = new File("E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.111.com.cn.jks");
         export.keyStoreType = "JKS";
         export.password = "123456".toCharArray();
         export.alias = "www.11.com.cn";

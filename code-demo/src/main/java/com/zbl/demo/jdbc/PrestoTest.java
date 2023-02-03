@@ -19,7 +19,7 @@ public class PrestoTest {
         Class.forName("com.facebook.presto.jdbc.PrestoDriver");
         Properties properties = new Properties();
         properties.setProperty("SSL", "true");
-//        properties.setProperty("SSLKeyStorePath", "E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.capaa.com.cn.jks");
+//        properties.setProperty("SSLKeyStorePath", "E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.com.cn.jks");
 //        properties.setProperty("SSLKeyStorePassword", "123456");
         properties.setProperty("SSLTrustStorePath", "C:\\Users\\ThinkPad\\Desktop\\126p.truststore");
         properties.setProperty("SSLTrustStorePassword", "123456");
