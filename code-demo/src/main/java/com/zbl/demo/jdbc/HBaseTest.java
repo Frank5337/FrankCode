@@ -32,9 +32,9 @@ public class HBaseTest {
 //        conf.set("hadoop.security.authentication", "kerberos");
 //        conf.set("hbase.security.authentication", "kerberos");
 //        conf.set("zookeeper.znode.parent", "/hbase-secure");
-//        conf.set("hbase.master.kerberos.principal", "hbase/hadoop2@MC.COM");
+//        conf.set("hbase.master.kerberos.principal", "hbase/hadoop2@xx.COM");
 //        UserGroupInformation.setConfiguration(conf);
-//        UserGroupInformation ugi = UserGroupInformation.loginUserFromKeytabAndReturnUGI("hbase/hadoop2@MC.COM", keyTab);
+//        UserGroupInformation ugi = UserGroupInformation.loginUserFromKeytabAndReturnUGI("hbase/hadoop2@cc.COM", keyTab);
 //        UserGroupInformation.setLoginUser(ugi);
 //        HBaseAdmin.available(conf);
 //        org.apache.hadoop.hbase.client.Connection connection = ConnectionFactory.createConnection(conf);

@@ -22,7 +22,7 @@ public class MysqlTestIPV6 {
         String jdbcUrl = "jdbc:mysql://address=(protocol=tcp)(host=" + ip + ")(port=" + port + ")/" + dataBase;
         Properties properties = new Properties();
         properties.setProperty("user", "root");
-        properties.setProperty("password", "hzmcdba");
+        properties.setProperty("password", "bbbbbb");
         Connection conn = DriverManager.getConnection(jdbcUrl, properties);
         PreparedStatement pstmt = conn.prepareStatement("select * from `config`;");
         ResultSet resultSet = pstmt.executeQuery();

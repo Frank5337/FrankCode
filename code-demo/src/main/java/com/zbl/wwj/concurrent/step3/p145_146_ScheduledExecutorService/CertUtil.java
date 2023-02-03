@@ -113,9 +113,9 @@ public class CertUtil {
 
         export.password = "123456".toCharArray();
 
-        export.alias = "www.capaa.com.cn";
+        export.alias = "www.1.com.cn";
 
-        export.exportedFile = new File("C:\\Users\\ThinkPad\\Desktop\\mchz\\160447\\新建文件夹\\aa.txt");
+        export.exportedFile = new File("C:\\Users\\ThinkPad\\Desktop\\11\\160447\\新建文件夹\\aa.txt");
 
         export.export();
     }

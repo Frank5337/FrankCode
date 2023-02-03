@@ -1,0 +1,8 @@
+server:
+  port: 7911
+spring:
+  application:
+    name: mongodb-example
+mongo:
+  ipAddrs: 192.168.96.160,192.168.96.160,192.168.96.160
+  ports: 27117,27118,27119

@@ -82,8 +82,8 @@ public class ExportKey {
         export.keyStoreType = "JKS";
         export.password = "123456".toCharArray();
         export.alias = "www.capaa.com.cn";
-        export.exportedPrivateKeyFile = new File("C:\\Users\\ThinkPad\\Desktop\\mchz\\160447\\新建文件夹\\test\\java\\proxyLocal.crt.192.168.242.82_8443");
-        export.exportedPublicKeyFile = new File("C:\\Users\\ThinkPad\\Desktop\\mchz\\160447\\新建文件夹\\test\\java\\proxyLocal.pem.192.168.242.82_8443");
+        export.exportedPrivateKeyFile = new File("C:\\Users\\ThinkPad\\Desktop\\11\\160447\\新建文件夹\\test\\java\\proxyLocal.crt.192.168.242.82_8443");
+        export.exportedPublicKeyFile = new File("C:\\Users\\ThinkPad\\Desktop\\11\\160447\\新建文件夹\\test\\java\\proxyLocal.pem.192.168.242.82_8443");
         export.exportPrivate();
         export.exportCertificate();
     }
