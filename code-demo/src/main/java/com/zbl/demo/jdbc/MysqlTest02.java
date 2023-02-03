@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class MysqlTest02 {
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.230.136:3333/capaa?useSSL=false", "root", "zbl5337");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.230.136:3333/11?useSSL=false", "root", "zbl5337");
         Statement pstmt = conn.createStatement();
 //        PreparedStatement pstmt = conn.prepareStatement("select * from ;");
 

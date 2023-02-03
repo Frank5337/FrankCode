@@ -12,7 +12,7 @@ import java.util.List;
 public class MysqlTest {
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://8.136.133.137:3306/capaa", "root", "zbl5337");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://8.136.133.137:3306/11", "root", "zbl5337");
         PreparedStatement pstmt = conn.prepareStatement("select distinct `PRIV_NAME`,`PRIV_DESC` from mc$priv_database where DB_TYPE = 13");
         ResultSet resultSet = pstmt.executeQuery();
 

@@ -131,7 +131,7 @@ public class KeyStoreConv {
      */
     public void test01() throws Exception {
         KeyStoreConv c = new KeyStoreConv();
-        String srcFile = "E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.capaa.com.cn.jks";
+        String srcFile = "E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.11.com.cn.jks";
         String destFile = "E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\test.pfx";
         c.PKCS12ToJKS(srcFile, "123456",destFile, "123456");
     }

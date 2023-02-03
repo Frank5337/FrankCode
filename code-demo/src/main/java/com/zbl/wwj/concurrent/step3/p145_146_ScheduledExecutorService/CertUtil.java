@@ -107,7 +107,7 @@ public class CertUtil {
 
         CertUtil export = new CertUtil();
 
-        export.keystoreFile = new File("E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.capaa.com.cn.jks");
+        export.keystoreFile = new File("E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.11.com.cn.jks");
 
         export.keyStoreType = "PC2";
 

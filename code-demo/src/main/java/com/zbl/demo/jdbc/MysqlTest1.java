@@ -12,7 +12,7 @@ import java.util.List;
 public class MysqlTest1 {
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.230.232:13306/menu", "asset", "hzmc321#");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.230.232:13306/menu", "123456", "123456#");
         PreparedStatement pstmt = conn.prepareStatement("select distinct menu_name from `mc_role_menu`");
         ResultSet resultSet = pstmt.executeQuery();
 

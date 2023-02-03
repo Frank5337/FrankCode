@@ -81,7 +81,7 @@ public class ExportKey {
         export.keystoreFile = new File("E:\\software\\qiyewxFiles\\WXWork\\1688851943938006\\Cache\\File\\2021-04\\www.capaa.com.cn.jks");
         export.keyStoreType = "JKS";
         export.password = "123456".toCharArray();
-        export.alias = "www.capaa.com.cn";
+        export.alias = "www.11.com.cn";
         export.exportedPrivateKeyFile = new File("C:\\Users\\ThinkPad\\Desktop\\11\\160447\\新建文件夹\\test\\java\\proxyLocal.crt.192.168.242.82_8443");
         export.exportedPublicKeyFile = new File("C:\\Users\\ThinkPad\\Desktop\\11\\160447\\新建文件夹\\test\\java\\proxyLocal.pem.192.168.242.82_8443");
         export.exportPrivate();

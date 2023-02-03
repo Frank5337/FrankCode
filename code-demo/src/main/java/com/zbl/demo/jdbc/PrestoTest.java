@@ -27,7 +27,7 @@ public class PrestoTest {
         properties.setProperty("password", "plaintext");
 
 //        properties.setProperty("password", assetSql.getDbPassword());
-//        Connection con = DriverManager.getConnection("jdbc:presto://www.capaa.com.cn:8443/hive", properties);
+//        Connection con = DriverManager.getConnection("jdbc:presto://www.11.com.cn:8443/hive", properties);
         Connection con = DriverManager.getConnection("jdbc:presto://192.168.51.126:8334/hive", properties);
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery("show schemas from hive");
