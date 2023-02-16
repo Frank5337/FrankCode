@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: mongodb-example
+  data:
+    mongodb:
+      uri: mongodb://192.168.96.160:27117,192.168.96.160:27118,192.168.96.160:27119/config
 mongo:
   ipAddrs: 192.168.96.160,192.168.96.160,192.168.96.160
   ports: 27117,27118,27119

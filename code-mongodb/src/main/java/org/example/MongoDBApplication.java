@@ -2,8 +2,6 @@ package org.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
-import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 
 /**
  * @Author: zbl
@@ -13,7 +11,9 @@ import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
  * /usr/java/jdk1.8.0_221-amd64/jre/bin/java -jar -Dspring.config.location=/home/c/application.yml code-mongodb-1.0-SNAPSHOT.jar >mongo.out 2>&1 &
  * @Version: $
  */
-@SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
+@SpringBootApplication(
+//        exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class}
+)
 public class MongoDBApplication {
 
     public static void main(String[] args) {

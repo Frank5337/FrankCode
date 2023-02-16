@@ -7,11 +7,15 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoIterable;
 import org.bson.Document;
+import org.example.mongodb.pojo.Test;
+import org.example.service.MongoDBService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -40,7 +44,11 @@ public class MongoDBController {
         for (int i = 0; i < ipAddrs.size(); i++) {
             servers.add(new ServerAddress(ipAddrs.get(i), ports.get(i)));
         }
-        MongoClientOptions build = MongoClientOptions.builder().minConnectionsPerHost(5).connectionsPerHost(10).build();
+        MongoClientOptions build = MongoClientOptions.builder()
+                .minConnectionsPerHost(5)
+                .connectionsPerHost(100)
+                .connectTimeout(1000 * 10)
+                .build();
         MongoClient mongoClient = new MongoClient(servers, build);
         try {
             test01(mongoClient);
@@ -82,6 +90,36 @@ public class MongoDBController {
             }
         }
 
+    }
+
+    @Resource
+    private MongoDBService mongoDBService;
+
+    @RequestMapping("/test2")
+    @ResponseBody
+    public void test2(){
+        run();
+    }
+
+    @RequestMapping("/bool2")
+    @ResponseBody
+    public void bool2(){
+        flag = !flag;
+    }
+
+    private boolean flag = true;
+
+    private void run(){
+        while (flag) {
+            try {
+                List<Test> all = mongoDBService.findAll();
+                System.out.println(all);
+                mongoDBService.add();
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
 

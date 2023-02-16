@@ -74,9 +74,12 @@ public class MongoDBTest3 {
         MongoClientOptions build = MongoClientOptions.builder().build();
         build.builder().minConnectionsPerHost(5).connectionsPerHost(10);
         MongoClient mongoClient = new MongoClient(Arrays.asList(
-                new ServerAddress("192.168.96.47", 27117),
-                new ServerAddress("192.168.96.47", 27118),
-                new ServerAddress("192.168.96.47", 27119)),
+//                new ServerAddress("192.168.96.47", 27117),
+//                new ServerAddress("192.168.96.47", 27118),
+//                new ServerAddress("192.168.96.47", 27119)),
+                new ServerAddress("192.168.96.160", 27117),
+                new ServerAddress("192.168.96.160", 27118),
+                new ServerAddress("192.168.96.160", 27119)),
                 build);
 
         MongoIterable<String> strings = mongoClient.listDatabaseNames();
