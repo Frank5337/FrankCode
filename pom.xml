@@ -23,6 +23,7 @@
         <module>code-test</module>
         <module>code-http-basic-eureka</module>
         <module>code-http-basic-client</module>
+        <module>code-mongodb</module>
     </modules>
 
     <groupId>com.zbl</groupId>
