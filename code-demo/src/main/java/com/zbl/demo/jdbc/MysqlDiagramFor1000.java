@@ -8,13 +8,15 @@ import java.sql.*;
  * @Description:
  * @Version: $
  */
-public class MysqlDiagramForL0X1000 {
+public class MysqlDiagramFor1000 {
+
+    private static final String schema = "";
 
     public static void main(String[] args) throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://8.136.133.137:3306/l0x1000db", "root", "zbl5337");
-//        PreparedStatement pstmt = conn.prepareStatement("SELECT table_name ,table_comment FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'l0x1000db'");
-        PreparedStatement pstmt = conn.prepareStatement("SELECT table_name ,table_comment FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'l0x1000db' \n" +
+        Connection conn = DriverManager.getConnection("jdbc:mysql://8.136.133.137:3306/" + schema + "", "root", "zbl5337");
+//        PreparedStatement pstmt = conn.prepareStatement("SELECT table_name ,table_comment FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '" + schema + "'");
+        PreparedStatement pstmt = conn.prepareStatement("SELECT table_name ,table_comment FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '" + schema + "' \n" +
                 "AND table_name IN ('t_activity','t_activity_detail','t_activity_user');");
         Statement statement = conn.createStatement();
         ResultSet resultTableList = pstmt.executeQuery();
