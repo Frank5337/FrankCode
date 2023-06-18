@@ -1,7 +1,7 @@
 package com.zbl.code.manager.demo.classLoader;
 
-import com.yunfan.yukai.controller.Tmd;
 import com.zbl.code.common.component.RedisCache;
+import com.zbl.code.manager.demo.classLoader.yukai.yunfan.controller.Tmd;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
